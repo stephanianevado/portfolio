@@ -10,8 +10,11 @@ export default function Home() {
 
       <main>
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to Stephania Nevado!
         </h1>
+        <section id="welcome-section" class="welcome-section">
+          <p>Hi!!! I'm Stephania a nutritionist, manager, writer and now i'm learning programming &hearts;<i class="fas fa-hand-spock"></i></p>
+        </section>
 
         <p className="description">
           Get started by editing <code>pages/index.js</code>
