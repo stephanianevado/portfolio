@@ -1,16 +1,8 @@
 import Head from 'next/head'
-import { NavBar } from '../components/nav-bar'
-import { TodayDate } from '../components/date'
-import { AboutMe } from '../pages/about'
-import { MySkills } from '../pages/myskills'
-import { MyWorks } from '../pages/work'
-import { MyContacts } from '../pages/contact'
-import Link from 'next/link'
-
-
 import { FooterPortfolio } from '../components/footer-portfolio'
+import { NavBar } from '../components/nav-bar'
 
-export default function Home() {
+const AboutMe = () => {
 
   return (
     <div className="container">
@@ -18,53 +10,23 @@ export default function Home() {
         <title>Stephania Nevado's portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body translate="no">
-        <NavBar />
-        <main>
-          <section id="welcome-section" className="welcome-section">
-            <p>Hi, my name is</p>
-            <h1>Stephania Nevado.</h1>
-            <h2>I build things for the web.</h2>
-            <p>I'm a nutritionist, manager, writer and now I'm a web development &hearts;</p>
-          </section>
+      <NavBar />
+      <main>
+        <p>
+          Hello! My name is Stephania Nevado I'm a nutritionist, manager and Front-End Developer located in Sweden.
+        </p>
+        <p>
+          My interest in web development started in 2020 when I wanted to try out creating a HealthTech product and get more hands-on experience by taking a digital product from idea to release. That's how Nutreto was born. Nutreto is a cloud-based platform for nutrition and health, usable for both patients and clinics.Check it out at
+                  <a href="https://nutreto.com/en/" target="_blank"> nutreto.com!</a>.
+        </p>
+        <p>
+          I'm passionate about tech, health and leadership, change management, process improvement and teamwork. I'm also always curious to learn new things. Well-organised person, problem solver with high attetion to detail.
+        </p>
+        <p>
+          <a href="/contact" target="_blank"> Let's rule the galaxy!</a>
+        </p>
 
-          <TodayDate />
-
-          <div className="grid">
-            <Link id="about-me" href="/about">
-              <a className="card">
-                <h3>About &rarr;</h3>
-                <p>Do or do not. There is no try. May the force be with me!!</p>
-              </a>
-            </Link>
-
-            <Link id="my-skills" href="/myskills">
-              <a className="card">
-                <h3>My skills &rarr;</h3>
-                <p>Power!! Unlimited power!! The force is strong with me!!</p>
-              </a>
-            </Link>
-
-            <Link id="work"
-              href="/work">
-              <a className="card">
-                <h3>Work &rarr;</h3>
-                <p>These are my Padawan and my Jedi Master projects</p>
-              </a>
-            </Link>
-
-            <Link id="contact"
-              href="/contact">
-              <a className="card">
-                <h3>Contact &rarr;</h3>
-                <p>
-                  Join me, and together, we can rule the galaxy.
-            </p>
-              </a>
-            </Link>
-          </div>
-        </main>
-      </body>
+      </main>
       <FooterPortfolio />
 
       <style jsx>{`
@@ -213,6 +175,8 @@ export default function Home() {
           box-sizing: border-box;
         }
         `}</style>
-    </div >
+    </div>
   )
 }
+
+export default AboutMe;
