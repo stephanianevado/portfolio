@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import { NavBar } from '../components/nav-bar'
-import { TodayDate } from '../components/date'
 import { AboutMe } from '../pages/about'
 import { MySkills } from '../pages/myskills'
 import { MyWorks } from '../pages/work'
@@ -27,8 +26,6 @@ export default function Home() {
             <h2>I build things for the web.</h2>
             <p>I'm a nutritionist, manager, writer and now I'm a web development &hearts;</p>
           </section>
-
-          <TodayDate />
 
           <div className="grid">
             <Link id="about-me" href="/about">
