@@ -6,7 +6,6 @@ import { MyWorks } from '../pages/work'
 import { MyContacts } from '../pages/contact'
 import Link from 'next/link'
 
-
 import { FooterPortfolio } from '../components/footer-portfolio'
 
 export default function Home() {
