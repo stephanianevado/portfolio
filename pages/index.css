@@ -7,3 +7,8 @@ body {
 p {
     font-family: 'Poppins', sans-serif;
 }
+
+html{
+    background-color: #020c1b;
+    /*background-color: #495670;*/
+}

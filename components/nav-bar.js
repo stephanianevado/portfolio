@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {dark, green, grey} from "./colors";
 
 const NavWrapper = styled.div`
   margin-bottom: 2rem;
@@ -11,7 +12,7 @@ const Nav = styled.nav`
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #dce6ee;
+  background-color: ${dark};
 `
 const NavList = styled.ul`
   display: flex;
@@ -21,10 +22,11 @@ const NavList = styled.ul`
    display: block;
    padding: 0.5rem;
    font-family: Poppins, sans-serif;
+   color: ${grey};
    text-decoration: none;
   }
   a:hover{
-    color: #002c59;
+    color: ${green};
   }
 `
 
@@ -40,7 +42,7 @@ export const NavBar = () => {
         <Nav>
             <div>
                 <a href="#">
-                    <Logo src="/logo.svg" alt="logo SVG portfolio"/>
+                    <Logo src="/logoportfolio.svg" alt="logo SVG portfolio"/>
                 </a>
             </div>
             <NavList>

@@ -1,9 +1,5 @@
 import Head from 'next/head'
 import { NavBar } from '../components/nav-bar'
-import { AboutMe } from '../pages/about'
-import { MySkills } from '../pages/myskills'
-import { MyWorks } from '../pages/work'
-import { MyContacts } from '../pages/contact'
 import Link from 'next/link'
 
 import { FooterPortfolio } from '../components/footer-portfolio'
