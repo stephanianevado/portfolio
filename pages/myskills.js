@@ -1,21 +1,23 @@
 import Head from 'next/head'
-import { FooterPortfolio } from '../components/footer-portfolio'
-import { NavBar } from '../components/nav-bar'
+import {FooterPortfolio} from '../components/footer-portfolio'
+import {NavBar} from '../components/nav-bar'
 
-const MySkills = () =>{
+const MySkills = () => {
     return (
         <div className="container">
             <Head>
                 <title>Stephania Nevado's portfolio</title>
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/favicon.ico"/>
             </Head>
-            <NavBar />
+            <body>
+            <NavBar/>
             <main>
                 <p>
                     lalalalalalalalalalalalalalala.°°°!!!
-                    </p>
+                </p>
             </main>
-            <FooterPortfolio />
+            </body>
+            <FooterPortfolio/>
         </div>
     );
 }
