@@ -2,8 +2,6 @@ import styled from 'styled-components'
 import { grey, pink, white } from './colors'
 import Link from 'next/link'
 
-const Wrapper = styled.div``
-
 const CardLink = styled.a`
   width: 100px;
   font-size: 2rem;

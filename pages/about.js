@@ -3,14 +3,16 @@ import { FooterPortfolio } from '../components/footer-portfolio'
 import { NavBar } from '../components/nav-bar'
 import styled from 'styled-components'
 import { grey, pink, white } from '../components/colors'
+import { Titles } from '../components/Titles'
 
 const Main = styled.main`
-  h2 {
-    color: ${white};
-    b {
-      color: ${pink};
-    }
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
   p {
     color: ${grey};
     display: inline-block;
@@ -19,12 +21,6 @@ const Main = styled.main`
       color: ${pink};
       text-decoration: none;
     }
-  }
-  .grid {
-    display: grid;
-    grid-temple-column: repeat(2, 2fr);
-    grid-temple-row: 2fr;
-    grid-temple-areas: 'text picture';
   }
 `
 
@@ -35,14 +31,12 @@ const AboutMe = () => {
         <title>Stephania Nevado's portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="container">
+      <div>
         <NavBar />
         <Main>
-          <h2>
-            <b>01.</b> About me
-          </h2>
-          <div className="grid">
-            <div className="text">
+          <Titles number="01" title="About me" />
+          <div>
+            <div>
               <p>
                 Hello! My name is Stephania Nevado I'm a nutritionist, manager
                 and Front-End Developer located in Sweden.
@@ -58,7 +52,6 @@ const AboutMe = () => {
                   {' '}
                   nutreto.com!
                 </a>
-                .
               </p>
               <p>
                 I'm passionate about tech, health and leadership, change
@@ -73,8 +66,8 @@ const AboutMe = () => {
                 </a>
               </p>
             </div>
-            <div className="picture">
-              <img src="/public/picture.jpg" />
+            <div>
+              <img src="/picture.svg" />
             </div>
           </div>
         </Main>

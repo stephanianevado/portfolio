@@ -151,3 +151,6 @@ export const EmailIcon = () => {
     </Svg>
   )
 }
+//export const PictureIcon = () =>{
+  //return ()
+//}
