@@ -102,7 +102,7 @@ export const NavBar = () => {
           </Li>
           <Li>
             <Button>
-              <a href="#" target="_blank">
+              <a href="/CV ENGLISH.pdf" target="_blank">
                 Resume
               </a>
             </Button>
