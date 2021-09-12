@@ -3,21 +3,21 @@ import { FooterPortfolio } from '../components/footer-portfolio'
 import { NavBar } from '../components/nav-bar'
 
 const MyWorks = () => {
-    return (
+  return (
+    <>
+      <Head>
+        <title>Stephania Nevado's portfolio</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className="container">
-        <Head>
-          <title>Stephania Nevado's portfolio</title>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <body>
-          <NavBar />
-          <main>
-            <p>lalalalalalalalalalalalalalala.°°°!!!</p>
-          </main>
-        </body>
+        <NavBar />
+        <main>
+          <p>lalalalalalalalalalalalalalala.°°°!!!</p>
+        </main>
         <FooterPortfolio />
       </div>
-    )
+    </>
+  )
 }
 
-export default MyWorks;
+export default MyWorks

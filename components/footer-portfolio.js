@@ -16,9 +16,6 @@ const Div = styled.div`
     bottom: 0px;
     left: 40px;
     right: auto;
-    padding: 10px 10px;
-    margin: 10px;
-    z-index: 10;
     orientation: left;
     writing-mode: vertical-rl;
   }
@@ -29,9 +26,6 @@ const Div = styled.div`
     bottom: 0px;
     right: 40px;
     left: auto;
-    padding: 10px 10px;
-    margin: 10px;
-    z-index: 10;
     orientation: right;
     writing-mode: vertical-lr;
   }

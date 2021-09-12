@@ -4,19 +4,19 @@ import { NavBar } from '../components/nav-bar'
 
 const MyContacts = () => {
   return (
-    <div className="container">
+    <>
       <Head>
         <title>Stephania Nevado's portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body>
+      <div className="container">
         <NavBar />
         <main>
           <p>lalalalalalalalalalalalalalala.°°°!!!</p>
         </main>
-      </body>
-      <FooterPortfolio />
-    </div>
+        <FooterPortfolio />
+      </div>
+    </>
   )
 }
 

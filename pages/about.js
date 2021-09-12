@@ -3,7 +3,6 @@ import { FooterPortfolio } from '../components/footer-portfolio'
 import { NavBar } from '../components/nav-bar'
 import styled from 'styled-components'
 import { grey, pink, white } from '../components/colors'
-import contact from './contact'
 
 const Main = styled.main`
   h2 {
@@ -31,12 +30,12 @@ const Main = styled.main`
 
 const AboutMe = () => {
   return (
-    <div className="container">
+    <>
       <Head>
         <title>Stephania Nevado's portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body>
+      <div className="container">
         <NavBar />
         <Main>
           <h2>
@@ -79,9 +78,9 @@ const AboutMe = () => {
             </div>
           </div>
         </Main>
-      </body>
-      <FooterPortfolio />
-    </div>
+        <FooterPortfolio />
+      </div>
+    </>
   )
 }
 

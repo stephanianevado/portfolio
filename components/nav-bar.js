@@ -46,29 +46,30 @@ const Logo = styled.img`
 `
 const Button = styled.button`
   display: flex;
+  align-items: center;
   justify-content: flex-end;
   background-color: transparent;
   border: 1px solid ${pink};
   border-radius: 5px;
-  padding: 0.2rem 0.5rem;
+  height: 35px;
+  margin-left: 1.3rem;
   a {
     display: inline-block;
-    margin: 0.25rem;
-    padding: 0.1rem;
     color: ${white};
   }
   a:hover {
     color: ${white};
-    backgroun-color: ${pink};
+    background-color: ${pink};
   }
-  :hover {
+  &:hover {
     background-color: ${pink};
     opacity: 0.5;
   }
 `
 const Li = styled.li`
-  display: inheret;
+  display: inherit;
 `
+
 export const NavBar = () => {
   return (
     <NavWrapper>
