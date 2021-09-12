@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {pink, white} from "./colors";
-import contact from "../pages/contact";
+import {CodepenIcon, FacebookIcon, GitHubIcon, InstagramIcon, LinkedinIcon, TwitterIcon} from "./Icons";
+
 
 const Div = styled.div`
     .contact-left {
@@ -29,7 +30,7 @@ const Div = styled.div`
         orientation: right;
         writing-mode: vertical-lr;
     }
-    
+ 
     a {
         color: ${white};
         margin: 20px auto;
@@ -47,8 +48,8 @@ const Div = styled.div`
 const Img = styled.img`
     vertical-align: middle;
     
-    .svg:hover{
-        fill: #F64C72;
+    svg:hover path {
+        fill: ${pink};
     }
 `
 
@@ -58,26 +59,29 @@ export const FooterPortfolio = () => {
         <footer>
             <Div className="contact-links">
                 <div className="contact-left">
-                    <a href="mailto:stephania.arantxa@gmail.com" className="btn contact-details">stephania.arantxa@gmail.com</a>
+                    <a href="mailto:stephania.arantxa@gmail.com"
+                       className="btn contact-details">stephania.arantxa@gmail.com</a>
                 </div>
                 <div className="contact-right">
                     <a href="https://github.com/stephanianevado" target="_blank" className="btn contact-details">
-                        <Img className="svg" src="/logogithub.svg" alt="logo svg github"/>
+                        <GitHubIcon />
                     </a>
-                    <a href="https://www.linkedin.com/in/stephanianevado/" target="_blank" className="btn contact-details">
-                        <Img src="/logolinkedin.svg" alt="logo svg linkedin"/>
+                    <a href="https://www.linkedin.com/in/stephanianevado/" target="_blank"
+                       className="btn contact-details">
+                        <LinkedinIcon />
                     </a>
-                    <a href="https://www.instagram.com/stephanianevado/" target="_blank" className="btn contact-details">
-                        <Img src="/logoinstagram.svg" alt="logo svg instagram"/>
+                    <a href="https://www.instagram.com/stephanianevado/" target="_blank"
+                       className="btn contact-details">
+                        <InstagramIcon />
                     </a>
                     <a href="https://www.facebook.com/nevadostephania" target="_blank" className="btn contact-details">
-                        <Img src="/logofacebook.svg" alt="logo svg facebook"/>
+                        <FacebookIcon />
                     </a>
                     <a href="https://twitter.com/nutrinevado" target="_blank" className="btn contact-details">
-                        <Img src="/logotwitter.svg" alt="logo svg twitter"/>
+                        <TwitterIcon />
                     </a>
                     <a href="https://codepen.io/stephanianevado" target="_blank" className="btn contact-details">
-                        <Img src="/logocodepen.svg" alt="logo svg codepen"/>
+                        <CodepenIcon />
                     </a>
                 </div>
 

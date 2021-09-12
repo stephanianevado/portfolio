@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {dark, grey, pink, white} from "./colors";
+import {dark, pink, white} from "./colors";
 
 const NavWrapper = styled.div`
   margin-bottom: 2rem;
@@ -57,6 +57,10 @@ const Button = styled.button`
      padding: 0.1rem;
      color: ${white};
     }
+    a:hover{
+    color: ${white};
+    backgroun-color: ${pink};
+    }
     :hover{
      background-color: ${pink};
      opacity: 0.5;
@@ -70,7 +74,7 @@ export const NavBar = () => {
         <NavWrapper>
             <Nav>
                 <div>
-                    <a href="#">
+                    <a href="/">
                         <Logo src="/logoportfolio4.svg" alt="logo SVG portfolio"/>
                     </a>
                 </div>
