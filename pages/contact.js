@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { FooterPortfolio } from '../components/footer-portfolio'
-import { NavBar } from '../components/nav-bar'
+import { NavBar } from '../components/NavBar'
 import { Titles } from '../components/Titles'
 import styled from 'styled-components'
 import { grey, pink, white } from '../components/colors'

@@ -2,11 +2,10 @@ import styled from 'styled-components'
 import { grey, pink, white } from './colors'
 import Link from 'next/link'
 
-const CardLink = styled.a`
-  width: 100px;
+const CardWrapper = styled.div`
+  width: 25rem;
   font-size: 2rem;
   margin: 1rem;
-  flex-basis: 45%;
   padding: 1.5rem;
   text-align: left;
   color: ${grey};
@@ -17,15 +16,13 @@ const CardLink = styled.a`
   b {
     color: ${pink};
   }
-
-  &:hover,
-  &:focus,
-  &:active {
+  &:hover {
     color: ${pink};
     border-color: ${pink};
     cursor: pointer;
   }
-
+`
+const CardLink = styled.a`
   h5 {
     margin: 0 0 1rem 0;
     font-size: 1.5rem;
@@ -37,17 +34,18 @@ const CardLink = styled.a`
     line-height: 1.5;
   }
 `
-
 export const Card = ({ number, title, text, href }) => {
   return (
-    <Link href={href}>
-      <CardLink>
-        <h5>
-          <b>{`${number}. `}</b>
-          {`${title} `}&rarr;
-        </h5>
-        <p>{text}</p>
-      </CardLink>
-    </Link>
+    <CardWrapper>
+      <Link href={href}>
+        <CardLink>
+          <h5>
+            <b>{`${number}. `}</b>
+            {`${title} `}&rarr;
+          </h5>
+          <p>{text}</p>
+        </CardLink>
+      </Link>
+    </CardWrapper>
   )
 }

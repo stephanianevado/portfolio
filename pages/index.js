@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { NavBar } from '../components/nav-bar'
+import { NavBar } from '../components/NavBar'
 import { FooterPortfolio } from '../components/footer-portfolio'
 import { Card } from '../components/Card'
 import styled from 'styled-components'
@@ -30,12 +30,13 @@ const Section = styled.section`
   h4 {
     color: ${grey};
     font-size: 1.5rem;
+    margin-bottom: 2.5rem;
   }
 `
 
 const Row = styled.div`
   display: flex;
-  width: 50rem;
+  flex-wrap: wrap;
 `
 
 export default function Home() {
