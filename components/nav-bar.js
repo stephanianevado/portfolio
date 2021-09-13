@@ -82,12 +82,12 @@ export const NavBar = () => {
         <NavList>
           <Li>
             <a href="/about">
-              <b>01.</b> About me
+              <b>01.</b> About
             </a>
           </Li>
           <Li>
             <a href="/myskills">
-              <b>02.</b> My skills
+              <b>02.</b> Skills
             </a>
           </Li>
           <Li>

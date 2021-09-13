@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { FooterPortfolio } from '../components/footer-portfolio'
 import { NavBar } from '../components/nav-bar'
+import { Titles } from '../components/Titles'
 
 const MyWorks = () => {
   return (
@@ -9,13 +10,11 @@ const MyWorks = () => {
         <title>Stephania Nevado's portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="container">
-        <NavBar />
-        <main>
-          <p>lalalalalalalalalalalalalalala.°°°!!!</p>
-        </main>
-        <FooterPortfolio />
-      </div>
+      <NavBar />
+      <main>
+        <Titles number="03" title="My work" />
+      </main>
+      <FooterPortfolio />
     </>
   )
 }

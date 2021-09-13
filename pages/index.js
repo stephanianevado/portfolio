@@ -61,13 +61,13 @@ export default function Home() {
             href="/about"
             number="01"
             title="About"
-            text="Do or do not. There is no try. May the force be with me!!"
+            text="Get to know me"
           />
           <Card
             href="/myskills"
             number="02"
-            title="My skills"
-            text="Power!! Unlimited power!! The force is strong with me!!"
+            title="Skills"
+            text="What I've Worked"
           />
         </Row>
         <Row>
@@ -75,13 +75,13 @@ export default function Home() {
             href="/work"
             number="03"
             title="Work"
-            text="These are my Padawan and my Jedi Master projects"
+            text="Some Things I've built"
           />
           <Card
             href="/contact"
             number="04"
             title="Contact"
-            text="Join me, and together, we can rule the galaxy."
+            text="What's Next? Get in touch!"
           />
         </Row>
       </Main>
