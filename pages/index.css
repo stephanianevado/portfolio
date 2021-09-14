@@ -12,11 +12,8 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
-p {
-    font-family: 'Poppins', sans-serif;
-}
-
 html {
     background-color: #020c1b;
     /*background-color: #495670;*/
+
 }

@@ -150,20 +150,15 @@ export const EmailIcon = () => (
   </Svg>
 )
 
-//export const PictureIcon = () =>{
-//return (
-// )
-//}
-
 export const HamburgerIcon = () => (
-  <Svg viewBox="0 0 24 24">
+  <svg viewBox="0 0 24 24" width={24}>
     <g id="24 / basic / menu">
-      <path
+      <path fill={pink}
         id="icon"
         fillRule="evenodd"
         clipRule="evenodd"
         d="M22 7V5H2V7H22ZM22 11V13H2V11H22ZM22 17V19H2V17H22Z"
       />
     </g>
-  </Svg>
+  </svg>
 )

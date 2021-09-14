@@ -53,17 +53,12 @@ export default function Home() {
           <h2>Stephania Nevado.</h2>
           <h3>I build things for the web.</h3>
           <h4>
-            I'm a nutritionist, manager, writer and now I'm a web development
+            I'm a nutritionist, manager, writer and now I'm a web developer
             &hearts;
           </h4>
         </Section>
         <Row>
-          <Card
-            href="/about"
-            number="01"
-            title="About"
-            text="Get to know me"
-          />
+          <Card href="/about" number="01" title="About" text="Get to know me" />
           <Card
             href="/myskills"
             number="02"
