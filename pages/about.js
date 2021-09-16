@@ -17,7 +17,7 @@ const Main = styled.main`
     }
   }
   ${Breakpoints.laptop} {
-    padding-top: 4rem;
+    padding-top: 3rem;
     padding-right: 3rem;
     padding-left: 3rem;
     p {

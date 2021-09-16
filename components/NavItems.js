@@ -1,23 +1,17 @@
 import styled from 'styled-components'
 import { pink, white } from './colors'
+import { Breakpoints } from './breakpoints'
 
-const Logo = styled.img`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  padding: 0.8rem;
-  width: 4rem;
-`
 const NavList = styled.ul`
   display: flex;
+  flex-direction: column;
   margin-right: 4rem;
   list-style: none;
   position: relative;
   a {
     display: block;
     padding: 0.5rem 1.3rem;
-    font-size: 0.85rem;
+    font-size: 1.25rem;
     color: ${white};
     text-decoration: none;
   }
@@ -27,7 +21,14 @@ const NavList = styled.ul`
   a:hover {
     color: ${pink};
   }
+  ${Breakpoints.laptop} {
+    a {
+      font-size: 0.85rem;
+    }
+    flex-direction: row;
+  }
 `
+
 const Button = styled.button`
   display: flex;
   align-items: center;
@@ -35,7 +36,8 @@ const Button = styled.button`
   background-color: transparent;
   border: 1px solid ${pink};
   border-radius: 5px;
-  height: 35px;
+  height: 50px;
+  margin-top: 2rem;
   margin-left: 1.3rem;
   a {
     display: inline-block;
@@ -49,6 +51,10 @@ const Button = styled.button`
     background-color: ${pink};
     opacity: 0.5;
   }
+  ${Breakpoints.laptop} {
+    margin-top: 0;
+    height: 35px;
+  }
 `
 const Li = styled.li`
   display: inherit;
@@ -56,11 +62,6 @@ const Li = styled.li`
 export const NavItems = () => {
   return (
     <>
-      <div>
-        <a href="/">
-          <Logo src="/logoportfolio4.svg" alt="logo SVG portfolio" />
-        </a>
-      </div>
       <NavList>
         <Li>
           <a href="/about">

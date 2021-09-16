@@ -10,7 +10,7 @@ import {Breakpoints} from "../components/breakpoints";
 const Main = styled.main`
 padding: 1rem;
   ${Breakpoints.laptop} {
-    padding-top: 4rem;
+    padding-top: 3rem;
     padding-right: 3rem;
     padding-left: 3rem;
     position: relative;

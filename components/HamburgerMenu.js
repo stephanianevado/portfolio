@@ -1,13 +1,13 @@
-import { HamburgerIcon } from './Icons'
+import { HamburgerIcon, XIcon } from './Icons'
 import { useState } from 'react'
 import { NavItems } from './NavItems'
 import styled from 'styled-components'
-import { grey } from './colors'
+import { grey2 } from './colors'
 import { Breakpoints } from './breakpoints'
 
 const Menu = styled.div`
-  background-color: ${grey};
-  width: 25%;
+  background-color: ${grey2};
+  width: 70%;
   height: 100%;
   position: fixed;
   top: 0;
@@ -32,7 +32,7 @@ export const HamburgerMenu = () => {
   return (
     <HamburgerWrapper>
       <Hamburger onClick={() => setOpen(!open)}>
-        <HamburgerIcon />
+        {open ? <XIcon /> : <HamburgerIcon />}
       </Hamburger>
       <Menu open={open}>
         <NavItems open={open} />

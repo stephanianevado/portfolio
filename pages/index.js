@@ -13,7 +13,7 @@ const Main = styled.main`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 5rem;
+    padding-top: 3rem;
     padding-right: 3rem;
     padding-left: 3rem;
   }
