@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 import { grey, pink, white } from './colors'
 import Link from 'next/link'
+import { Breakpoints } from './breakpoints'
 
 const CardWrapper = styled.div`
-  width: 25rem;
-  font-size: 2rem;
+  width: 15rem;
   margin: 1rem;
   padding: 1.5rem;
   text-align: left;
@@ -20,6 +20,26 @@ const CardWrapper = styled.div`
     color: ${pink};
     border-color: ${pink};
     cursor: pointer;
+  }
+  ${Breakpoints.laptop} {
+    width: 25rem;
+    font-size: 2rem;
+    margin: 1rem;
+    padding: 1.5rem;
+    text-align: left;
+    color: ${grey};
+    text-decoration: none;
+    border: 1px solid ${white};
+    border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+    b {
+      color: ${pink};
+    }
+    &:hover {
+      color: ${pink};
+      border-color: ${pink};
+      cursor: pointer;
+    }
   }
 `
 const CardLink = styled.a`

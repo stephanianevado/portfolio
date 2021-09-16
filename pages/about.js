@@ -4,11 +4,10 @@ import { NavBar } from '../components/NavBar'
 import styled from 'styled-components'
 import { grey, pink, white } from '../components/colors'
 import { Titles } from '../components/Titles'
+import { Breakpoints } from '../components/breakpoints'
 
 const Main = styled.main`
-  padding-top: 4rem;
-  padding-right: 3rem;
-  padding-left: 3rem;
+  padding: 2rem;
   p {
     color: ${grey};
     position: relative;
@@ -17,18 +16,35 @@ const Main = styled.main`
       text-decoration: none;
     }
   }
+  ${Breakpoints.laptop} {
+    padding-top: 4rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    p {
+      color: ${grey};
+      position: relative;
+      a {
+        color: ${pink};
+        text-decoration: none;
+      }
+    }
+  }
 `
 const Row = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  ${Breakpoints.laptop} {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 `
+
 const Column = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: space-around;
-  width: 25rem;
+  img {
+    width: 100%;
+  }
+  ${Breakpoints.laptop} {
+    width: 25rem;
+  }
 `
 
 const AboutMe = () => {

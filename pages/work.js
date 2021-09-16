@@ -3,7 +3,20 @@ import {FooterPortfolio} from '../components/footer-portfolio'
 import {NavBar} from '../components/NavBar'
 import {Titles} from '../components/Titles'
 import {WorkComp} from '../components/WorkComp'
+import styled from "styled-components";
+import {grey, pink} from "../components/colors";
+import {Breakpoints} from "../components/breakpoints";
 
+const Main = styled.main`
+padding: 1rem;
+  ${Breakpoints.laptop} {
+    padding-top: 4rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    position: relative;
+    left: 10%;
+  }
+`
 const MyWorks = () => {
     return (
         <>
@@ -12,7 +25,7 @@ const MyWorks = () => {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <NavBar/>
-            <main>
+            <Main>
                 <Titles number="03" title="My work"/>
                 <WorkComp
                     imagen="/Markdown live preview.png"
@@ -49,7 +62,7 @@ const MyWorks = () => {
                     github="https://github.com/stephanianevado/pomodoro-clock"
                     pages="https://stephanianevado.github.io/pomodoro-clock/"
                 />
-            </main>
+            </Main>
             <FooterPortfolio/>
         </>
     )

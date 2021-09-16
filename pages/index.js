@@ -4,17 +4,39 @@ import { FooterPortfolio } from '../components/footer-portfolio'
 import { Card } from '../components/Card'
 import styled from 'styled-components'
 import { grey, pink, white } from '../components/colors'
+import { Breakpoints } from '../components/breakpoints'
 
 const Main = styled.main`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 5rem;
-  padding-right: 3rem;
-  padding-left: 3rem;
+  padding: 2rem;
+  ${Breakpoints.laptop} {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
 `
 const Section = styled.section`
+  h1 {
+    color: ${pink};
+    font-size: 1rem;
+  }
+  h2 {
+    color: ${white};
+    font-size: 2.5rem;
+  }
+  h3 {
+    color: ${grey};
+    font-size: 1.5rem;
+  }
+  h4 {
+    color: ${grey};
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  ${Breakpoints.laptop}
   h1 {
     color: ${pink};
     font-size: 1rem;
@@ -35,8 +57,11 @@ const Section = styled.section`
 `
 
 const Row = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+  margin: 0, 1rem;
+  ${Breakpoints.laptop} {
+    display: flex;
+    flex-wrap: wrap;
+  }
 `
 
 export default function Home() {

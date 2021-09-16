@@ -4,25 +4,28 @@ import { NavBar } from '../components/NavBar'
 import { Titles } from '../components/Titles'
 import styled from 'styled-components'
 import { grey, pink, white } from '../components/colors'
+import { Breakpoints } from '../components/breakpoints'
 
 const Main = styled.main`
-  padding-top: 4rem;
-  padding-right: 3rem;
-  padding-left: 3rem;
+  padding: 2.5rem;
+  ${Breakpoints.laptop} {
+    padding-top: 4rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
 `
 const Row = styled.div`
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  ${Breakpoints.laptop} {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 `
 const Column = styled.div`
+  padding-top: 4rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  width: 25rem;
   h4 {
     color: ${white};
   }
@@ -30,9 +33,24 @@ const Column = styled.div`
     color: ${grey};
     position: relative;
   }
+  ${Breakpoints.laptop} {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25rem;
+    h4 {
+      color: ${white};
+    }
+    p {
+      color: ${grey};
+      position: relative;
+    }
+  }
 `
 
 const Button = styled.button`
+  margin: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;

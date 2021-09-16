@@ -4,11 +4,10 @@ import { NavBar } from '../components/NavBar'
 import { Titles } from '../components/Titles'
 import styled from 'styled-components'
 import { grey, pink, white } from '../components/colors'
+import { Breakpoints } from '../components/breakpoints'
 
 const Main = styled.main`
-  padding-top: 4rem;
-  padding-right: 3rem;
-  padding-left: 3rem;
+  padding: 2rem;
   p {
     color: ${grey};
     position: relative;
@@ -17,20 +16,40 @@ const Main = styled.main`
       text-decoration: none;
     }
   }
+  ${Breakpoints.laptop} {
+    padding-top: 4rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    p {
+      color: ${grey};
+      position: relative;
+      a {
+        color: ${pink};
+        text-decoration: none;
+      }
+    }
+  }
 `
 const Row = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  ${Breakpoints.laptop} {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 `
 const Column = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: space-around;
-  width: 25rem;
   h4 {
     color: ${white};
+  }
+  ${Breakpoints.laptop} {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-around;
+    width: 25rem;
+    h4 {
+      color: ${white};
+    }
   }
 `
 
@@ -47,8 +66,8 @@ const MySkills = () => {
         <Row>
           <Column>
             <p>
-              Since beginning my journey I've dedicated myself to learning
-              about frontend development starting with responsive web design
+              Since beginning my journey I've dedicated myself to learning about
+              frontend development starting with responsive web design
               principles in HTML and CSS. Followed by JavaScript algorithms and
               data structure to frontend development libraries.
             </p>
