@@ -38,21 +38,16 @@ const Section = styled.section`
   }
   ${Breakpoints.laptop}
   h1 {
-    color: ${pink};
     font-size: 1rem;
   }
   h2 {
-    color: ${white};
     font-size: 3rem;
   }
   h3 {
-    color: ${grey};
     font-size: 3rem;
   }
   h4 {
-    color: ${grey};
     font-size: 1.5rem;
-    margin-bottom: 2.5rem;
   }
 `
 

@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { FooterPortfolio } from '../components/footer-portfolio'
 import { NavBar } from '../components/NavBar'
 import styled from 'styled-components'
-import { grey, pink, white } from '../components/colors'
+import { grey, pink } from '../components/colors'
 import { Titles } from '../components/Titles'
 import { Breakpoints } from '../components/breakpoints'
 
@@ -20,14 +20,6 @@ const Main = styled.main`
     padding-top: 3rem;
     padding-right: 3rem;
     padding-left: 3rem;
-    p {
-      color: ${grey};
-      position: relative;
-      a {
-        color: ${pink};
-        text-decoration: none;
-      }
-    }
   }
 `
 const Row = styled.div`

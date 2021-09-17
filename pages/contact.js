@@ -35,17 +35,7 @@ const Column = styled.div`
   }
   ${Breakpoints.laptop} {
     padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     width: 25rem;
-    h4 {
-      color: ${white};
-    }
-    p {
-      color: ${grey};
-      position: relative;
-    }
   }
 `
 

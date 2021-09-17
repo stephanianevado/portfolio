@@ -20,14 +20,6 @@ const Main = styled.main`
     padding-top: 3rem;
     padding-right: 3rem;
     padding-left: 3rem;
-    p {
-      color: ${grey};
-      position: relative;
-      a {
-        color: ${pink};
-        text-decoration: none;
-      }
-    }
   }
 `
 const Row = styled.div`
@@ -47,9 +39,6 @@ const Column = styled.div`
     justify-content: center;
     align-items: space-around;
     width: 25rem;
-    h4 {
-      color: ${white};
-    }
   }
 `
 

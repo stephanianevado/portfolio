@@ -24,22 +24,6 @@ const CardWrapper = styled.div`
   ${Breakpoints.laptop} {
     width: 25rem;
     font-size: 2rem;
-    margin: 1rem;
-    padding: 1.5rem;
-    text-align: left;
-    color: ${grey};
-    text-decoration: none;
-    border: 1px solid ${white};
-    border-radius: 10px;
-    transition: color 0.15s ease, border-color 0.15s ease;
-    b {
-      color: ${pink};
-    }
-    &:hover {
-      color: ${pink};
-      border-color: ${pink};
-      cursor: pointer;
-    }
   }
 `
 const CardLink = styled.a`
