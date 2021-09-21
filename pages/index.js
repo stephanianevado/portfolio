@@ -36,18 +36,17 @@ const Section = styled.section`
     font-size: 1rem;
     margin-bottom: 2.5rem;
   }
-  ${Breakpoints.laptop}
-  h1 {
-    font-size: 1rem;
-  }
-  h2 {
-    font-size: 3rem;
-  }
-  h3 {
-    font-size: 3rem;
-  }
-  h4 {
-    font-size: 1.5rem;
+  ${Breakpoints.laptop} {
+  padding: 1rem 8rem;
+    h1 {
+      font-size: 1rem;
+    }
+    h2 {
+      font-size: 3rem;
+    }
+    h4 {
+      font-size: 1.5rem;
+    }
   }
 `
 
@@ -64,18 +63,17 @@ export default function Home() {
     <>
       <Head>
         <title>Stephania Nevado's portfolio</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logoportfolio4.svg" />
       </Head>
       <NavBar />
       <Main>
         <Section>
-          <h1>Hi, my name is</h1>
+          <h1>Hi! My name is</h1>
           <h2>Stephania Nevado.</h2>
-          <h3>I build things for the web.</h3>
-          <h4>
-            I'm a nutritionist, manager, writer and now I'm a web developer
-            &hearts;
-          </h4>
+          <h3>
+            I'm a nutritionist, manager, writer and now I'm enthusiastic about
+            frontend development &hearts;.
+          </h3>
         </Section>
         <Row>
           <Card href="/about" number="01" title="About" text="Get to know me" />

@@ -31,7 +31,6 @@ const Column = styled.div`
   }
   p {
     color: ${grey};
-    position: relative;
   }
   ${Breakpoints.laptop} {
     padding: 2rem;
@@ -75,20 +74,19 @@ const MyContacts = () => {
         <Titles number="04" title="Contact me" />
         <Row>
           <Column>
-            <h4>Get In Touch</h4>
+            <h4>Get in touch</h4>
             <p>
-              I'm currently looking for new opportunities, my inbox is always
+              I'm currently looking for new opportunities and my inbox is always
               open.
             </p>
             <p>
-              I'm interested in health tech companies, thanks to my previous
-              experience as a health staff and manager it would be a good
-              combination. However I'm also open to proposals that help me learn
-              more and more about web development and frontend.
+              I love to code - it was an amazing discovery for me. I’m really
+              eager to learn new things and excited to start contributing as
+              soon as possible.
             </p>
             <Button>
               <a href="mailto:stephania.arantxa@gmail.com" target="_blank">
-                Say Hello
+                Say hello
               </a>
             </Button>
           </Column>

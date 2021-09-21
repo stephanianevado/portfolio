@@ -4,7 +4,7 @@ import { GitHubIcon, LinkedinIcon, LinkIcon } from './Icons'
 import { Breakpoints } from './breakpoints'
 
 const WorkWrapper = styled.div`
-  width: 20rem;
+  width: 25rem;
   font-size: 2rem;
   margin: 1rem 0;
   padding: 0.8rem;
@@ -23,19 +23,18 @@ const WorkWrapper = styled.div`
     cursor: pointer;
   }
   p {
-      font-size: 1.2rem;
-    }
+    font-size: 1.2rem;
+  }
   a {
     display: flex;
     justify-content: flex-end;
     margin-right: 0.5rem;
-    }
+  }
   ${Breakpoints.laptop} {
-    width: 50rem;
     margin: 2rem;
     padding: 1.5rem;
     text-align: left;
-  
+  }
 `
 const IconWrapper = styled.a`
   a {
@@ -46,15 +45,13 @@ const IconWrapper = styled.a`
 `
 
 const Img = styled.img`
-  max-width: 18rem;
   width: 15rem;
   padding: 1rem;
   display: block;
   margin: auto;
   ${Breakpoints.laptop} {
-    max-width: 60rem;
-    width: 40rem;
     padding: 2rem;
+    width: 20rem;
   }
 `
 

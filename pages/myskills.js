@@ -10,7 +10,6 @@ const Main = styled.main`
   padding: 2rem;
   p {
     color: ${grey};
-    position: relative;
     a {
       color: ${pink};
       text-decoration: none;
@@ -55,14 +54,14 @@ const MySkills = () => {
         <Row>
           <Column>
             <p>
-              Since beginning my journey I've dedicated myself to learning about
-              frontend development starting with responsive web design
-              principles in HTML and CSS. Followed by JavaScript algorithms and
-              data structure to frontend development libraries.
+              Since the beginning of my journey I've dedicated myself to
+              learning about frontend development, starting with responsive web
+              design principles in HTML and CSS, followed by JavaScript
+              algorithms and data structures and frontend development libraries.
             </p>
             <p>
-              I also have experience as a manager, head of department,
-              leadership, process improvement and teamwork.
+              I also have experience as a manager and head of department, as
+              well as with leadership, process improvement and teamwork.
             </p>
             <p>
               Visit my
@@ -71,7 +70,7 @@ const MySkills = () => {
                 target="_blank"
               >
                 {' '}
-                Linkedin
+                LinkedIn
               </a>{' '}
               profile for more details or just{' '}
               <a href="/contact" target="_blank">
@@ -81,14 +80,14 @@ const MySkills = () => {
             </p>
           </Column>
           <Column>
-            <h4>Programming Languages:</h4>
-            <p>JavaScript (ES6), TypeScript, HTML, HTML5, CSS/Sass.</p>
-            <h4>Libraries & Frameworks:</h4>
-            <p>Bootstrap, jQuery, React, Node.js, Next.js, Materialize.</p>
-            <h4>Tools & Platforms:</h4>
-            <p> Github, Redux, Contentful, Wordpress, Wix, Babel, Terminal.</p>
-            <h4>Design:</h4>
-            <p>Figma.</p>
+            <h4>Programming languages:</h4>
+            <p> JavaScript (ES6), HTML, CSS/Styled components/Sass.</p>
+            <h4>Libraries & frameworks:</h4>
+            <p> React, Next.js, Node.js , Bootstrap, jQuery, Materialize, Redux.</p>
+            <h4>Tools & platforms:</h4>
+            <p> GitHub, Prettier, Contentful, Wordpress, Wix, Babel, Terminal (bash/zsh), VSCode, IntelliJ, Figma.</p>
+            <h4>Management:</h4>
+            <p> Process and planning, team management, personal development, stakeholder communication.</p>
           </Column>
         </Row>
       </Main>

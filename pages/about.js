@@ -10,7 +10,6 @@ const Main = styled.main`
   padding: 2rem;
   p {
     color: ${grey};
-    position: relative;
     a {
       color: ${pink};
       text-decoration: none;
@@ -53,11 +52,11 @@ const AboutMe = () => {
         <Row>
           <Column>
             <p>
-              Hello! My name is Stephania Nevado I'm a nutritionist, manager and
+              Hello! My name is Stephania Nevado. I'm a nutritionist, manager and
               Front-End Developer located in Sweden.
             </p>
             <p>
-              My interest in web development started in 2020 when I wanted to
+              My interest in web development started in 2020. I wanted to
               try out creating a HealthTech product and get more hands-on
               experience by taking a digital product from idea to release.
               That's how Nutreto was born. Nutreto is a cloud-based platform for
@@ -71,8 +70,8 @@ const AboutMe = () => {
             <p>
               I'm passionate about tech, health and leadership, change
               management, process improvement and teamwork. I'm also always
-              curious to learn new things. Well-organised person, problem solver
-              with high attetion to detail.
+              curious to learn new things. I'm a well-organised person, a problem solver
+              with high attention to detail.
             </p>
           </Column>
           <Column>
