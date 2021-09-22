@@ -13,12 +13,9 @@ const Nav = styled.nav`
 `
 
 const Logo = styled.img`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
   padding: 0.8rem;
   width: 4rem;
+  height: 3.5rem;
 `
 
 const Menu = styled.div`
@@ -33,7 +30,7 @@ export const NavBar = () => {
     <>
       <Nav>
         <a href="/">
-          <Logo src="/logoportfolio4.svg" alt="logo SVG portfolio" />
+          <Logo src="/logoportfolio.svg" alt="logo SVG portfolio" />
         </a>
         <Menu>
           <NavItems />
