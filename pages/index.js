@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import { NavBar } from '../components/NavBar'
-import { FooterPortfolio } from '../components/footer-portfolio'
+import { FooterPortfolio } from '../components/FooterPortfolio'
 import { Card } from '../components/Card'
 import styled from 'styled-components'
 import { grey, pink, white } from '../components/colors'
-import { Breakpoints } from '../components/breakpoints'
+import { Breakpoints } from '../components/Breakpoints'
 
 const Main = styled.main`
   padding: 2rem;
@@ -19,6 +19,7 @@ const Main = styled.main`
   }
 `
 const Section = styled.section`
+  padding-bottom: 2rem;
   h1 {
     color: ${pink};
     font-size: 1rem;
@@ -37,7 +38,7 @@ const Section = styled.section`
     margin-bottom: 2.5rem;
   }
   ${Breakpoints.laptop} {
-  padding: 1rem 8rem;
+    padding: 1rem 8rem 2.5rem 8rem;
     h1 {
       font-size: 1rem;
     }
@@ -63,7 +64,7 @@ export default function Home() {
     <>
       <Head>
         <title>Stephania Nevado's portfolio</title>
-        <link rel="icon" href="/logoportfolio4.svg" />
+        <link rel="icon" href="/favicon.svg" />
       </Head>
       <NavBar />
       <Main>
@@ -71,8 +72,8 @@ export default function Home() {
           <h1>Hi! My name is</h1>
           <h2>Stephania Nevado.</h2>
           <h3>
-            I'm a nutritionist, manager, writer and now I'm enthusiastic about
-            frontend development &hearts;.
+            I'm an aspiring frontend developer currently going through a career
+            change. I love to code - it was an amazing discovery for me &hearts;
           </h3>
         </Section>
         <Row>
@@ -81,7 +82,7 @@ export default function Home() {
             href="/myskills"
             number="02"
             title="Skills"
-            text="What I've Worked"
+            text="What I know"
           />
         </Row>
         <Row>
@@ -89,13 +90,13 @@ export default function Home() {
             href="/work"
             number="03"
             title="Work"
-            text="Some Things I've built"
+            text="Some things I've built"
           />
           <Card
             href="/contact"
             number="04"
             title="Contact"
-            text="What's Next? Get in touch!"
+            text="What's next? Get in touch!"
           />
         </Row>
       </Main>

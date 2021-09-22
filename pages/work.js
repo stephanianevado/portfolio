@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import { FooterPortfolio } from '../components/footer-portfolio'
+import { FooterPortfolio } from '../components/FooterPortfolio'
 import { NavBar } from '../components/NavBar'
-import { Titles } from '../components/Titles'
-import { WorkComp } from '../components/WorkComp'
+import { Title } from '../components/Title'
+import { ProjectBox } from '../components/ProjectBox'
 import styled from 'styled-components'
-import { Breakpoints } from '../components/breakpoints'
+import { Breakpoints } from '../components/Breakpoints'
 
 const Main = styled.main`
   padding: 2rem;
@@ -30,20 +30,20 @@ const MyWorks = () => {
     <>
       <Head>
         <title>Stephania Nevado's portfolio</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.svg" />
       </Head>
       <NavBar />
       <Main>
-        <Titles number="03" title="My work" />
+        <Title number="03" title="My work" />
         <Row>
-          <WorkComp
+          <ProjectBox
             imagen="/Markdown live preview.png"
             title="Markdown live preview"
             description="A simple Markdown live previewer built with HTML, JavaScript, CSS and Bootstrap."
             github="https://github.com/stephanianevado/markdown-live-previewer"
             pages="https://stephanianevado.github.io/markdown-live-previewer/"
           />
-          <WorkComp
+          <ProjectBox
             imagen="/Feminist quote machine 1.png"
             title="Feminist quote machine"
             description="A quote machine built with HTML, CSS, JS, jQuery, Bootstrap and React."
@@ -52,14 +52,14 @@ const MyWorks = () => {
           />
         </Row>
         <Row>
-          <WorkComp
+          <ProjectBox
             imagen="/Star wars music box.png"
             title="Star Wars music box"
             description="A Star Wars music box built with React and CSS."
             github="https://github.com/stephanianevado/star-wars-music-box"
             pages="https://stephanianevado.github.io/star-wars-music-box/"
           />
-          <WorkComp
+          <ProjectBox
             imagen="/JS calculator.png"
             title="JavaScript calculator"
             description="A simple calculator built with React and CSS."
@@ -68,14 +68,14 @@ const MyWorks = () => {
           />
         </Row>
         <Row>
-          <WorkComp
+          <ProjectBox
             imagen="/Pomodoro clock.png"
             title="Pomodoro clock"
             description="A Pomodoro clock built with React, Materialize and CSS."
             github="https://github.com/stephanianevado/pomodoro-clock"
             pages="https://stephanianevado.github.io/pomodoro-clock/"
           />
-          <WorkComp
+          <ProjectBox
             imagen="/Web news.png"
             title="Web news"
             description="A web news app built with Next.js, React, CSS, and json."

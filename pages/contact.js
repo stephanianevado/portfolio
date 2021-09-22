@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import { FooterPortfolio } from '../components/footer-portfolio'
+import { FooterPortfolio } from '../components/FooterPortfolio'
 import { NavBar } from '../components/NavBar'
-import { Titles } from '../components/Titles'
+import { Title } from '../components/Title'
 import styled from 'styled-components'
 import { grey, pink, white } from '../components/colors'
-import { Breakpoints } from '../components/breakpoints'
+import { Breakpoints } from '../components/Breakpoints'
 
 const Main = styled.main`
   padding: 2.5rem;
@@ -67,11 +67,11 @@ const MyContacts = () => {
     <>
       <Head>
         <title>Stephania Nevado's portfolio</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.svg" />
       </Head>
       <NavBar />
       <Main>
-        <Titles number="04" title="Contact me" />
+        <Title number="04" title="Contact me" />
         <Row>
           <Column>
             <h4>Get in touch</h4>

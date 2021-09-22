@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { grey, pink, white } from './colors'
-import { GitHubIcon, LinkedinIcon, LinkIcon } from './Icons'
-import { Breakpoints } from './breakpoints'
+import { GitHubIcon, LinkIcon } from './icons'
+import { Breakpoints } from './Breakpoints'
 
 const WorkWrapper = styled.div`
   width: 25rem;
@@ -55,7 +55,7 @@ const Img = styled.img`
   }
 `
 
-export const WorkComp = ({ imagen, title, description, github, pages }) => {
+export const ProjectBox = ({ imagen, title, description, github, pages }) => {
   return (
     <WorkWrapper>
       <h5>{title}</h5>

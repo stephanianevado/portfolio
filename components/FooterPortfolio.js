@@ -8,8 +8,8 @@ import {
   InstagramIcon,
   LinkedinIcon,
   TwitterIcon,
-} from './Icons'
-import { Breakpoints } from './breakpoints'
+} from './icons'
+import { Breakpoints } from './Breakpoints'
 
 const Footer = styled.footer`
   a {

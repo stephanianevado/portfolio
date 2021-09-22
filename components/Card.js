@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { grey, pink, white } from './colors'
 import Link from 'next/link'
-import { Breakpoints } from './breakpoints'
+import { Breakpoints } from './Breakpoints'
 
 const CardWrapper = styled.div`
   width: 15rem;

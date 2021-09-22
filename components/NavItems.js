@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { pink, white } from './colors'
-import { Breakpoints } from './breakpoints'
+import { Breakpoints } from './Breakpoints'
 
 const NavList = styled.ul`
   display: flex;

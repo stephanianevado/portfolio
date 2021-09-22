@@ -2,10 +2,7 @@ import styled from 'styled-components'
 import { dark } from './colors'
 import { NavItems } from './NavItems'
 import { HamburgerMenu } from './HamburgerMenu'
-import { Breakpoints } from './breakpoints'
-
-const NavWrapper = styled.div`
-`
+import { Breakpoints } from './Breakpoints'
 
 const Nav = styled.nav`
   display: flex;
@@ -33,7 +30,7 @@ const Menu = styled.div`
 
 export const NavBar = () => {
   return (
-    <NavWrapper>
+    <>
       <Nav>
         <a href="/">
           <Logo src="/logoportfolio4.svg" alt="logo SVG portfolio" />
@@ -43,6 +40,6 @@ export const NavBar = () => {
         </Menu>
       </Nav>
       <HamburgerMenu />
-    </NavWrapper>
+    </>
   )
 }

@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import { FooterPortfolio } from '../components/footer-portfolio'
+import { FooterPortfolio } from '../components/FooterPortfolio'
 import { NavBar } from '../components/NavBar'
-import { Titles } from '../components/Titles'
+import { Title } from '../components/Title'
 import styled from 'styled-components'
 import { grey, pink, white } from '../components/colors'
-import { Breakpoints } from '../components/breakpoints'
+import { Breakpoints } from '../components/Breakpoints'
 
 const Main = styled.main`
   padding: 2rem;
@@ -46,11 +46,11 @@ const MySkills = () => {
     <>
       <Head>
         <title>Stephania Nevado's portfolio</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.svg" />
       </Head>
       <NavBar />
       <Main>
-        <Titles number="02" title="My skills" />
+        <Title number="02" title="My skills" />
         <Row>
           <Column>
             <p>
@@ -83,11 +83,22 @@ const MySkills = () => {
             <h4>Programming languages:</h4>
             <p> JavaScript (ES6), HTML, CSS/Styled components/Sass.</p>
             <h4>Libraries & frameworks:</h4>
-            <p> React, Next.js, Node.js , Bootstrap, jQuery, Materialize, Redux.</p>
+            <p>
+              {' '}
+              React, Next.js, Node.js , Bootstrap, jQuery, Materialize, Redux.
+            </p>
             <h4>Tools & platforms:</h4>
-            <p> GitHub, Prettier, Contentful, Wordpress, Wix, Babel, Terminal (bash/zsh), VSCode, IntelliJ, Figma.</p>
+            <p>
+              {' '}
+              GitHub, Prettier, Contentful, Wordpress, Wix, Babel, Terminal
+              (bash/zsh), VSCode, IntelliJ, Figma.
+            </p>
             <h4>Management:</h4>
-            <p> Process and planning, team management, personal development, stakeholder communication.</p>
+            <p>
+              {' '}
+              Process and planning, team management, personal development,
+              stakeholder communication.
+            </p>
           </Column>
         </Row>
       </Main>

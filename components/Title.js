@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { pink, white } from './colors'
 
-const TitlesH5 = styled.h5`
+const TitleH5 = styled.h5`
   font-size: 2rem;
   color: ${white};
   b {
@@ -9,11 +9,11 @@ const TitlesH5 = styled.h5`
   }
 `
 
-export const Titles = ({ number, title }) => {
+export const Title = ({ number, title }) => {
   return (
-    <TitlesH5>
+    <TitleH5>
       <b>{`${number}. `}</b>
       {`${title} `}&rarr;
-    </TitlesH5>
+    </TitleH5>
   )
 }
