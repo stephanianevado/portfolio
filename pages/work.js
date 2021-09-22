@@ -75,6 +75,13 @@ const MyWorks = () => {
             github="https://github.com/stephanianevado/pomodoro-clock"
             pages="https://stephanianevado.github.io/pomodoro-clock/"
           />
+          <WorkComp
+            imagen="/Web news.png"
+            title="Web news"
+            description="A web news app built with Next.js, React, CSS, and json."
+            github="https://github.com/stephanianevado/web-news-next.js"
+            pages="https://web-news-next-js.vercel.app/"
+          />
         </Row>
       </Main>
       <FooterPortfolio />
