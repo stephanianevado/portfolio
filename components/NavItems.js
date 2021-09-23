@@ -85,7 +85,7 @@ export const NavItems = () => {
         </Li>
         <Li>
           <Button>
-            <a href="/CV ENGLISH.pdf" target="_blank">
+            <a href="/CV ENG.pdf" target="_blank">
               Resume
             </a>
           </Button>
