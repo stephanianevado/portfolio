@@ -91,7 +91,7 @@ const MySkills = () => {
             <p>
               {' '}
               GitHub, Prettier, Contentful, Wordpress, Wix, Babel, Terminal
-              (bash/zsh), VSCode, IntelliJ, Figma.
+              (bash/zsh), VSCode, IntelliJ, Vercel, Figma.
             </p>
             <h4>Management:</h4>
             <p>

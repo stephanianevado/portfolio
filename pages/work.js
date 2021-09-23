@@ -41,14 +41,14 @@ const MyWorks = () => {
             title="Markdown live preview"
             description="A simple Markdown live previewer built with HTML, JavaScript, CSS and Bootstrap."
             github="https://github.com/stephanianevado/markdown-live-previewer"
-            pages="https://stephanianevado.github.io/markdown-live-previewer/"
+            pages="https://markdown-live-previewer.vercel.app/"
           />
           <ProjectBox
             imagen="/Feminist quote machine 1.png"
             title="Feminist quote machine"
             description="A quote machine built with HTML, CSS, JS, jQuery, Bootstrap and React."
             github="https://github.com/stephanianevado/feminist-quote-machine"
-            pages="https://stephanianevado.github.io/feminist-quote-machine/"
+            pages="https://feminist-quote-machine.vercel.app/"
           />
         </Row>
         <Row>
@@ -57,14 +57,14 @@ const MyWorks = () => {
             title="Star Wars music box"
             description="A Star Wars music box built with React and CSS."
             github="https://github.com/stephanianevado/star-wars-music-box"
-            pages="https://stephanianevado.github.io/star-wars-music-box/"
+            pages="https://star-wars-music-box.vercel.app/"
           />
           <ProjectBox
             imagen="/JS calculator.png"
             title="JavaScript calculator"
             description="A simple calculator built with React and CSS."
             github="https://github.com/stephanianevado/javascript-calculator"
-            pages="https://stephanianevado.github.io/javascript-calculator/"
+            pages="https://javascript-calculator-theta.vercel.app/"
           />
         </Row>
         <Row>
@@ -73,7 +73,7 @@ const MyWorks = () => {
             title="Pomodoro clock"
             description="A Pomodoro clock built with React, Materialize and CSS."
             github="https://github.com/stephanianevado/pomodoro-clock"
-            pages="https://stephanianevado.github.io/pomodoro-clock/"
+            pages="https://pomodoro-clock-eight-rouge.vercel.app/"
           />
           <ProjectBox
             imagen="/Web news.png"
