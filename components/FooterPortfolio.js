@@ -7,7 +7,6 @@ import {
   GitHubIcon,
   InstagramIcon,
   LinkedinIcon,
-  ReplitIcon,
 } from './icons'
 import { Breakpoints } from './Breakpoints'
 
@@ -56,9 +55,6 @@ export const FooterPortfolio = () => {
         </a>
         <a href="https://codepen.io/stephanianevado" target="_blank">
           <CodepenIcon />
-        </a>
-        <a href="https://replit.com/@stephanianevado" target="_blank">
-          <ReplitIcon />
         </a>
         <a href="mailto:stephania.arantxa@gmail.com" target="_blank">
           <EmailIcon />
