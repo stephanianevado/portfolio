@@ -85,13 +85,13 @@ const MySkills = () => {
             <h4>Libraries & frameworks:</h4>
             <p>
               {' '}
-              React, Next.js, Node.js, Express, Bootstrap, jQuery, Materialize, Redux, D3.
+              React, Next.js, Node.js , Bootstrap, jQuery, Materialize, Redux, D3.
             </p>
             <h4>Tools & platforms:</h4>
             <p>
               {' '}
               GitHub, Prettier, Contentful, Wordpress, Wix, Babel, Terminal
-              (bash/zsh), JSON, APIs, AJAX, npm, mongoDB, VSCode, IntelliJ, Vercel, Figma.
+              (bash/zsh), JSON, APIs, AJAX, VSCode, IntelliJ, Vercel, Figma.
             </p>
             <h4>Management:</h4>
             <p>
