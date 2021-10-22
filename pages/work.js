@@ -83,6 +83,15 @@ const MyWorks = () => {
             pages="https://web-news-next-js.vercel.app/"
           />
         </Row>
+        <Row>
+          <ProjectBox
+              imagen="/Task Tracker.png"
+              title="Task Tracker"
+              description="A task tracker built with React, CSS and json."
+              github="https://github.com/stephanianevado/task-tracker-react"
+              pages="https://task-tracker-react-stephanianevado.vercel.app/"
+          />
+        </Row>
       </Main>
       <FooterPortfolio />
     </>
