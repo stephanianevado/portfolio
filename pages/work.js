@@ -91,6 +91,13 @@ const MyWorks = () => {
               github="https://github.com/stephanianevado/task-tracker-react"
               pages="https://task-tracker-react-stephanianevado.vercel.app/"
           />
+          <ProjectBox
+              imagen="/My cat app 2.png"
+              title="My Cat App"
+              description="App built with React, Styled Components, Python, FastAPI and Postgresql."
+              github="https://github.com/stephanianevado/my-cat-app"
+              pages="https://my-cat-app-stephanianevado.vercel.app/"
+          />
         </Row>
       </Main>
       <FooterPortfolio />
