@@ -87,7 +87,7 @@ const MyWorks = () => {
           <ProjectBox
               imagen="/Task Tracker.png"
               title="Task Tracker"
-              description="A task tracker built with React, CSS and json."
+              description="A task tracker built with React, CSS and JSON server."
               github="https://github.com/stephanianevado/task-tracker-react"
               pages="https://task-tracker-react-stephanianevado.vercel.app/"
           />
