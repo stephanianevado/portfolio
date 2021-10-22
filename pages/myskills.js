@@ -81,17 +81,17 @@ const MySkills = () => {
           </Column>
           <Column>
             <h4>Programming languages:</h4>
-            <p> JavaScript (ES6), HTML, CSS/Styled components/Sass.</p>
+            <p> JavaScript (ES6), HTML, CSS/Styled components/Sass, Python3.</p>
             <h4>Libraries & frameworks:</h4>
             <p>
               {' '}
-              React, Next.js, Node.js, Express, Bootstrap, jQuery, Materialize, Redux, D3.
+              React, Next.js, Node.js, Express, Bootstrap, jQuery, Materialize, Redux, D3, FastAPI.
             </p>
             <h4>Tools & platforms:</h4>
             <p>
               {' '}
               GitHub, Prettier, Contentful, Wordpress, Wix, Babel, Terminal
-              (bash/zsh), JSON, APIs, AJAX, npm, mongoDB, VSCode, IntelliJ, Vercel, Figma.
+              (bash/zsh), JSON, APIs, AJAX, npm, mongoDB, Postgresql, VSCode, IntelliJ, Vercel, Figma.
             </p>
             <h4>Management:</h4>
             <p>
