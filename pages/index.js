@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import { NavBar } from '../components/NavBar'
-import { FooterPortfolio } from '../components/FooterPortfolio'
-import { Card } from '../components/Card'
 import styled from 'styled-components'
-import { grey, pink, white } from '../components/colors'
 import { Breakpoints } from '../components/Breakpoints'
+import { Card } from '../components/Card'
+import { grey, pink, white } from '../components/colors'
+import { FooterPortfolio } from '../components/FooterPortfolio'
+import { NavBar } from '../components/NavBar'
 
 const Main = styled.main`
   padding: 2rem;
@@ -72,8 +72,9 @@ export default function Home() {
           <h1>Hi! My name is</h1>
           <h2>Stephania Nevado.</h2>
           <h3>
-            I'm an aspiring frontend developer currently going through a career
-            change. I love to code - it was an amazing discovery for me &hearts;
+            I'm a full stack developer currently working at a start-up creating
+            an AI product for synthetic data generation. I love to code - it was
+            an amazing discovery for me &hearts;
           </h3>
         </Section>
         <Row>
