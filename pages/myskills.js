@@ -1,10 +1,10 @@
 import Head from 'next/head'
+import styled from 'styled-components'
+import { Breakpoints } from '../components/Breakpoints'
+import { grey, pink, white } from '../components/colors'
 import { FooterPortfolio } from '../components/FooterPortfolio'
 import { NavBar } from '../components/NavBar'
 import { Title } from '../components/Title'
-import styled from 'styled-components'
-import { grey, pink, white } from '../components/colors'
-import { Breakpoints } from '../components/Breakpoints'
 
 const Main = styled.main`
   padding: 2rem;
@@ -85,13 +85,15 @@ const MySkills = () => {
             <h4>Libraries & frameworks:</h4>
             <p>
               {' '}
-              React, Next.js, Node.js, Express, Bootstrap, jQuery, Materialize, Redux, D3, FastAPI.
+              React, Jest, React testing library, Next.js, Node.js, Express,
+              Bootstrap, jQuery, Materialize, Redux, D3, FastAPI.
             </p>
             <h4>Tools & platforms:</h4>
             <p>
               {' '}
-              GitHub, Prettier, Contentful, Wordpress, Wix, Babel, Terminal
-              (bash/zsh), JSON, APIs, AJAX, npm, mongoDB, Postgresql, VSCode, IntelliJ, Vercel, Figma.
+              GitHub, Prettier, Docker, Contentful, Wordpress, Wix, Babel,
+              Terminal (bash/zsh), JSON, APIs, AJAX, npm, mongoDB, Postgresql,
+              VSCode, IntelliJ, Vercel, Figma.
             </p>
             <h4>Management:</h4>
             <p>
