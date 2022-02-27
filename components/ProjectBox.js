@@ -20,7 +20,6 @@ const WorkWrapper = styled.div`
   &:hover {
     color: ${pink};
     border-color: ${pink};
-    cursor: pointer;
   }
   p {
     font-size: 1.2rem;

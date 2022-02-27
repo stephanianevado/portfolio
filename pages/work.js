@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import { FooterPortfolio } from '../components/FooterPortfolio'
-import { NavBar } from '../components/NavBar'
-import { Title } from '../components/Title'
-import { ProjectBox } from '../components/ProjectBox'
 import styled from 'styled-components'
 import { Breakpoints } from '../components/Breakpoints'
+import { FooterPortfolio } from '../components/FooterPortfolio'
+import { NavBar } from '../components/NavBar'
+import { ProjectBox } from '../components/ProjectBox'
+import { Title } from '../components/Title'
 
 const Main = styled.main`
   padding: 2rem;
@@ -37,34 +37,18 @@ const MyWorks = () => {
         <Title number="03" title="My work" />
         <Row>
           <ProjectBox
-            imagen="/Markdown live preview.png"
-            title="Markdown live preview"
-            description="A simple Markdown live previewer built with HTML, JavaScript, CSS and Bootstrap."
-            github="https://github.com/stephanianevado/markdown-live-previewer"
-            pages="https://markdown-live-previewer.vercel.app/"
+            imagen="/Task Tracker.png"
+            title="Task Tracker"
+            description="A task tracker built with React, CSS and JSON server."
+            github="https://github.com/stephanianevado/task-tracker-react"
+            pages="https://task-tracker-react-stephanianevado.vercel.app/"
           />
           <ProjectBox
-            imagen="/Feminist quote machine 1.png"
-            title="Feminist quote machine"
-            description="A quote machine built with HTML, CSS, JS, jQuery, Bootstrap and React."
-            github="https://github.com/stephanianevado/feminist-quote-machine"
-            pages="https://feminist-quote-machine.vercel.app/"
-          />
-        </Row>
-        <Row>
-          <ProjectBox
-            imagen="/Star wars music box.png"
-            title="Star Wars music box"
-            description="A Star Wars music box built with React and CSS."
-            github="https://github.com/stephanianevado/star-wars-music-box"
-            pages="https://star-wars-music-box.vercel.app/"
-          />
-          <ProjectBox
-            imagen="/JS calculator.png"
-            title="JavaScript calculator"
-            description="A simple calculator built with React and CSS."
-            github="https://github.com/stephanianevado/javascript-calculator"
-            pages="https://javascript-calculator-theta.vercel.app/"
+            imagen="/My cat app 2.png"
+            title="My Cat App"
+            description="App built with React, Styled Components, Python, FastAPI and Postgresql."
+            github="https://github.com/stephanianevado/my-cat-app"
+            pages="https://my-cat-app-stephanianevado.vercel.app/"
           />
         </Row>
         <Row>
@@ -85,18 +69,34 @@ const MyWorks = () => {
         </Row>
         <Row>
           <ProjectBox
-              imagen="/Task Tracker.png"
-              title="Task Tracker"
-              description="A task tracker built with React, CSS and JSON server."
-              github="https://github.com/stephanianevado/task-tracker-react"
-              pages="https://task-tracker-react-stephanianevado.vercel.app/"
+            imagen="/Star wars music box.png"
+            title="Star Wars music box"
+            description="A Star Wars music box built with React and CSS."
+            github="https://github.com/stephanianevado/star-wars-music-box"
+            pages="https://star-wars-music-box.vercel.app/"
           />
           <ProjectBox
-              imagen="/My cat app 2.png"
-              title="My Cat App"
-              description="App built with React, Styled Components, Python, FastAPI and Postgresql."
-              github="https://github.com/stephanianevado/my-cat-app"
-              pages="https://my-cat-app-stephanianevado.vercel.app/"
+            imagen="/JS calculator.png"
+            title="JavaScript calculator"
+            description="A simple calculator built with React and CSS."
+            github="https://github.com/stephanianevado/javascript-calculator"
+            pages="https://javascript-calculator-theta.vercel.app/"
+          />
+        </Row>
+        <Row>
+          <ProjectBox
+            imagen="/Markdown live preview.png"
+            title="Markdown live preview"
+            description="A simple Markdown live previewer built with HTML, JavaScript, CSS and Bootstrap."
+            github="https://github.com/stephanianevado/markdown-live-previewer"
+            pages="https://markdown-live-previewer.vercel.app/"
+          />
+          <ProjectBox
+            imagen="/Feminist quote machine 1.png"
+            title="Feminist quote machine"
+            description="A quote machine built with HTML, CSS, JS, jQuery, Bootstrap and React."
+            github="https://github.com/stephanianevado/feminist-quote-machine"
+            pages="https://feminist-quote-machine.vercel.app/"
           />
         </Row>
       </Main>
