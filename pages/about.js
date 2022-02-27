@@ -1,10 +1,10 @@
 import Head from 'next/head'
+import styled from 'styled-components'
+import { Breakpoints } from '../components/Breakpoints'
+import { grey, pink } from '../components/colors'
 import { FooterPortfolio } from '../components/FooterPortfolio'
 import { NavBar } from '../components/NavBar'
-import styled from 'styled-components'
-import { grey, pink } from '../components/colors'
 import { Title } from '../components/Title'
-import { Breakpoints } from '../components/Breakpoints'
 
 const Main = styled.main`
   padding: 2rem;
@@ -35,6 +35,9 @@ const Column = styled.div`
   }
   ${Breakpoints.laptop} {
     width: 25rem;
+    img {
+      margin-top: 7rem;
+    }
   }
 `
 
@@ -52,8 +55,8 @@ const AboutMe = () => {
         <Row>
           <Column>
             <p>
-              Hello! My name is Stephania Nevado. I'm a nutritionist, manager
-              and Front-End Developer located in Sweden.
+              Hello! My name is Stephania Nevado. I'm a full stack developer,
+              manager and nutritionist located in Sweden.
             </p>
             <p>
               My interest in web development started in 2020. I wanted to try
@@ -67,9 +70,16 @@ const AboutMe = () => {
               </a>
             </p>
             <p>
-              I'm passionate about tech, health and leadership, change
+              Currently I'm working in a start-up creating an AI product for
+              synthetic data generation. I'm creating a frontend application
+              from scratch using modern web technologies (JavaScript, React,
+              Styled components, Jest). My aim is to create a modular, testable
+              code base with a high unit test coverage.
+            </p>
+            <p>
+              I'm passionate about tech, leadership and health, change
               management, process improvement and teamwork. I'm also always
-              curious to learn new things. I'm a well-organised person, a
+              curious to learn new things. I'm a well-organized person, a
               problem solver with high attention to detail.
             </p>
           </Column>
