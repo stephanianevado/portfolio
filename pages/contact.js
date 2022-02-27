@@ -1,10 +1,10 @@
 import Head from 'next/head'
+import styled from 'styled-components'
+import { Breakpoints } from '../components/Breakpoints'
+import { grey, pink, white } from '../components/colors'
 import { FooterPortfolio } from '../components/FooterPortfolio'
 import { NavBar } from '../components/NavBar'
 import { Title } from '../components/Title'
-import styled from 'styled-components'
-import { grey, pink, white } from '../components/colors'
-import { Breakpoints } from '../components/Breakpoints'
 
 const Main = styled.main`
   padding: 2.5rem;
@@ -19,6 +19,7 @@ const Row = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-top: 5rem;
   }
 `
 const Column = styled.div`
@@ -32,6 +33,10 @@ const Column = styled.div`
   p {
     color: ${grey};
   }
+  a {
+    color: ${pink};
+    text-decoration: none;
+  }
   ${Breakpoints.laptop} {
     padding: 2rem;
     width: 25rem;
@@ -39,6 +44,7 @@ const Column = styled.div`
 `
 
 const Button = styled.button`
+  cursor: pointer;
   margin: 2rem;
   display: flex;
   align-items: center;
@@ -80,9 +86,13 @@ const MyContacts = () => {
               open.
             </p>
             <p>
-              I love to code - it was an amazing discovery for me. I’m really
-              eager to learn new things and excited to start contributing as
-              soon as possible.
+              I love to code - it was an amazing discovery for me. I'm always
+              eager to learn new things and grow as a developer. Check out my
+              <a href="https://github.com/stephanianevado" target="_blank">
+                {' '}
+                GitHub
+              </a>{' '}
+              !
             </p>
             <Button>
               <a href="mailto:stephania.arantxa@gmail.com" target="_blank">
