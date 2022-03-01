@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import { grey, pink, white } from './colors'
-import { GitHubIcon, LinkIcon } from './icons'
 import { Breakpoints } from './Breakpoints'
+import { grey,pink,white } from './colors'
+import { GitHubIcon,LinkIcon } from './icons'
 
 const WorkWrapper = styled.div`
   width: 25rem;
@@ -64,9 +64,11 @@ export const ProjectBox = ({ image, title, description, github, pages }) => {
         <a href={github} target="_blank">
           {<GitHubIcon />}
         </a>
-        <a href={pages} target="_blank">
-          <LinkIcon />
-        </a>
+        {pages && (
+          <a href={pages} target="_blank">
+            <LinkIcon />
+          </a>
+        )}
       </IconWrapper>
     </WorkWrapper>
   )

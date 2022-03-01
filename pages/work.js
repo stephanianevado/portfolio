@@ -48,7 +48,6 @@ const MyWorks = () => {
             title="My Cat App"
             description="App built with React, Styled Components, Python, FastAPI and Postgresql."
             github="https://github.com/stephanianevado/my-cat-app"
-            pages="https://my-cat-app-stephanianevado.vercel.app/"
           />
         </Row>
         <Row>
