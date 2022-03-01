@@ -54,11 +54,11 @@ const Img = styled.img`
   }
 `
 
-export const ProjectBox = ({ imagen, title, description, github, pages }) => {
+export const ProjectBox = ({ image, title, description, github, pages }) => {
   return (
     <WorkWrapper>
       <h5>{title}</h5>
-      <Img src={imagen} />
+      <Img src={image} />
       <p>{description}</p>
       <IconWrapper>
         <a href={github} target="_blank">
