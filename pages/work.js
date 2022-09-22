@@ -37,6 +37,15 @@ const MyWorks = () => {
         <Title number="03" title="My work" />
         <Row>
           <ProjectBox
+            image="/breeds.png"
+            title="My Cat Breeds App"
+            description="App built with Next.js, TypeScript, Styled Components and Jest."
+            github="https://github.com/stephanianevado/carla"
+            pages="https://carla.vercel.app/"
+          />
+        </Row>
+        <Row>
+          <ProjectBox
             image="/Task tracker.png"
             title="Task Tracker"
             description="A task tracker built with React, CSS and JSON server."

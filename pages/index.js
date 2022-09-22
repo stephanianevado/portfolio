@@ -72,9 +72,9 @@ export default function Home() {
           <h1>Hi! My name is</h1>
           <h2>Stephania Nevado.</h2>
           <h3>
-            I'm a full stack developer currently working at a start-up creating
-            an AI product for synthetic data generation. I love to code - it was
-            an amazing discovery for me &hearts;
+            I'm a frontend developer currently working at a start-up creating a
+            product to buy or lease an electrified vehicle online. I love to
+            code - it was an amazing discovery for me &hearts;
           </h3>
         </Section>
         <Row>

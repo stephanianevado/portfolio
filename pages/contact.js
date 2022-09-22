@@ -26,9 +26,10 @@ const Column = styled.div`
   padding-top: 4rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   h4 {
     color: ${white};
+    align-self: center;
   }
   p {
     color: ${grey};
@@ -39,7 +40,7 @@ const Column = styled.div`
   }
   ${Breakpoints.laptop} {
     padding: 2rem;
-    width: 25rem;
+    width: 30rem;
   }
 `
 
@@ -81,10 +82,7 @@ const MyContacts = () => {
         <Row>
           <Column>
             <h4>Get in touch</h4>
-            <p>
-              I'm currently looking for new opportunities and my inbox is always
-              open.
-            </p>
+            <p>My inbox is always open to discuss new opportunities.</p>
             <p>
               I love to code - it was an amazing discovery for me. I'm always
               eager to learn new things and grow as a developer. Check out my

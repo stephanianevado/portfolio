@@ -55,7 +55,7 @@ const AboutMe = () => {
         <Row>
           <Column>
             <p>
-              Hello! My name is Stephania Nevado. I'm a full stack developer,
+              Hello! My name is Stephania Nevado. I'm a frontend developer,
               manager and nutritionist located in Sweden.
             </p>
             <p>
@@ -70,11 +70,17 @@ const AboutMe = () => {
               </a>
             </p>
             <p>
-              Currently I'm working in a start-up creating an AI product for
-              synthetic data generation. I'm creating a frontend application
-              from scratch using modern web technologies (JavaScript, React,
-              Styled components, Jest). My aim is to create a modular, testable
-              code base with a high unit test coverage.
+              Currently I'm working in a start-up building the most convenient,
+              transparent and easy way to buy or lease an electrified vehicle
+              online. For the frontend we're using modern web technologies
+              (Next.js, JavaScript, React, Cypress, Flora).
+            </p>
+            <p>
+              In my first job I built an AI product for synthetic data
+              generation. I created a frontend application from scratch using
+              modern web technologies (JavaScript, React, Styled components,
+              Jest). My aim was to create a modular, testable code base with a
+              high unit test coverage.
             </p>
             <p>
               I'm passionate about tech, leadership and health, change
