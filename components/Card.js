@@ -16,6 +16,9 @@ const CardWrapper = styled.div`
   b {
     color: ${pink};
   }
+  h5 {
+    font-size: 1.5rem;
+  }
   &:hover {
     color: ${pink};
     border-color: ${pink};
@@ -27,28 +30,18 @@ const CardWrapper = styled.div`
   }
 `
 const CardLink = styled.a`
-  h5 {
-    margin: 0 0 1rem 0;
-    font-size: 1.5rem;
-  }
-
-  p {
-    margin: 0;
-    font-size: 1.25rem;
-    line-height: 1.5;
-  }
+  font-size: 1.25rem;
+  line-height: 1.5;
 `
 export const Card = ({ number, title, text, href }) => {
   return (
     <CardWrapper>
-      <Link href={href}>
-        <CardLink>
-          <h5>
-            <b>{`${number}. `}</b>
-            {`${title} `}&rarr;
-          </h5>
-          <p>{text}</p>
-        </CardLink>
+      <h5>
+        <b>{`${number}. `}</b>
+        {`${title} `}&rarr;
+      </h5>
+      <Link href={href} legacyBehavior>
+        <CardLink>{text}</CardLink>
       </Link>
     </CardWrapper>
   )

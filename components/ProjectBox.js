@@ -1,7 +1,8 @@
+import Link from 'next/link'
 import styled from 'styled-components'
 import { Breakpoints } from './Breakpoints'
-import { grey,pink,white } from './colors'
-import { GitHubIcon,LinkIcon } from './icons'
+import { grey, pink, white } from './colors'
+import { GitHubIcon, LinkIcon } from './icons'
 
 const WorkWrapper = styled.div`
   width: 25rem;
@@ -35,12 +36,10 @@ const WorkWrapper = styled.div`
     text-align: left;
   }
 `
-const IconWrapper = styled.a`
-  a {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 0.5rem;
-  }
+const IconWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 0.5rem;
 `
 
 const Img = styled.img`
@@ -62,7 +61,7 @@ export const ProjectBox = ({ image, title, description, github, pages }) => {
       <p>{description}</p>
       <IconWrapper>
         <a href={github} target="_blank">
-          {<GitHubIcon />}
+          <GitHubIcon />
         </a>
         {pages && (
           <a href={pages} target="_blank">
