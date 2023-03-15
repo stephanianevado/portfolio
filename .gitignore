@@ -1,5 +1,10 @@
+# Editor files
 .next
-node_modules
 .idea
 .vscode
+node_modules
 
+
+# TypeScript
+tsconfig.tsbuildinfo
+tsconfig.tsbuildinfo
