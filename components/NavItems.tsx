@@ -1,5 +1,3 @@
-import React from 'react'
-
 import styled from 'styled-components'
 
 import { Breakpoints } from 'components/Breakpoints'
@@ -62,6 +60,7 @@ const Button = styled.button`
 const Li = styled.li`
   display: inherit;
 `
+
 export const NavItems = () => {
   return (
     <>

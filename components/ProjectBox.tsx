@@ -1,5 +1,3 @@
-import React from 'react'
-
 import styled from 'styled-components'
 
 import { Breakpoints } from 'components/Breakpoints'
@@ -55,7 +53,21 @@ const Img = styled.img`
   }
 `
 
-export const ProjectBox = ({ image, title, description, github, pages }) => {
+type Props = {
+  image: string
+  title: string
+  description: string
+  github: string
+  pages?: string
+}
+
+export const ProjectBox = ({
+  image,
+  title,
+  description,
+  github,
+  pages,
+}: Props) => {
   return (
     <WorkWrapper>
       <h5>{title}</h5>
