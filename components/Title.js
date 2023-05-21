@@ -1,5 +1,8 @@
+import React from 'react'
+
 import styled from 'styled-components'
-import { pink, white } from './colors'
+
+import { pink, white } from 'components/colors'
 
 const TitleH5 = styled.h5`
   font-size: 2rem;

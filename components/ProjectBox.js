@@ -1,8 +1,10 @@
-import Link from 'next/link'
+import React from 'react'
+
 import styled from 'styled-components'
-import { Breakpoints } from './Breakpoints'
-import { grey, pink, white } from './colors'
-import { GitHubIcon, LinkIcon } from './icons'
+
+import { Breakpoints } from 'components/Breakpoints'
+import { grey, pink, white } from 'components/colors'
+import { GitHubIcon, LinkIcon } from 'components/icons'
 
 const WorkWrapper = styled.div`
   width: 25rem;
@@ -60,11 +62,11 @@ export const ProjectBox = ({ image, title, description, github, pages }) => {
       <Img src={image} />
       <p>{description}</p>
       <IconWrapper>
-        <a href={github} target="_blank">
+        <a href={github} target="_blank" rel="noreferrer">
           <GitHubIcon />
         </a>
         {pages && (
-          <a href={pages} target="_blank">
+          <a href={pages} target="_blank" rel="noreferrer">
             <LinkIcon />
           </a>
         )}

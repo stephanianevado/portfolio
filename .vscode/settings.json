@@ -1,3 +1,90 @@
 {
-    "git.ignoreLimitWarning": true
+  "git.ignoreLimitWarning": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+    "source.fixAll.eslint": true
+  },
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "entity.other.attribute-name",
+        "settings": {
+          "foreground": "#0000FF",
+          "fontStyle": "bold"
+        }
+      },
+      {
+        "scope": "support.class.component",
+        "settings": {
+          "foreground": "#000080",
+          "fontStyle": "bold"
+        }
+      },
+      {
+        "scope": "string",
+        "settings": {
+          "foreground": "#008000",
+          "fontStyle": "bold"
+        }
+      },
+      {
+        "scope": "entity.name.function",
+        "settings": {
+          "foreground": "#000000",
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "variable.other.readwrite.alias",
+        "settings": {
+          "foreground": "#000000",
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "variable.other.constant",
+        "settings": {
+          "foreground": "#458383"
+        }
+      },
+      {
+        "scope": "variable.object.property",
+        "settings": {
+          "foreground": "#660E7A",
+          "fontStyle": "bold"
+        }
+      },
+      {
+        "scope": "constant.numeric",
+        "settings": {
+          "foreground": "#0000FF",
+          "fontStyle": "bold"
+        }
+      },
+      {
+        "scope": "keyword.control",
+        "settings": {
+          "foreground": "#000080",
+          "fontStyle": "bold"
+        }
+      },
+      {
+        "scope": "comment",
+        "settings": {
+          "foreground": "#808080",
+          "fontStyle": "italic"
+        }
+      }
+    ]
+  },
+  "workbench.colorCustomizations": {
+    "editorUnnecessaryCode.opacity": "#ff0000",
+    "editorUnnecessaryCode.border": "#ff0000"
+  },
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontSize": 16,
+  "editor.fontLigatures": true,
+  "editor.smoothScrolling": true,
+  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" }
 }

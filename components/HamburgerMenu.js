@@ -1,9 +1,11 @@
-import { HamburgerIcon, XIcon } from './icons'
-import { useState } from 'react'
-import { NavItems } from './NavItems'
+import React, { useState } from 'react'
+
 import styled from 'styled-components'
-import { grey2 } from './colors'
-import { Breakpoints } from './Breakpoints'
+
+import { Breakpoints } from 'components/Breakpoints'
+import { grey2 } from 'components/colors'
+import { HamburgerIcon, XIcon } from 'components/icons'
+import { NavItems } from 'components/NavItems'
 
 const Menu = styled.div`
   background-color: ${grey2};

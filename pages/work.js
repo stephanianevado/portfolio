@@ -1,10 +1,14 @@
+import React from 'react'
+
 import Head from 'next/head'
+
 import styled from 'styled-components'
-import { Breakpoints } from '../components/Breakpoints'
-import { FooterPortfolio } from '../components/FooterPortfolio'
-import { NavBar } from '../components/NavBar'
-import { ProjectBox } from '../components/ProjectBox'
-import { Title } from '../components/Title'
+
+import { Breakpoints } from 'components/Breakpoints'
+import { FooterPortfolio } from 'components/FooterPortfolio'
+import { NavBar } from 'components/NavBar'
+import { ProjectBox } from 'components/ProjectBox'
+import { Title } from 'components/Title'
 
 const Main = styled.main`
   padding: 2rem;

@@ -1,10 +1,14 @@
+import React from 'react'
+
 import Head from 'next/head'
+
 import styled from 'styled-components'
-import { Breakpoints } from '../components/Breakpoints'
-import { Card } from '../components/Card'
-import { grey, pink, white } from '../components/colors'
-import { FooterPortfolio } from '../components/FooterPortfolio'
-import { NavBar } from '../components/NavBar'
+
+import { Breakpoints } from 'components/Breakpoints'
+import { Card } from 'components/Card'
+import { grey, pink, white } from 'components/colors'
+import { FooterPortfolio } from 'components/FooterPortfolio'
+import { NavBar } from 'components/NavBar'
 
 const Main = styled.main`
   padding: 2rem;

@@ -1,10 +1,14 @@
+import React from 'react'
+
 import Head from 'next/head'
+
 import styled from 'styled-components'
-import { Breakpoints } from '../components/Breakpoints'
-import { grey, pink, white } from '../components/colors'
-import { FooterPortfolio } from '../components/FooterPortfolio'
-import { NavBar } from '../components/NavBar'
-import { Title } from '../components/Title'
+
+import { Breakpoints } from 'components/Breakpoints'
+import { grey, pink, white } from 'components/colors'
+import { FooterPortfolio } from 'components/FooterPortfolio'
+import { NavBar } from 'components/NavBar'
+import { Title } from 'components/Title'
 
 const Main = styled.main`
   padding: 2rem;
@@ -68,7 +72,7 @@ const MySkills = () => {
               <a
                 href="https://www.linkedin.com/in/stephanianevado/"
                 target="_blank"
-              >
+                rel="noreferrer">
                 {' '}
                 LinkedIn
               </a>{' '}
