@@ -1,10 +1,14 @@
+import React from 'react'
+
 import Head from 'next/head'
+
 import styled from 'styled-components'
-import { Breakpoints } from '../components/Breakpoints'
-import { grey, pink, white } from '../components/colors'
-import { FooterPortfolio } from '../components/FooterPortfolio'
-import { NavBar } from '../components/NavBar'
-import { Title } from '../components/Title'
+
+import { Breakpoints } from 'components/Breakpoints'
+import { grey, pink, white } from 'components/colors'
+import { FooterPortfolio } from 'components/FooterPortfolio'
+import { NavBar } from 'components/NavBar'
+import { Title } from 'components/Title'
 
 const Main = styled.main`
   padding: 2.5rem;
@@ -86,14 +90,20 @@ const MyContacts = () => {
             <p>
               I love to code - it was an amazing discovery for me. I'm always
               eager to learn new things and grow as a developer. Check out my
-              <a href="https://github.com/stephanianevado" target="_blank">
+              <a
+                href="https://github.com/stephanianevado"
+                target="_blank"
+                rel="noreferrer">
                 {' '}
                 GitHub
               </a>{' '}
               !
             </p>
             <Button>
-              <a href="mailto:stephania.arantxa@gmail.com" target="_blank">
+              <a
+                href="mailto:stephania.arantxa@gmail.com"
+                target="_blank"
+                rel="noreferrer">
                 Say hello
               </a>
             </Button>

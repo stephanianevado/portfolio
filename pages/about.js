@@ -1,10 +1,14 @@
+import React from 'react'
+
 import Head from 'next/head'
+
 import styled from 'styled-components'
-import { Breakpoints } from '../components/Breakpoints'
-import { grey, pink } from '../components/colors'
-import { FooterPortfolio } from '../components/FooterPortfolio'
-import { NavBar } from '../components/NavBar'
-import { Title } from '../components/Title'
+
+import { Breakpoints } from 'components/Breakpoints'
+import { grey, pink } from 'components/colors'
+import { FooterPortfolio } from 'components/FooterPortfolio'
+import { NavBar } from 'components/NavBar'
+import { Title } from 'components/Title'
 
 const Main = styled.main`
   padding: 2rem;
@@ -64,7 +68,10 @@ const AboutMe = () => {
               by taking a digital product from idea to release. That's how
               Nutreto was born. Nutreto is a cloud-based platform for nutrition
               and health, usable for both patients and clinics. Check it out at
-              <a href="https://nutreto.com/en/" target="_blank">
+              <a
+                href="https://nutreto.com/en/"
+                target="_blank"
+                rel="noreferrer">
                 {' '}
                 nutreto.com!
               </a>

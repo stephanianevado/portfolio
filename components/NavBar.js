@@ -1,8 +1,11 @@
+import React from 'react'
+
 import styled from 'styled-components'
-import { dark } from './colors'
-import { NavItems } from './NavItems'
-import { HamburgerMenu } from './HamburgerMenu'
-import { Breakpoints } from './Breakpoints'
+
+import { Breakpoints } from 'components/Breakpoints'
+import { dark } from 'components/colors'
+import { HamburgerMenu } from 'components/HamburgerMenu'
+import { NavItems } from 'components/NavItems'
 
 const Nav = styled.nav`
   display: flex;

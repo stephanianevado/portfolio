@@ -23,7 +23,6 @@
       },
       "plugins": ["react", "import"],
       "rules": {
-        "import/extensions": ["error", "ignorePackages"],
         "import/no-unresolved": "error",
         "no-sparse-arrays": "off",
         "react/prop-types": "warn",
@@ -58,5 +57,43 @@
         "no-sparse-arrays": "off"
       }
     }
-  ]
+  ],
+  "plugins": ["import"],
+  "rules": {
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "groups": [
+          "external",
+          "builtin",
+          "internal",
+          ["parent", "sibling"],
+          "index"
+        ],
+        "newlines-between": "always-and-inside-groups",
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "next/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "styled-components",
+            "group": "external",
+            "position": "after"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["react"]
+      }
+    ]
+  }
 }
