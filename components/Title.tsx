@@ -1,5 +1,3 @@
-import React from 'react'
-
 import styled from 'styled-components'
 
 import { pink, white } from 'components/colors'
@@ -11,8 +9,12 @@ const TitleH5 = styled.h5`
     color: ${pink};
   }
 `
+type Props = {
+  number: string
+  title: string
+}
 
-export const Title = ({ number, title }) => {
+export const Title = ({ number, title }: Props) => {
   return (
     <TitleH5>
       <b>{`${number}. `}</b>

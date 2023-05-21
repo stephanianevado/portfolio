@@ -1,5 +1,3 @@
-import React from 'react'
-
 import Link from 'next/link'
 
 import styled from 'styled-components'
@@ -37,7 +35,15 @@ const CardLink = styled.a`
   font-size: 1.25rem;
   line-height: 1.5;
 `
-export const Card = ({ number, title, text, href }) => {
+
+type Props = {
+  number: string
+  title: string
+  text: string
+  href: string
+}
+
+export const Card = ({ number, title, text, href }: Props) => {
   return (
     <CardWrapper>
       <h5>
