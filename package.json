@@ -11,7 +11,7 @@
     "lint:eslint": "pnpm exec eslint . --quiet"
   },
   "dependencies": {
-    "lint": "0.8.19",
+    "lint": "^1.1.2",
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
