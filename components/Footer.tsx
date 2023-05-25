@@ -13,7 +13,7 @@ import {
   ReplitIcon,
 } from './icons'
 
-const Footer = styled.footer`
+const FooterP = styled.footer`
   a {
     color: ${white};
     margin: 10px;
@@ -40,9 +40,9 @@ const Contact = styled.div`
   }
 `
 
-export const FooterPortfolio = () => {
+export const Footer = () => {
   return (
-    <Footer>
+    <FooterP>
       <Contact>
         <a
           href="https://github.com/stephanianevado"
@@ -87,6 +87,6 @@ export const FooterPortfolio = () => {
           <EmailIcon />
         </a>
       </Contact>
-    </Footer>
+    </FooterP>
   )
 }

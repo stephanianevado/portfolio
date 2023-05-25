@@ -1,11 +1,7 @@
-import Head from 'next/head'
-
 import styled from 'styled-components'
 
 import { Breakpoints } from 'components/Breakpoints'
 import { grey, pink } from 'components/colors'
-import { FooterPortfolio } from 'components/FooterPortfolio'
-import { NavBar } from 'components/NavBar'
 import { Title } from 'components/Title'
 
 const Main = styled.main`
@@ -46,11 +42,6 @@ const Column = styled.div`
 const AboutMe = () => {
   return (
     <>
-      <Head>
-        <title>Stephania Nevado's portfolio</title>
-        <link rel="icon" href="/favicon.svg" />
-      </Head>
-      <NavBar />
       <Main>
         <Title number="01" title="About me" />
 
@@ -99,7 +90,6 @@ const AboutMe = () => {
           </Column>
         </Row>
       </Main>
-      <FooterPortfolio />
     </>
   )
 }

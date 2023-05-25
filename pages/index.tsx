@@ -1,12 +1,8 @@
-import Head from 'next/head'
-
 import styled from 'styled-components'
 
 import { Breakpoints } from 'components/Breakpoints'
 import { Card } from 'components/Card'
 import { grey, pink, white } from 'components/colors'
-import { FooterPortfolio } from 'components/FooterPortfolio'
-import { NavBar } from 'components/NavBar'
 
 const Main = styled.main`
   padding: 2rem;
@@ -64,11 +60,6 @@ const Row = styled.div`
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Stephania Nevado's portfolio</title>
-        <link rel="icon" href="/favicon.svg" />
-      </Head>
-      <NavBar />
       <Main>
         <Section>
           <h1>Hi! My name is</h1>
@@ -103,7 +94,6 @@ export default function Home() {
           />
         </Row>
       </Main>
-      <FooterPortfolio />
     </>
   )
 }
