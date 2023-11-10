@@ -5,6 +5,11 @@ import Breakpoint from 'types/index'
 export type ThemeColor = keyof typeof Theme.colors
 export type ThemeFontSize = keyof typeof Theme.fontSize
 
+const fonts = {
+  HEADING: 'Poppins, Pangea, sans-serif',
+  BODY: 'Poppins, Pangea Text, sans-serif',
+}
+
 export const Theme = {
   colors: {
     dark: '#020c1b',
@@ -22,6 +27,79 @@ export const Theme = {
     [Breakpoint.LAPTOP_M]: '@media (min-width: 1260px)',
     [Breakpoint.LAPTOP_L]: '@media (min-width: 1440px)',
     [Breakpoint.DESKTOP]: '@media (min-width: 2560px)',
+  },
+  fonts,
+  typography: {
+    padme: {
+      fontFamily: fonts.HEADING,
+      fontWeight: 500,
+      fontSize: 40,
+      lineHeight: 48 / 40,
+      letterSpacing: 0.6,
+    },
+    anakin: {
+      fontFamily: fonts.HEADING,
+      fontWeight: 500,
+      fontSize: 28,
+      lineHeight: 36 / 28,
+      letterSpacing: 0.6,
+    },
+    ashoka: {
+      fontFamily: fonts.HEADING,
+      fontSize: 24,
+      lineHeight: 32 / 24,
+      letterSpacing: 0.6,
+      variants: {
+        normal: {
+          fontWeight: 400,
+        },
+        bold: {
+          fontWeight: 500,
+        },
+      },
+    },
+    leia: {
+      fontFamily: fonts.HEADING,
+      fontSize: 20,
+      lineHeight: 28 / 20,
+      letterSpacing: 0.6,
+      variants: {
+        normal: {
+          fontWeight: 400,
+        },
+        bold: {
+          fontWeight: 500,
+        },
+      },
+    },
+    luke: {
+      fontFamily: fonts.BODY,
+      fontSize: 16,
+      lineHeight: 24 / 16,
+      letterSpacing: 0.6,
+      variants: {
+        normal: {
+          fontWeight: 400,
+        },
+        bold: {
+          fontWeight: 500,
+        },
+      },
+    },
+    obi: {
+      fontFamily: fonts.BODY,
+      fontSize: 14,
+      lineHeight: 20 / 14,
+      letterSpacing: 0.6,
+      variants: {
+        normal: {
+          fontWeight: 400,
+        },
+        bold: {
+          fontWeight: 500,
+        },
+      },
+    },
   },
   fontSize: {
     xSmall: '0.75rem',
@@ -68,7 +146,7 @@ export const GlobalStyle = createGlobalStyle`
   h6,
   button,
   input {
-    font-family: ${Theme.fontFamily.font};
+    font-family: ${Theme.typography.padme.fontFamily};
     margin-top: 0
   }
 
@@ -76,10 +154,10 @@ export const GlobalStyle = createGlobalStyle`
   p,
   a,
   footer {
-    font-family: ${Theme.fontFamily.font};
-    font-size: ${Theme.fontSize.normal};
-    font-weight: ${Theme.fontWeight.normal};
-    line-height: ${Theme.lineHeight.normal};
+    font-family: ${Theme.typography.luke.fontFamily};
+    font-size: ${Theme.typography.luke.fontSize};
+    font-weight: ${Theme.typography.luke.variants.normal};
+    line-height: ${Theme.typography.luke.lineHeight};
     color: ${Theme.colors.white};
   }
 

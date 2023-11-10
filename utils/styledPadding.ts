@@ -5,28 +5,20 @@ import type { PaddingProps } from 'types/index'
 import multiplier from 'utils/multiplier'
 
 export const styledPadding = css<PaddingProps>`
-  && {
-    padding: ${(props: PaddingProps) =>
-      props.padding ? `${multiplier(props.padding)}px` : ''};
-    padding-top: ${(props: PaddingProps) =>
-      props.paddingVertical ? `${multiplier(props.paddingVertical)}px` : ''};
-    padding-right: ${(props: PaddingProps) =>
-      props.paddingHorizontal
-        ? `${multiplier(props.paddingHorizontal)}px`
-        : ''};
-    padding-bottom: ${(props: PaddingProps) =>
-      props.paddingVertical ? `${multiplier(props.paddingVertical)}px` : ''};
-    padding-left: ${(props: PaddingProps) =>
-      props.paddingHorizontal
-        ? `${multiplier(props.paddingHorizontal)}px`
-        : ''};
-    padding-top: ${(props: PaddingProps) =>
-      props.paddingTop ? `${multiplier(props.paddingTop)}px` : ''};
-    padding-right: ${(props: PaddingProps) =>
-      props.paddingRight ? `${multiplier(props.paddingRight)}px` : ''};
-    padding-bottom: ${(props: PaddingProps) =>
-      props.paddingBottom ? `${multiplier(props.paddingBottom)}px` : ''};
-    padding-left: ${(props: PaddingProps) =>
-      props.paddingLeft ? `${multiplier(props.paddingLeft)}px` : ''};
-  }
+  padding: ${(props: PaddingProps) => multiplier(props.padding) || 0}px;
+  padding-top: ${(props: PaddingProps) =>
+    multiplier(props.paddingVertical) || 0}px;
+  padding-right: ${(props: PaddingProps) =>
+    multiplier(props.paddingHorizontal) || 0}px;
+  padding-bottom: ${(props: PaddingProps) =>
+    multiplier(props.paddingVertical) || 0}px;
+  padding-left: ${(props: PaddingProps) =>
+    multiplier(props.paddingHorizontal) || 0}px;
+  padding-top: ${(props: PaddingProps) => multiplier(props.paddingTop) || 0}px;
+  padding-right: ${(props: PaddingProps) =>
+    multiplier(props.paddingRight) || 0}px;
+  padding-bottom: ${(props: PaddingProps) =>
+    multiplier(props.paddingBottom) || 0}px;
+  padding-left: ${(props: PaddingProps) =>
+    multiplier(props.paddingLeft) || 0}px;
 `

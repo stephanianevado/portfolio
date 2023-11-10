@@ -6,7 +6,7 @@ import type { BreakpointStyles } from 'types/index'
 import { propToCSSMap } from 'utils/propToCSSMap'
 
 export const createResponsiveStyle = (
-  breakpoints: Record<string, BreakpointStyles> | undefined
+  breakpoints: Record<string, BreakpointStyles>
 ) => {
   if (!breakpoints) return null
 
@@ -18,7 +18,6 @@ export const createResponsiveStyle = (
           ${Object.keys(breakpointStyles)
             .map((style) => {
               const cssProperty = propToCSSMap[style] || style
-
               return `${cssProperty}: ${breakpointStyles[style]};`
             })
             .join(' ')}

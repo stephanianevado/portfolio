@@ -5,24 +5,18 @@ import type { MarginProps } from 'types/index'
 import multiplier from 'utils/multiplier'
 
 export const styledMargins = css<MarginProps>`
-  && {
-    margin: ${(props: MarginProps) =>
-      props.margin ? `${multiplier(props.margin)}px` : ''};
-    margin-top: ${(props: MarginProps) =>
-      props.marginVertical ? ` ${multiplier(props.marginVertical)}px` : ''};
-    margin-right: ${(props: MarginProps) =>
-      props.marginHorizontal ? ` ${multiplier(props.marginHorizontal)}px` : ''};
-    margin-bottom: ${(props: MarginProps) =>
-      props.marginVertical ? ` ${multiplier(props.marginVertical)}px` : ''};
-    margin-left: ${(props: MarginProps) =>
-      props.marginHorizontal ? `${multiplier(props.marginHorizontal)}px` : ''};
-    margin-top: ${(props: MarginProps) =>
-      props.marginTop ? ` ${multiplier(props.marginTop)}px` : ''};
-    margin-right: ${(props: MarginProps) =>
-      props.marginRight ? ` ${multiplier(props.marginRight)}px` : ''};
-    margin-bottom: ${(props: MarginProps) =>
-      props.marginBottom ? ` ${multiplier(props.marginBottom)}px` : ''};
-    margin-left: ${(props: MarginProps) =>
-      props.marginLeft ? `${multiplier(props.marginLeft)}px` : ''};
-  }
+  margin: ${(props: MarginProps) => multiplier(props.margin) || 0}px;
+  margin-top: ${(props: MarginProps) =>
+    multiplier(props.marginVertical) || 0}px;
+  margin-right: ${(props: MarginProps) =>
+    multiplier(props.marginHorizontal) || 0}px;
+  margin-bottom: ${(props: MarginProps) =>
+    multiplier(props.marginVertical) || 0}px;
+  margin-left: ${(props: MarginProps) =>
+    multiplier(props.marginHorizontal) || 0}px;
+  margin-top: ${(props: MarginProps) => multiplier(props.marginTop) || 0}px;
+  margin-right: ${(props: MarginProps) => multiplier(props.marginRight) || 0}px;
+  margin-bottom: ${(props: MarginProps) =>
+    multiplier(props.marginBottom) || 0}px;
+  margin-left: ${(props: MarginProps) => multiplier(props.marginLeft) || 0}px;
 `
