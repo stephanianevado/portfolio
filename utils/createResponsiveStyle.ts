@@ -1,12 +1,12 @@
 import { Theme } from 'components/Theme'
 
-import type Breakpoint from 'types/index'
+import type { Breakpoint } from 'components/Theme'
 import type { BreakpointStyles } from 'types/index'
 
 import { propToCSSMap } from 'utils/propToCSSMap'
 
 export const createResponsiveStyle = (
-  breakpoints: Record<string, BreakpointStyles>
+  breakpoints?: Record<string, BreakpointStyles>
 ) => {
   if (!breakpoints) return null
 
