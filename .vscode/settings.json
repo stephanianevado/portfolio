@@ -1,8 +1,8 @@
 {
   "git.ignoreLimitWarning": true,
   "editor.codeActionsOnSave": {
-    "source.organizeImports": true,
-    "source.fixAll.eslint": true
+    "source.organizeImports": "explicit",
+    "source.fixAll.eslint": "explicit"
   },
   "editor.tokenColorCustomizations": {
     "textMateRules": [
@@ -86,5 +86,8 @@
   "editor.fontLigatures": true,
   "editor.smoothScrolling": true,
   "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" }
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.words": ["anakin", "ashoka", "leia", "padme", "vader"]
 }

@@ -1,15 +1,12 @@
-import { Box } from 'components/Box'
+import { Box } from 'components/common/box/Box'
 import {
-  CodepenIcon,
-  EmailIcon,
-  FacebookIcon,
-  GitHubIcon,
-  InstagramIcon,
-  LinkedinIcon,
-  ReplitIcon,
-} from 'components/icons'
-
-import Breakpoint from 'types/index'
+  Email,
+  Facebook,
+  GitHub,
+  Instagram,
+  Linkedin,
+} from 'components/icons/icons'
+import { Breakpoint } from 'components/Theme'
 
 export const Footer = () => {
   return (
@@ -28,49 +25,35 @@ export const Footer = () => {
         href="https://github.com/stephanianevado"
         target="_blank"
         rel="noreferrer">
-        <GitHubIcon />
+        <GitHub />
       </Box>
       <Box
         as="a"
         href="https://www.linkedin.com/in/stephanianevado/"
         target="_blank"
         rel="noreferrer">
-        <LinkedinIcon />
+        <Linkedin />
       </Box>
       <Box
         as="a"
         href="https://www.instagram.com/stephanianevado/"
         target="_blank"
         rel="noreferrer">
-        <InstagramIcon />
+        <Instagram />
       </Box>
       <Box
         as="a"
         href="https://www.facebook.com/nevadostephania"
         target="_blank"
         rel="noreferrer">
-        <FacebookIcon />
-      </Box>
-      <Box
-        as="a"
-        href="https://codepen.io/stephanianevado"
-        target="_blank"
-        rel="noreferrer">
-        <CodepenIcon />
-      </Box>
-      <Box
-        as="a"
-        href="https://replit.com/@stephanianevado"
-        target="_blank"
-        rel="noreferrer">
-        <ReplitIcon />
+        <Facebook />
       </Box>
       <Box
         as="a"
         href="mailto:stephania.arantxa@gmail.com"
         target="_blank"
         rel="noreferrer">
-        <EmailIcon />
+        <Email />
       </Box>
     </Box>
   )

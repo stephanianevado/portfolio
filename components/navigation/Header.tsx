@@ -2,13 +2,12 @@ import { useState } from 'react'
 
 import Image from 'next/image'
 
-import { Box } from 'components/Box'
-import { Button } from 'components/Button'
-import { HamburgerIcon } from 'components/icons'
+import { Box } from 'components/common/box/Box'
+import { IconButton } from 'components/common/iconButton/IconButton'
+import { Hamburger } from 'components/icons/icons'
 import { Items } from 'components/navigation/Items'
 import { Menu } from 'components/navigation/Menu'
-
-import Breakpoint from 'types/index'
+import { Breakpoint } from 'components/Theme'
 
 export const Header = () => {
   const [open, setOpen] = useState(false)
@@ -20,14 +19,23 @@ export const Header = () => {
         as="header"
         direction="row"
         alignItems="center"
-        justifyContent="space-between"
-        width="100%">
-        <Box as="a" href="/">
+        width="100%"
+        breakpoints={{
+          [Breakpoint.MOBILE_S]: { justifyContent: 'flex-end' },
+          [Breakpoint.LAPTOP]: { justifyContent: 'space-between' },
+        }}>
+        <Box
+          as="a"
+          href="/"
+          breakpoints={{
+            [Breakpoint.MOBILE_S]: { display: 'none' },
+            [Breakpoint.LAPTOP]: { display: 'flex' },
+          }}>
           <Image
-            src="/logoportfolio.svg"
-            alt="logo SVG portfolio"
+            src="/images/logo.svg"
+            alt="svg logo"
             width={100}
-            height={75.97}
+            height={40}
             style={{
               objectFit: 'fill',
               objectPosition: 'center',
@@ -46,12 +54,19 @@ export const Header = () => {
           </Box>
           <Box
             breakpoints={{
-              [Breakpoint.MOBILE_S]: { display: 'flex' },
-              [Breakpoint.LAPTOP]: { display: 'none' },
+              [Breakpoint.MOBILE_S]: {
+                display: 'flex',
+                margin: '0px 16px',
+              },
+              [Breakpoint.LAPTOP]: {
+                display: 'none',
+              },
             }}>
-            <Button name="open-menu-button" onClick={() => setOpen(true)}>
-              <HamburgerIcon />
-            </Button>
+            <IconButton
+              name="open-menu-button"
+              onClick={() => setOpen(true)}
+              icon={Hamburger}
+            />
           </Box>
         </Box>
       </Box>

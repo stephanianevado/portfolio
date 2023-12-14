@@ -1,14 +1,5 @@
-import styled from 'styled-components'
+import { Box } from 'components/common/box/Box'
 
-import { pink, white } from 'components/colors'
-
-const TitleH5 = styled.h5`
-  font-size: 2rem;
-  color: ${white};
-  b {
-    color: ${pink};
-  }
-`
 type Props = {
   number: string
   title: string
@@ -16,9 +7,9 @@ type Props = {
 
 export const Title = ({ number, title }: Props) => {
   return (
-    <TitleH5>
+    <Box>
       <b>{`${number}. `}</b>
       {`${title} `}&rarr;
-    </TitleH5>
+    </Box>
   )
 }

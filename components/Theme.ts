@@ -1,9 +1,27 @@
 import { createGlobalStyle } from 'styled-components'
 
-import Breakpoint from 'types/index'
+export enum Color {
+  PRIMARY_BLACK = 'primaryBlack',
+  SECONDARY_BLACK = 'secondaryBlack',
+  TERTIARY_BLACK = 'tertiaryBlack',
+  PRIMARY_GREY = 'primaryGrey',
+  SECONDARY_GREY = 'secondaryGrey',
+  TERTIARY_GREY = 'tertiaryGrey',
+  PRIMARY_WHITE = 'primaryWhite',
+  SECONDARY_WHITE = 'secondaryWhite',
+  PRIMARY_BLUE = 'primaryBlue',
+}
 
-export type ThemeColor = keyof typeof Theme.colors
-export type ThemeFontSize = keyof typeof Theme.fontSize
+export enum Breakpoint {
+  MOBILE_S = 'MOBILE_S',
+  MOBILE_M = 'MOBILE_M',
+  MOBILE_L = 'MOBILE_L',
+  TABLET = 'TABLET',
+  LAPTOP = 'LAPTOP',
+  LAPTOP_M = 'LAPTOP_M',
+  LAPTOP_L = 'LAPTOP_L',
+  DESKTOP = 'DESKTOP',
+}
 
 const fonts = {
   HEADING: 'Poppins, Pangea, sans-serif',
@@ -12,11 +30,15 @@ const fonts = {
 
 export const Theme = {
   colors: {
-    dark: '#020c1b',
-    grey: '#758ba9',
-    grey2: '#677a94',
-    white: '#e6f1ff',
-    pink: '#F64C72',
+    [Color.PRIMARY_BLACK]: '#000000',
+    [Color.SECONDARY_BLACK]: '#1A2029',
+    [Color.TERTIARY_BLACK]: '#020C1B',
+    [Color.PRIMARY_GREY]: '#758BA9',
+    [Color.SECONDARY_GREY]: '#F0F0F0',
+    [Color.TERTIARY_GREY]: '#8C96A3',
+    [Color.PRIMARY_WHITE]: '#FFFFFF',
+    [Color.SECONDARY_WHITE]: '#E6F1FF',
+    [Color.PRIMARY_BLUE]: '#342CDB',
   },
   breakpoints: {
     [Breakpoint.MOBILE_S]: '@media (min-width: 320px)',
@@ -30,6 +52,13 @@ export const Theme = {
   },
   fonts,
   typography: {
+    vader: {
+      fontFamily: fonts.HEADING,
+      fontWeight: 500,
+      fontSize: 42,
+      lineHeight: 48 / 40,
+      letterSpacing: 0.6,
+    },
     padme: {
       fontFamily: fonts.HEADING,
       fontWeight: 500,
@@ -101,27 +130,6 @@ export const Theme = {
       },
     },
   },
-  fontSize: {
-    xSmall: '0.75rem',
-    small: '0.875rem',
-    normal: '1.125rem',
-    medium: '1.5rem',
-    large: '2.5rem',
-    xLarge: '4rem',
-  },
-  fontFamily: {
-    font: 'Poppins',
-  },
-  fontWeight: {
-    semiBold: '500',
-    bold: '900',
-    normal: 'normal',
-  },
-  lineHeight: {
-    small: '1rem',
-    normal: '1.5rem',
-    large: '2rem',
-  },
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -130,7 +138,7 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%;
     height: 100%;
     margin: 0;
-    background-color: ${Theme.colors.dark};
+    background-color: ${Theme.colors.primaryWhite};
   }
 
   body {
@@ -158,11 +166,6 @@ export const GlobalStyle = createGlobalStyle`
     font-size: ${Theme.typography.luke.fontSize};
     font-weight: ${Theme.typography.luke.variants.normal};
     line-height: ${Theme.typography.luke.lineHeight};
-    color: ${Theme.colors.white};
-  }
-
-  a, 
-  li {
-    text-decoration: none;
+    color: ${Theme.colors.tertiaryBlack};
   }
 `
