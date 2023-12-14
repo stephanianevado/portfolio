@@ -6,12 +6,10 @@ import type { AppProps } from 'next/app'
 
 import Head from 'next/head'
 
-import { Box } from 'components/Box'
+import { Box } from 'components/common/box/Box'
 import { Footer } from 'components/navigation/Footer'
 import { Header } from 'components/navigation/Header'
-import { GlobalStyle } from 'components/Theme'
-
-import Breakpoint from 'types/index'
+import { Breakpoint, GlobalStyle } from 'components/Theme'
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode
@@ -42,7 +40,7 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
       </Head>
       <GlobalStyle />
       <Header />
-      <Box grow={1}>
+      <Box>
         <Component {...pageProps} />
       </Box>
       <Footer />
