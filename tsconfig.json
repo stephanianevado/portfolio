@@ -20,7 +20,6 @@
       "components/*": ["components/*"],
       "pages/*": ["pages/*"],
       "public/*": ["public/*"],
-      "scripts/*": ["scripts/*"],
       "types/*": ["types/*"],
       "utils/*": ["utils/*"]
     }

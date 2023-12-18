@@ -36,12 +36,11 @@ export const Header = () => {
           <Image
             src="/images/logo.svg"
             alt="svg logo"
-            width={100}
+            width={144}
             height={40}
             style={{
               objectFit: 'fill',
               objectPosition: 'center',
-              width: 'auto',
             }}
             priority
           />
@@ -76,6 +75,7 @@ export const Header = () => {
               name="open-menu-button"
               onClick={() => setOpen(true)}
               icon={Hamburger}
+              aria-label="Open navigation menu"
             />
           </Box>
         </Box>

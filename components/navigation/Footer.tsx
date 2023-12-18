@@ -6,13 +6,12 @@ import {
   Instagram,
   Linkedin,
 } from 'components/icons/icons'
-import { Breakpoint, Theme } from 'components/Theme'
+import { Breakpoint } from 'components/Theme'
 
 export const Footer = () => {
   const currentDate = new Date()
   const currentYear = currentDate.getFullYear()
 
-  const { primaryBlack } = Theme.colors
   return (
     <Box
       as="footer"
@@ -27,40 +26,44 @@ export const Footer = () => {
       Copyright ©{currentYear} Stephania Nevado. All right reserved.
       <Box direction="row" justifyContent="flex-end">
         <Box
-          bg="red"
           as="a"
           href="https://github.com/stephanianevado"
           target="_blank"
-          rel="noreferrer">
-          <GitHub color={primaryBlack} />
+          rel="noreferrer"
+          aria-label="Go to my GitHub">
+          <GitHub size={10} />
         </Box>
         <Box
           as="a"
           href="https://www.linkedin.com/in/stephanianevado/"
           target="_blank"
-          rel="noreferrer">
-          <Linkedin />
+          rel="noreferrer"
+          aria-label="Go to my LinkedIn">
+          <Linkedin size={10} />
         </Box>
         <Box
           as="a"
           href="https://www.instagram.com/stephanianevado/"
           target="_blank"
-          rel="noreferrer">
-          <Instagram />
+          rel="noreferrer"
+          aria-label="Go to my Instagram">
+          <Instagram size={10} />
         </Box>
         <Box
           as="a"
           href="https://www.facebook.com/nevadostephania"
           target="_blank"
-          rel="noreferrer">
-          <Facebook />
+          rel="noreferrer"
+          aria-label="Go to my Facebook">
+          <Facebook size={10} />
         </Box>
         <Box
           as="a"
           href="mailto:stephania.arantxa@gmail.com"
           target="_blank"
-          rel="noreferrer">
-          <Email />
+          rel="noreferrer"
+          aria-label="Send me an email">
+          <Email size={10} />
         </Box>
       </Box>
     </Box>

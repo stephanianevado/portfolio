@@ -256,7 +256,7 @@ export const Line = ({ ...props }: IconProps) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}>
-      <path opacity="0.2" d="M0 2H1235" stroke="#141313" stroke-width="4" />
+      <path opacity="0.2" d="M0 2H1235" stroke="#141313" strokeWidth="4" />
     </Icon>
   )
 }

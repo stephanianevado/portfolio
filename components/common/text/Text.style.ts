@@ -15,6 +15,7 @@ import type {
   Display,
   JustifyContent,
   Size,
+  Variant,
 } from 'types/index'
 
 import { createResponsiveStyle } from 'utils/createResponsiveStyle'
@@ -41,7 +42,7 @@ export type TextProps = PaddingProps &
     id?: string
     as?: string
     children?: React.ReactNode | React.ReactNode[]
-    variant?: 'vader' | 'padme' | 'anakin' | 'ashoka' | 'leia' | 'luke' | 'obi'
+    variant?: Variant
     subStyle?: 'normal' | 'bold'
     rel?: string
     color?: Color
@@ -118,7 +119,7 @@ export const StyledText = styled.div`
     variant,
     subStyle,
   }: {
-    variant: TextProps['variant']
+    variant: Variant
     subStyle: TextProps['subStyle']
   }) => (variant || subStyle) && getTypographyStyle(variant, subStyle)};
   ${({ breakpoints }: { breakpoints: TextProps['breakpoints'] }) =>

@@ -10,6 +10,7 @@ export enum Color {
   SECONDARY_GREY = 'secondaryGrey',
   TERTIARY_GREY = 'tertiaryGrey',
   PRIMARY_ORANGE = 'primaryOrange',
+  SECONDARY_ORANGE = 'secondaryOrange',
   PRIMARY_PINK = 'primaryPink',
   SECONDARY_PINK = 'secondaryPink',
   PRIMARY_PURPLE = 'primaryPurple',
@@ -41,11 +42,12 @@ export const Theme = {
     [Color.TERTIARY_BLACK]: '#020C1B',
     [Color.PRIMARY_BLUE]: '#342CDB',
     [Color.SECONDARY_BLUE]: '#0C8CE9',
-    [Color.PRIMARY_GREY]: '#8B8B8B',
-    [Color.SECONDARY_GREY]: '#F0F0F0',
+    [Color.PRIMARY_GREY]: '#454545',
+    [Color.SECONDARY_GREY]: '#8B8B8B',
     [Color.TERTIARY_GREY]: '#F5F5F5',
-    [Color.PRIMARY_ORANGE]: '#F24822',
-    [Color.PRIMARY_PINK]: '#F6EEF4;',
+    [Color.PRIMARY_ORANGE]: '#97240D',
+    [Color.SECONDARY_ORANGE]: '#F24822',
+    [Color.PRIMARY_PINK]: '#F6EEF4',
     [Color.SECONDARY_PINK]: '#FF00A8',
     [Color.PRIMARY_PURPLE]: '#8638E5',
     [Color.SECONDARY_PURPLE]: '#681ABB',
@@ -150,7 +152,7 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%;
     height: 100%;
     margin: 0;
-    background-color: ${Theme.colors.primaryPink};
+    background-color: #F5F5FF;
   }
 
   body {

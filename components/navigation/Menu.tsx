@@ -56,6 +56,7 @@ export const Menu = ({ open, onClose }: Props) => {
           name="close-menu-button"
           onClick={onClose}
           icon={Close}
+          aria-label="Close navigation menu"
         />
       </Box>
       <Box

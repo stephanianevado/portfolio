@@ -36,12 +36,13 @@ export type ButtonProps = PaddingProps &
     children?: React.ReactNode
     border?: Color
     borderRadius?: Size
-    onClick?: MouseEventHandler<HTMLInputElement>
     href?: string
     target?: '_blank'
     breakpoints?: Record<string, BreakpointStyles>
     icon?: Icon
     iconPosition?: string
+    onClick?: MouseEventHandler<HTMLInputElement>
+    onSubmit?: (event: React.SyntheticEvent) => void
   }>
 
 export const StyledButton = styled.button<ButtonProps>`
@@ -99,9 +100,6 @@ export const StyledButton = styled.button<ButtonProps>`
   as: ${(props: ButtonProps) => props.as && props.as};
   href: ${(props: ButtonProps) => props.href && props.href};
   target: ${(props: ButtonProps) => props.target || '_blank'};
-  onclick: ${(props: ButtonProps) => {
-    props.onClick ? props.onClick : undefined
-  }};
   ${({ breakpoints }: { breakpoints: ButtonProps['breakpoints'] }) =>
     createResponsiveStyle(breakpoints)};
 `

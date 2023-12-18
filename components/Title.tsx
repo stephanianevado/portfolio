@@ -14,7 +14,7 @@ export const Title = ({
   subHeader = 'h2',
   variant = 'vader',
 }: Props) => {
-  const { secondaryBlack, primaryGrey, primaryOrange } = Theme.colors
+  const { secondaryBlack, primaryGrey, secondaryOrange } = Theme.colors
 
   return (
     <>
@@ -23,8 +23,8 @@ export const Title = ({
         color={secondaryBlack}
         variant="leia"
         textDecoration="underline"
-        textDecorationColor={primaryOrange}
-        textUnderlineOffset="4px">
+        textDecorationColor={secondaryOrange}
+        textUnderlineOffset="8px">
         {header}
       </Text>
 

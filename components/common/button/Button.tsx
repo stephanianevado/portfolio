@@ -9,6 +9,8 @@ import { Spacer } from 'components/common/spacer/Spacer'
 export const Button = ({
   iconPosition = 'right',
   icon: Icon,
+  onClick,
+  onSubmit,
   children,
   ...props
 }: ButtonProps) => {
@@ -30,5 +32,9 @@ export const Button = ({
     </Box>
   )
 
-  return <StyledButton {...props}>{boxBase}</StyledButton>
+  return (
+    <StyledButton onClick={onClick} onSubmit={onSubmit} {...props}>
+      {boxBase}
+    </StyledButton>
+  )
 }
