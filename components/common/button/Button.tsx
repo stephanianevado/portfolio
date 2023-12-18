@@ -4,6 +4,7 @@ import {
   StyledButton,
   type ButtonProps,
 } from 'components/common/button/Button.style'
+import { Spacer } from 'components/common/spacer/Spacer'
 
 export const Button = ({
   iconPosition = 'right',
@@ -12,10 +13,20 @@ export const Button = ({
   ...props
 }: ButtonProps) => {
   const boxBase = (
-    <Box>
-      {iconPosition === 'left' && Icon && <Icon />}
+    <Box direction="row" alignItems="center" justifyContent="center">
+      {iconPosition === 'left' && Icon && (
+        <>
+          <Icon size={4} />
+          <Spacer size={2} />
+        </>
+      )}
       {children}
-      {iconPosition === 'right' && Icon && <Icon />}
+      {iconPosition === 'right' && Icon && (
+        <>
+          <Spacer size={2} />
+          <Icon size={4} />
+        </>
+      )}
     </Box>
   )
 

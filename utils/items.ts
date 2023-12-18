@@ -8,26 +8,18 @@ export enum Id {
 export const items = {
   [Id.ABOUT]: {
     title: 'About',
-    number: '01.',
-    href: '/',
-    text: 'Get to know me',
+    href: '/about',
   },
   [Id.SKILLS]: {
     title: 'Skills',
-    number: '02.',
-    href: '/myskills',
-    text: 'What I know',
+    href: '/skills',
   },
   [Id.WORK]: {
     title: 'Work',
-    number: '03.',
     href: '/work',
-    text: "Some things I've built",
   },
   [Id.CONTACT]: {
     title: 'Contact',
-    number: '04.',
     href: '/contact',
-    text: "What's next? Get in touch!",
   },
 }

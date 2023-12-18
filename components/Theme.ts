@@ -4,12 +4,18 @@ export enum Color {
   PRIMARY_BLACK = 'primaryBlack',
   SECONDARY_BLACK = 'secondaryBlack',
   TERTIARY_BLACK = 'tertiaryBlack',
+  PRIMARY_BLUE = 'primaryBlue',
+  SECONDARY_BLUE = 'secondaryBlue',
   PRIMARY_GREY = 'primaryGrey',
   SECONDARY_GREY = 'secondaryGrey',
   TERTIARY_GREY = 'tertiaryGrey',
+  PRIMARY_ORANGE = 'primaryOrange',
+  PRIMARY_PINK = 'primaryPink',
+  SECONDARY_PINK = 'secondaryPink',
+  PRIMARY_PURPLE = 'primaryPurple',
+  SECONDARY_PURPLE = 'secondaryPurple',
   PRIMARY_WHITE = 'primaryWhite',
   SECONDARY_WHITE = 'secondaryWhite',
-  PRIMARY_BLUE = 'primaryBlue',
 }
 
 export enum Breakpoint {
@@ -24,8 +30,8 @@ export enum Breakpoint {
 }
 
 const fonts = {
-  HEADING: 'Poppins, Pangea, sans-serif',
-  BODY: 'Poppins, Pangea Text, sans-serif',
+  HEADING: 'Spline Sans, Poppins, Pangea, sans-serif',
+  BODY: 'Spline Sans, Poppins, Pangea Text, sans-serif',
 }
 
 export const Theme = {
@@ -33,12 +39,18 @@ export const Theme = {
     [Color.PRIMARY_BLACK]: '#000000',
     [Color.SECONDARY_BLACK]: '#1A2029',
     [Color.TERTIARY_BLACK]: '#020C1B',
-    [Color.PRIMARY_GREY]: '#758BA9',
+    [Color.PRIMARY_BLUE]: '#342CDB',
+    [Color.SECONDARY_BLUE]: '#0C8CE9',
+    [Color.PRIMARY_GREY]: '#8B8B8B',
     [Color.SECONDARY_GREY]: '#F0F0F0',
-    [Color.TERTIARY_GREY]: '#8C96A3',
+    [Color.TERTIARY_GREY]: '#F5F5F5',
+    [Color.PRIMARY_ORANGE]: '#F24822',
+    [Color.PRIMARY_PINK]: '#F6EEF4;',
+    [Color.SECONDARY_PINK]: '#FF00A8',
+    [Color.PRIMARY_PURPLE]: '#8638E5',
+    [Color.SECONDARY_PURPLE]: '#681ABB',
     [Color.PRIMARY_WHITE]: '#FFFFFF',
     [Color.SECONDARY_WHITE]: '#E6F1FF',
-    [Color.PRIMARY_BLUE]: '#342CDB',
   },
   breakpoints: {
     [Breakpoint.MOBILE_S]: '@media (min-width: 320px)',
@@ -138,7 +150,7 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%;
     height: 100%;
     margin: 0;
-    background-color: ${Theme.colors.primaryWhite};
+    background-color: ${Theme.colors.primaryPink};
   }
 
   body {

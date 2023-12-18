@@ -13,10 +13,10 @@ import type { PaddingProps } from 'utils/styledPadding'
 
 const {
   tertiaryBlack,
-  secondaryBlack,
   tertiaryGrey,
   primaryWhite,
   primaryBlue,
+  primaryPurple,
 } = Theme.colors
 const { fontFamily, fontSize, variants } = Theme.typography.luke
 const { fontWeight } = variants.bold
@@ -45,7 +45,7 @@ export type ButtonProps = PaddingProps &
   }>
 
 export const StyledButton = styled.button<ButtonProps>`
-  padding: ${(props: PaddingProps) => multiplier(props.padding) || '28px 18px'};
+  padding: ${(props: PaddingProps) => multiplier(props.padding) || '20px 16px'};
   font-family: ${(props: ButtonProps) => props.fontFamily || fontFamily};
   font-size: ${(props: ButtonProps) => props.fontSize || fontSize}px;
   font-weight: ${(props: ButtonProps) => props.fontWeight || fontWeight};
@@ -53,10 +53,11 @@ export const StyledButton = styled.button<ButtonProps>`
   id: ${(props: ButtonProps) => props.id && props.id};
   name: ${(props: ButtonProps) => props.name || ''};
   type: ${(props: ButtonProps) => props.type && props.type};
-  color: ${(props: ButtonProps) => props.color || primaryWhite};
-  background-color: ${(props: ButtonProps) => props.bg || secondaryBlack};
+  color: ${(props: ButtonProps) => props.color || tertiaryBlack};
+  background-color: ${(props: ButtonProps) =>
+    props.bg || 'rgba(0, 0, 0, 0.04)'};
   &:hover {
-    background-color:${tertiaryBlack};
+    background-color:${primaryPurple};
     box-shadow: 0 0 0 1px ${primaryWhite};
   };
  &:disabled {
@@ -67,8 +68,8 @@ export const StyledButton = styled.button<ButtonProps>`
   };
   box-sizing: border-box;
   border-radius: ${(props: ButtonProps) =>
-    multiplier(props.borderRadius) || multiplier(1.5)};
-  border: ${(props: ButtonProps) => props.border || `1px bold ${primaryWhite}`};
+    multiplier(props.borderRadius) || multiplier(2)};
+  border: ${(props: ButtonProps) => props.border || `1px bold #E3E3E3`};
   width: 100%;
   max-width: 100%;
   min-width: 80px;

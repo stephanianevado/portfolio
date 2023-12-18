@@ -43,9 +43,9 @@ export const StyledIcon = styled.button<IconButtonProps>`
     cursor: not-allowed;
   };
   width: ${(props: IconButtonProps) =>
-    multiplier(props.size) || multiplier(8)}};
+    multiplier(props.size) || multiplier(10)}};
   height: ${(props: IconButtonProps) =>
-    multiplier(props.size) || multiplier(8)}};
+    multiplier(props.size) || multiplier(10)}};
   max-width: 100%;
   display: flex;
   flex-direction: row;
@@ -63,6 +63,7 @@ export const StyledIcon = styled.button<IconButtonProps>`
       box-shadow: none;
     },
   };
+  overflow: hidden;
   cursor: pointer;
     as: ${(props: IconButtonProps) => props.as && props.as};
   href: ${(props: IconButtonProps) => props.href && props.href};

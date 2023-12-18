@@ -2,9 +2,11 @@ import { useState } from 'react'
 
 import Image from 'next/image'
 
+import { fadeInDown } from 'components/animations/animation'
 import { Box } from 'components/common/box/Box'
+import { Button } from 'components/common/button/Button'
 import { IconButton } from 'components/common/iconButton/IconButton'
-import { Hamburger } from 'components/icons/icons'
+import { Hamburger, Link } from 'components/icons/icons'
 import { Items } from 'components/navigation/Items'
 import { Menu } from 'components/navigation/Menu'
 import { Breakpoint } from 'components/Theme'
@@ -44,14 +46,21 @@ export const Header = () => {
             priority
           />
         </Box>
+
         <Box>
           <Box
             breakpoints={{
               [Breakpoint.MOBILE_S]: { display: 'none' },
               [Breakpoint.LAPTOP]: { display: 'flex' },
             }}>
-            <Items />
+            <Box
+              animationName={fadeInDown}
+              animationDuration="1s"
+              animationTimingFunction="ease-out">
+              <Items />
+            </Box>
           </Box>
+
           <Box
             breakpoints={{
               [Breakpoint.MOBILE_S]: {
@@ -63,11 +72,29 @@ export const Header = () => {
               },
             }}>
             <IconButton
+              size={10}
               name="open-menu-button"
               onClick={() => setOpen(true)}
               icon={Hamburger}
             />
           </Box>
+        </Box>
+        <Box
+          animationName={fadeInDown}
+          animationDuration="2s"
+          animationTimingFunction="ease-out"
+          breakpoints={{
+            [Breakpoint.MOBILE_S]: { display: 'none' },
+            [Breakpoint.LAPTOP]: { display: 'flex' },
+          }}>
+          <Button
+            as="a"
+            href="/documents/cv.pdf"
+            target="_blank"
+            icon={Link}
+            iconPosition="left">
+            Resume
+          </Button>
         </Box>
       </Box>
     </>

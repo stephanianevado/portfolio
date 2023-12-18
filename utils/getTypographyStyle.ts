@@ -1,5 +1,7 @@
+import type { TextProps } from 'components/common/text/Text.style'
 import { Theme } from 'components/Theme'
-import type { TextProps, ThemeProps } from 'types/index'
+
+import type { ThemeProps } from 'types/index'
 
 export const getTypographyStyle = (
   variant: TextProps['variant'],

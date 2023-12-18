@@ -1,13 +1,15 @@
+import { useRouter } from 'next/router'
+
 import { Box } from 'components/common/box/Box'
-import { Button } from 'components/common/button/Button'
 import { Text } from 'components/common/text/Text'
 import { Breakpoint, Theme } from 'components/Theme'
 
 import { Id, items } from 'utils/items'
 
 export const Items = () => {
+  const router = useRouter()
   const { MOBILE_S, LAPTOP } = Breakpoint
-  const { secondaryBlack } = Theme.colors
+  const { primaryGrey, primaryOrange } = Theme.colors
 
   return (
     <Box
@@ -22,6 +24,8 @@ export const Items = () => {
       {Object.values(Id).map((id) => {
         const item = items[id]
         const { title, href } = item
+        const isActivePage = router.pathname === href
+
         return (
           <Box
             key={id}
@@ -32,21 +36,16 @@ export const Items = () => {
               [MOBILE_S]: { margin: '12px 16px' },
               [LAPTOP]: { margin: '0px 24px' },
             }}>
-            <Text color={secondaryBlack} variant="leia" subStyle="bold">
+            <Text
+              color={isActivePage ? primaryOrange : primaryGrey}
+              textDecoration={isActivePage ? 'underline' : 'none'}
+              variant="leia"
+              subStyle="bold">
               {title}
             </Text>
           </Box>
         )
       })}
-      <Box
-        breakpoints={{
-          [MOBILE_S]: { margin: '12px 16px' },
-          [LAPTOP]: { margin: '0px' },
-        }}>
-        <Button as="a" href="/documents/cv.pdf" target="_blank">
-          Resume
-        </Button>
-      </Box>
     </Box>
   )
 }

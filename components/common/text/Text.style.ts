@@ -1,5 +1,6 @@
 import type { PropsWithChildren } from 'react'
 
+import type { keyframes } from 'styled-components'
 import styled from 'styled-components'
 
 import { Theme } from 'components/Theme'
@@ -46,6 +47,8 @@ export type TextProps = PaddingProps &
     color?: Color
     align?: 'center' | 'left' | 'right'
     textDecoration?: 'none' | 'underline'
+    textDecorationColor?: Color
+    textUnderlineOffset?: string
     textWrap?: 'wrap' | 'nowrap' | 'balance'
     whiteSpace?:
       | 'normal'
@@ -54,6 +57,18 @@ export type TextProps = PaddingProps &
       | 'pre-wrap'
       | 'pre-line'
       | 'break-spaces'
+    animationName?: string | typeof keyframes
+    animationDuration?: string
+    animationTimingFunction?:
+      | 'ease'
+      | 'linear'
+      | 'ease-in'
+      | 'ease-out'
+      | 'ease-in-out'
+      | 'step-start'
+      | 'step-end'
+      | 'steps'
+      | 'cubic-bezier'
     hover?: Record<string, unknown>
     disabled?: boolean
     breakpoints?: Record<string, BreakpointStyles>
@@ -80,6 +95,10 @@ export const StyledText = styled.div`
   color: ${(props: TextProps) => props.color || 'transparent'};
   text-align: ${(props: TextProps) => props.align || 'left'};
   text-decoration: ${(props: TextProps) => props.textDecoration || 'none'};
+  text-decoration-color: ${(props: TextProps) =>
+    props.textDecorationColor || 'none'};
+    text-underline-offset: ${(props: TextProps) =>
+      props.textUnderlineOffset || 'none'};
   text-wrap:  ${(props: TextProps) => props.textWrap || 'balance'}; 
   &:hover {
     ${(props: TextProps) => props.hover};
@@ -91,6 +110,10 @@ export const StyledText = styled.div`
       box-shadow: none;
     },
   };
+  animation-name: ${(props: TextProps) => props.animationName};
+  animation-duration: ${(props: TextProps) => props.animationDuration};
+  animation-timing-function: ${(props: TextProps) =>
+    props.animationTimingFunction};
   ${({
     variant,
     subStyle,

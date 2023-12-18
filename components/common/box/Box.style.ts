@@ -1,5 +1,6 @@
 import type { FC, MouseEventHandler, PropsWithChildren } from 'react'
 
+import type { keyframes } from 'styled-components'
 import styled from 'styled-components'
 
 import {
@@ -63,12 +64,25 @@ export type BoxProps = PaddingProps &
     href?: string
     cursor?: 'pointer'
     textDecoration?: 'none' | 'underline'
+    animationName?: string | typeof keyframes
+    animationDuration?: string
+    animationTimingFunction?:
+      | 'ease'
+      | 'linear'
+      | 'ease-in'
+      | 'ease-out'
+      | 'ease-in-out'
+      | 'step-start'
+      | 'step-end'
+      | 'steps'
+      | 'cubic-bezier'
+    zIndex?: string | number
     breakpoints?: Record<string, BreakpointStyles>
   }>
 
 export const StyledBox = styled.div<BoxProps>`
-  ${styledPadding}
-  ${styledMargins}
+  ${styledPadding};
+  ${styledMargins};
   id: ${(props: BoxProps) => props.id};
   as: ${(props: BoxProps) => props.as};
   box-sizing: ${(props: BoxProps) => props.boxSizing || 'border-box'};
@@ -76,7 +90,7 @@ export const StyledBox = styled.div<BoxProps>`
   border: ${(props: BoxProps) => props.border || 'transparent'};
   border-radius: ${(props: BoxProps) => multiplier(props.borderRadius) || 0};
   height: ${(props: BoxProps) => multiplier(props.height)};
-  max-height:${(props: BoxProps) => multiplier(props.maxHeight)}
+  max-height: ${(props: BoxProps) => multiplier(props.maxHeight)};
   min-height: ${(props: BoxProps) => multiplier(props.minHeight)};
   width: ${(props: BoxProps) => props.width && multiplier(props.width)};
   max-width: ${(props: BoxProps) => multiplier(props.maxWidth) || '100%'};
@@ -103,14 +117,17 @@ export const StyledBox = styled.div<BoxProps>`
   ref: ${(props: BoxProps) => props.ref};
   class-name: ${(props: BoxProps) => props.className};
   target: ${(props: BoxProps) => props.target || '_blank'};
-  &: hover {
-    ${(props: BoxProps) => props.hover}
-  }
-  onclick: ${(props: BoxProps) => props.onClick};
-  onsubmit: ${(props: BoxProps) => props.onSubmit};
   href: ${(props: BoxProps) => props.href};
   cursor: ${(props: BoxProps) => props.cursor};
   text-decoration: ${(props: BoxProps) => props.textDecoration || 'none'};
+  animation-name: ${(props: BoxProps) => props.animationName};
+  animation-duration: ${(props: BoxProps) => props.animationDuration};
+  animation-timing-function: ${(props: BoxProps) =>
+    props.animationTimingFunction};
+  z-index: ${(props: BoxProps) => props.zIndex};
+  &:hover {
+    ${(props: BoxProps) => props.hover};
+  }
   ${({ breakpoints }: { breakpoints: BoxProps['breakpoints'] }) =>
     createResponsiveStyle(breakpoints)};
 `

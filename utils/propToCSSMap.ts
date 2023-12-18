@@ -30,4 +30,10 @@ export const propToCSSMap: Record<string, string> = {
   fontSize: 'font-size',
   subStyle: 'font-weight',
   align: 'text-align',
+  textDecoration: 'text-decoration',
+  textDecorationColor: 'text-decoration-color',
+  textUnderlineOffset: 'text-underline-offset',
+  animationName: 'animation-name',
+  animationDuration: 'animation-duration',
+  animationTimingFunction: 'animation-timing-function',
 }

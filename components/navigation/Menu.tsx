@@ -1,6 +1,10 @@
+import Image from 'next/image'
+
+import { fadeInLeft } from 'components/animations/animation'
 import { Box } from 'components/common/box/Box'
+import { Button } from 'components/common/button/Button'
 import { IconButton } from 'components/common/iconButton/IconButton'
-import { Close } from 'components/icons/icons'
+import { Close, Headset } from 'components/icons/icons'
 import { Items } from 'components/navigation/Items'
 import { Theme } from 'components/Theme'
 
@@ -25,11 +29,51 @@ export const Menu = ({ open, onClose }: Props) => {
       left={0}
       right={0}
       bottom={0}
-      overflow="hidden">
-      <Box alignSelf="flex-end" marginTop={6} marginRight={4}>
-        <IconButton name="close-menu-button" onClick={onClose} icon={Close} />
+      overflow="hidden"
+      zIndex={1}>
+      <Box
+        direction="row"
+        alignItems="center"
+        justifyContent="space-between"
+        marginTop={6}
+        marginHorizontal={4}>
+        <Box as="a" href="/">
+          <Image
+            src="/images/cat-logo.svg"
+            alt="svg logo"
+            width={100}
+            height={40}
+            style={{
+              objectFit: 'fill',
+              objectPosition: 'center',
+              width: 'auto',
+            }}
+            priority
+          />
+        </Box>
+        <IconButton
+          size={10}
+          name="close-menu-button"
+          onClick={onClose}
+          icon={Close}
+        />
       </Box>
-      <Items />
+      <Box
+        animationName={fadeInLeft}
+        animationDuration="1s"
+        animationTimingFunction="ease-out">
+        <Items />
+      </Box>
+      <Box marginHorizontal={3} marginVertical={4}>
+        <Button
+          as="a"
+          href="/documents/cv.pdf"
+          target="_blank"
+          icon={Headset}
+          iconPosition="left">
+          Resume
+        </Button>
+      </Box>
     </Box>
   )
 }
