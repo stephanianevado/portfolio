@@ -13,6 +13,7 @@ export enum Color {
   SECONDARY_ORANGE = 'secondaryOrange',
   PRIMARY_PINK = 'primaryPink',
   SECONDARY_PINK = 'secondaryPink',
+  TERTIARY_PINK = 'tertiaryPink',
   PRIMARY_PURPLE = 'primaryPurple',
   SECONDARY_PURPLE = 'secondaryPurple',
   PRIMARY_WHITE = 'primaryWhite',
@@ -47,8 +48,9 @@ export const Theme = {
     [Color.TERTIARY_GREY]: '#F5F5F5',
     [Color.PRIMARY_ORANGE]: '#97240D',
     [Color.SECONDARY_ORANGE]: '#F24822',
-    [Color.PRIMARY_PINK]: '#F6EEF4',
-    [Color.SECONDARY_PINK]: '#FF00A8',
+    [Color.PRIMARY_PINK]: '#F5F5FF',
+    [Color.SECONDARY_PINK]: '#F6EEF4',
+    [Color.TERTIARY_PINK]: '#FF00A8',
     [Color.PRIMARY_PURPLE]: '#8638E5',
     [Color.SECONDARY_PURPLE]: '#681ABB',
     [Color.PRIMARY_WHITE]: '#FFFFFF',
@@ -66,6 +68,20 @@ export const Theme = {
   },
   fonts,
   typography: {
+    sith: {
+      fontFamily: fonts.HEADING,
+      fontSize: 104,
+      lineHeight: 48 / 40,
+      letterSpacing: 0.6,
+      variants: {
+        normal: {
+          fontWeight: 400,
+        },
+        bold: {
+          fontWeight: 500,
+        },
+      },
+    },
     vader: {
       fontFamily: fonts.HEADING,
       fontWeight: 500,
@@ -152,7 +168,7 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%;
     height: 100%;
     margin: 0;
-    background-color: #F5F5FF;
+    background-color: ${Theme.colors.primaryPink};
   }
 
   body {

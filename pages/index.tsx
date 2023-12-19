@@ -1,8 +1,8 @@
 import Head from 'next/head'
 
 import Icosahedron from 'components/animations/Icosahedron'
+import AppWrapper from 'components/AppWrapper'
 import { Box } from 'components/common/box/Box'
-import { Link } from 'components/common/link/Link'
 import { Text } from 'components/common/text/Text'
 import { Breakpoint, Theme } from 'components/Theme'
 
@@ -11,7 +11,7 @@ export default function Home() {
   const { LAPTOP, MOBILE_S } = Breakpoint
 
   return (
-    <>
+    <AppWrapper>
       <Head>
         <meta
           name="description"
@@ -20,40 +20,37 @@ export default function Home() {
       </Head>
       <Box
         alignItems="center"
+        paddingVertical={10}
         breakpoints={{
-          [MOBILE_S]: { padding: '40px 16px', direction: 'column' },
-          [LAPTOP]: { padding: '40px 0px', direction: 'row' },
+          [MOBILE_S]: { direction: 'column' },
+          [LAPTOP]: { direction: 'row' },
         }}>
         <Box
           breakpoints={{
-            [LAPTOP]: { flex: 2 },
+            [LAPTOP]: { flex: 1 },
           }}>
-          <Text as="h1" color={primaryBlack} variant="vader">
-            Hey & Welcome.
-          </Text>
-          <Text as="h2" color={primaryBlack} variant="padme">
+          <Text
+            as="h1"
+            color={primaryBlack}
+            variant={MOBILE_S ? 'vader' : 'sith'}>
             My name is{' '}
-            <Text as="span" color={primaryBlue} variant="padme">
-              Stephania
+            <Text
+              as="span"
+              color={primaryBlue}
+              variant={MOBILE_S ? 'vader' : 'sith'}
+              subStyle="bold">
+              Stephania Nevado...
             </Text>
-            !
           </Text>
-          <Text as="p" color={secondaryBlack} variant="anakin">
-            I am a frontend developer, manager and nutritionist located in
-            Sweden. Currently working at{' '}
-            <Link
-              href="https://www.carla.se/"
-              target="_blank"
-              variant="anakin"
-              color={primaryBlue}>
-              Carla
-            </Link>{' '}
-            -a start-up for buying, selling and leasing electrified vehicles
-            online. I love to code - it is one of my biggest passions ✨
+          <Text
+            as="p"
+            color={secondaryBlack}
+            variant={MOBILE_S ? 'padme' : 'vader'}>
+            Frontend developer, manager and nutritionist located in Sweden ✨
           </Text>
         </Box>
         <Icosahedron />
       </Box>
-    </>
+    </AppWrapper>
   )
 }

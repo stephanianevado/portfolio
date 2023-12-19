@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 
+import AppWrapper from 'components/AppWrapper'
 import { Box } from 'components/common/box/Box'
 import { Link } from 'components/common/link/Link'
 import { Text } from 'components/common/text/Text'
@@ -13,19 +14,14 @@ export default function About() {
   const { LAPTOP, MOBILE_S } = Breakpoint
 
   return (
-    <>
+    <AppWrapper>
       <Head>
         <meta
           name="description"
           content="In this section you get to know me better"
         />
       </Head>
-      <Box
-        paddingVertical={25}
-        breakpoints={{
-          [MOBILE_S]: { padding: '40px 16px' },
-          [LAPTOP]: { padding: '40px 0px' },
-        }}>
+      <Box paddingVertical={20}>
         <Title header="Nice to meet you!" subHeader="WELCOME" />
         <Box
           breakpoints={{
@@ -37,13 +33,13 @@ export default function About() {
               [LAPTOP]: { flex: 2 },
             }}>
             <Text as="p" color={tertiaryBlack} variant="leia">
-              Hello there! My name is Stephania Nevado. I'm a Frontend
-              developer, and I'm very passionate and dedicated to my work. My
-              interest in web development started in 2020. I wanted to try out
-              creating a HealthTech product and get more hands-on experience by
-              taking a digital product from idea to release. That's how Nutreto
-              was born. Nutreto is a cloud-based platform for nutrition and
-              health, usable for both patients and clinics. Check it out at{' '}
+              Hello there! My name is Stephania Nevado. I&apos;m a Frontend
+              developer, and I&apos;m very passionate and dedicated to my work.
+              My interest in web development started in 2020. I wanted to try
+              out creating a HealthTech product and get more hands-on experience
+              by taking a digital product from idea to release. That&apos;s how
+              Nutreto was born. Nutreto is a cloud-based platform for nutrition
+              and health, usable for both patients and clinics. Check it out at{' '}
               <Link
                 href="https://nutreto.com/en/"
                 target="_blank"
@@ -54,10 +50,10 @@ export default function About() {
               !
             </Text>
             <Text as="p" color={tertiaryBlack} variant="leia">
-              Currently I'm working at a start-up for buying, selling and
-              leasing electrified vehicles online. For the frontend we're using
-              modern web technologies (Next.js, TypeScript, React, Cypress,
-              Jest, Flora).
+              Currently I&apos;m working at a start-up for buying, selling and
+              leasing electrified vehicles online. For the frontend we&apos;re
+              using modern web technologies (Next.js, TypeScript, React,
+              Cypress, Jest, Flora).
             </Text>
             <Text as="p" color={tertiaryBlack} variant="leia">
               In my first job I built an AI product for synthetic data
@@ -67,9 +63,9 @@ export default function About() {
               high unit test coverage.
             </Text>
             <Text as="p" color={tertiaryBlack} variant="leia">
-              I'm passionate about tech, leadership and health, change
-              management, process improvement and teamwork. I'm also always
-              curious to learn new things. I'm a well-organized person, a
+              I&apos;m passionate about tech, leadership and health, change
+              management, process improvement and teamwork. I&apos;m also always
+              curious to learn new things. I&apos;m a well-organized person, a
               problem solver with high attention to detail.
             </Text>
           </Box>
@@ -98,6 +94,6 @@ export default function About() {
           </Box>
         </Box>
       </Box>
-    </>
+    </AppWrapper>
   )
 }

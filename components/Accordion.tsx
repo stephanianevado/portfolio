@@ -54,7 +54,7 @@ export const Accordion = ({ title, text, description, children }: Props) => {
           {icon}
         </Box>
       </Box>
-      <Line />
+      <Line color={primaryBlue} />
     </Box>
   )
 }

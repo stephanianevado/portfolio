@@ -41,6 +41,8 @@ export const Header = () => {
             style={{
               objectFit: 'fill',
               objectPosition: 'center',
+              width: 'auto',
+              height: 'auto',
             }}
             priority
           />

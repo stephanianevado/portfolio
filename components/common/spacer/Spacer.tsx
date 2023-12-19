@@ -10,4 +10,5 @@ export type SpacerProps = {
 
 export const Spacer = styled.div`
   width: ${(props: SpacerProps) => multiplier(props.size)};
+  height: ${(props: SpacerProps) => multiplier(props.size)};
 `

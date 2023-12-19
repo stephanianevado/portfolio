@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react'
+
 import styled from 'styled-components'
 
 import { Theme } from 'components/Theme'
@@ -247,16 +249,41 @@ export const Minus = ({ ...props }: IconProps) => {
   )
 }
 
-export const Line = ({ ...props }: IconProps) => {
+type LineProps = {
+  color?: Color
+}
+
+export const Line = ({ color = '#141313' }: LineProps) => {
+  const [width, setWidth] = useState(1280) // Initial width
+
+  useEffect(() => {
+    const handleResize = () => {
+      const box = document.getElementById('main') // Use the id of the main Box
+      if (box) {
+        const boxWidth = box.offsetWidth
+        setWidth(boxWidth)
+      }
+    }
+
+    handleResize()
+
+    // Attach resize event listener
+    window.addEventListener('resize', handleResize)
+
+    // Cleanup: remove event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+
   return (
-    <Icon
-      width="1235"
+    <svg
+      width={width}
       height="4"
-      viewBox="0 0 1235 4"
+      viewBox={`0 0 ${width} 4`}
       fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      {...props}>
-      <path opacity="0.2" d="M0 2H1235" stroke="#141313" strokeWidth="4" />
-    </Icon>
+      xmlns="http://www.w3.org/2000/svg">
+      <path opacity="0.2" d={`M0 2H${width}`} stroke={color} strokeWidth="4" />
+    </svg>
   )
 }

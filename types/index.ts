@@ -46,6 +46,7 @@ export type Size = number | string
 export type Target = '_blank' | '_self' | '_parent' | '_top' | 'framename'
 
 export type Variant =
+  | 'sith'
   | 'vader'
   | 'padme'
   | 'anakin'

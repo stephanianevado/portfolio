@@ -2,7 +2,7 @@ import styled, { keyframes } from 'styled-components'
 
 import { Theme } from 'components/Theme'
 
-const { primaryPurple, secondaryPink } = Theme.colors
+const { primaryPurple, tertiaryPink } = Theme.colors
 
 const rotate = keyframes`
   from {
@@ -86,7 +86,7 @@ const FaceWithColor = styled(Face)`
     border-bottom-color: rgba(0, 255, 0, 0.2);
   }
   &:nth-child(6n + 2):before {
-    border-bottom-color: ${secondaryPink};
+    border-bottom-color: ${tertiaryPink};
   }
   &:nth-child(6n + 3):before {
     border-bottom-color: rgba(255, 255, 0, 0.2);

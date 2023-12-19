@@ -1,4 +1,7 @@
+import Head from 'next/head'
+
 import Rings from 'components/animations/Rings'
+import AppWrapper from 'components/AppWrapper'
 import { Box } from 'components/common/box/Box'
 import { Button } from 'components/common/button/Button'
 import { Link } from 'components/common/link/Link'
@@ -12,55 +15,62 @@ export default function Contact() {
   const { LAPTOP, MOBILE_S } = Breakpoint
 
   return (
-    <Box
-      breakpoints={{
-        [MOBILE_S]: { padding: '40px 16px' },
-        [LAPTOP]: { padding: '40px 0px' },
-      }}>
-      <Title header="Contact" subHeader="REACH OUT ME" />
+    <AppWrapper>
+      <Head>
+        <meta
+          name="description"
+          content="If you are interested just contact me"
+        />
+      </Head>
+      <Box paddingVertical={20}>
+        <Title header="Contact" subHeader="REACH OUT ME" />
 
-      <Box
-        breakpoints={{
-          [MOBILE_S]: { padding: '40px 16px', direction: 'column' },
-          [LAPTOP]: { padding: '40px 0px', direction: 'row' },
-        }}>
         <Box
+          alignItems="center"
           breakpoints={{
-            [LAPTOP]: { flex: 1 },
+            [MOBILE_S]: { direction: 'column' },
+            [LAPTOP]: { direction: 'row' },
           }}>
-          <Text as="p" color={secondaryBlack} variant="leia">
-            My inbox is always open to discuss new opportunities. I’m always
-            eager to learn new things and grow as a developer. Check out my{' '}
-            <Link
-              href="https://github.com/stephanianevado"
-              target="_blank"
-              variant="leia"
-              color={primaryBlue}>
-              GitHub
-            </Link>
-            !
-          </Text>
           <Box
             breakpoints={{
-              [LAPTOP]: { alignSelf: 'flex-start' },
+              [LAPTOP]: { flex: 1 },
             }}>
-            <Button
-              as="a"
-              href="mailto:stephania.arantxa@gmail.com"
-              target="_blank"
-              icon={Headset}
-              iconPosition="left">
-              Let’s talk with me
-            </Button>
+            <Text as="p" color={secondaryBlack} variant="leia">
+              My inbox is always open to discuss new opportunities. I&apos;m
+              always eager to learn new things and grow as a developer. Check
+              out my{' '}
+              <Link
+                href="https://github.com/stephanianevado"
+                target="_blank"
+                variant="leia"
+                color={primaryBlue}>
+                GitHub
+              </Link>
+              !
+            </Text>
+            <Box
+              breakpoints={{
+                [LAPTOP]: { alignSelf: 'flex-start' },
+              }}>
+              <Button
+                as="a"
+                href="mailto:stephania.arantxa@gmail.com"
+                target="_blank"
+                icon={Headset}
+                iconPosition="left">
+                Let&apos;s talk with me
+              </Button>
+            </Box>
+          </Box>
+          <Box
+            breakpoints={{
+              [MOBILE_S]: { paddingTop: '60px' },
+              [LAPTOP]: { paddingTop: '0px' },
+            }}>
+            <Rings />
           </Box>
         </Box>
-        <Box
-          breakpoints={{
-            [MOBILE_S]: { paddingTop: '60px' },
-          }}>
-          <Rings />
-        </Box>
       </Box>
-    </Box>
+    </AppWrapper>
   )
 }
