@@ -14,7 +14,7 @@ export const Title = ({
   subHeader = 'h2',
   variant = 'vader',
 }: Props) => {
-  const { secondaryBlack, primaryGrey, secondaryOrange } = Theme.colors
+  const { secondaryBlack, primaryGrey, tertiaryPink } = Theme.colors
 
   return (
     <>
@@ -23,7 +23,7 @@ export const Title = ({
         color={secondaryBlack}
         variant="leia"
         textDecoration="underline"
-        textDecorationColor={secondaryOrange}
+        textDecorationColor={tertiaryPink}
         textUnderlineOffset="8px">
         {header}
       </Text>
@@ -33,7 +33,7 @@ export const Title = ({
         color={primaryGrey}
         variant={variant}
         animationName={fadeInRight}
-        animationDuration="2s"
+        animationDuration="200ms"
         animationTimingFunction="ease-out">
         {subHeader} &rarr;
       </Text>

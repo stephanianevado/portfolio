@@ -9,7 +9,7 @@ import { Id, items } from 'utils/items'
 export const Items = () => {
   const router = useRouter()
   const { MOBILE_S, LAPTOP } = Breakpoint
-  const { secondaryGrey, secondaryOrange } = Theme.colors
+  const { secondaryGrey, tertiaryPink } = Theme.colors
 
   return (
     <Box
@@ -37,11 +37,16 @@ export const Items = () => {
               [LAPTOP]: { margin: '0px 24px' },
             }}>
             <Text
-              color={isActivePage ? secondaryOrange : secondaryGrey}
+              color={isActivePage ? tertiaryPink : secondaryGrey}
               textDecoration={isActivePage ? 'underline' : 'none'}
               textUnderlineOffset="4px"
-              variant="leia"
-              subStyle="bold">
+              variant="kylo"
+              subStyle="bold"
+              hover={{
+                color: tertiaryPink,
+                textDecoration: 'underline',
+                textUnderlineOffset: '4px',
+              }}>
               {title}
             </Text>
           </Box>

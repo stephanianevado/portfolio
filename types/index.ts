@@ -47,10 +47,12 @@ export type Target = '_blank' | '_self' | '_parent' | '_top' | 'framename'
 
 export type Variant =
   | 'sith'
+  | 'jedi'
   | 'vader'
   | 'padme'
   | 'anakin'
   | 'ashoka'
+  | 'kylo'
   | 'leia'
   | 'luke'
   | 'obi'

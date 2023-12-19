@@ -4,7 +4,7 @@ import { fadeInLeft } from 'components/animations/animation'
 import { Box } from 'components/common/box/Box'
 import { Button } from 'components/common/button/Button'
 import { IconButton } from 'components/common/iconButton/IconButton'
-import { Close, Headset } from 'components/icons/icons'
+import { Close, Link } from 'components/icons/icons'
 import { Items } from 'components/navigation/Items'
 import { Theme } from 'components/Theme'
 
@@ -19,6 +19,7 @@ export const Menu = ({ open, onClose }: Props) => {
   if (!open) {
     return null
   }
+
   return (
     <Box
       bg={primaryWhite}
@@ -61,7 +62,7 @@ export const Menu = ({ open, onClose }: Props) => {
       </Box>
       <Box
         animationName={fadeInLeft}
-        animationDuration="1s"
+        animationDuration="200ms"
         animationTimingFunction="ease-out">
         <Items />
       </Box>
@@ -70,7 +71,7 @@ export const Menu = ({ open, onClose }: Props) => {
           as="a"
           href="/documents/cv.pdf"
           target="_blank"
-          icon={Headset}
+          icon={Link}
           iconPosition="left">
           Resume
         </Button>

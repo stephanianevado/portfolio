@@ -32,8 +32,8 @@ export enum Breakpoint {
 }
 
 const fonts = {
-  HEADING: 'Spline Sans, Poppins, Pangea, sans-serif',
-  BODY: 'Spline Sans, Poppins, Pangea Text, sans-serif',
+  HEADING: 'Clash Display, Spline Sans, Poppins, Pangea, sans-serif',
+  BODY: 'Clash Display, Spline Sans, Poppins, Pangea Text, sans-serif',
 }
 
 export const Theme = {
@@ -78,27 +78,34 @@ export const Theme = {
           fontWeight: 400,
         },
         bold: {
-          fontWeight: 500,
+          fontWeight: 600,
         },
       },
     },
+    jedi: {
+      fontFamily: fonts.HEADING,
+      fontWeight: 600,
+      fontSize: 72,
+      lineHeight: 48 / 40,
+      letterSpacing: 0.6,
+    },
     vader: {
       fontFamily: fonts.HEADING,
-      fontWeight: 500,
+      fontWeight: 600,
       fontSize: 42,
       lineHeight: 48 / 40,
       letterSpacing: 0.6,
     },
     padme: {
       fontFamily: fonts.HEADING,
-      fontWeight: 500,
+      fontWeight: 600,
       fontSize: 40,
       lineHeight: 48 / 40,
       letterSpacing: 0.6,
     },
     anakin: {
       fontFamily: fonts.HEADING,
-      fontWeight: 500,
+      fontWeight: 600,
       fontSize: 28,
       lineHeight: 36 / 28,
       letterSpacing: 0.6,
@@ -113,7 +120,7 @@ export const Theme = {
           fontWeight: 400,
         },
         bold: {
-          fontWeight: 500,
+          fontWeight: 600,
         },
       },
     },
@@ -127,7 +134,21 @@ export const Theme = {
           fontWeight: 400,
         },
         bold: {
-          fontWeight: 500,
+          fontWeight: 600,
+        },
+      },
+    },
+    kylo: {
+      fontFamily: fonts.BODY,
+      fontSize: 18,
+      lineHeight: 24 / 16,
+      letterSpacing: 0.6,
+      variants: {
+        normal: {
+          fontWeight: 400,
+        },
+        bold: {
+          fontWeight: 600,
         },
       },
     },
@@ -141,7 +162,7 @@ export const Theme = {
           fontWeight: 400,
         },
         bold: {
-          fontWeight: 500,
+          fontWeight: 600,
         },
       },
     },
@@ -155,7 +176,7 @@ export const Theme = {
           fontWeight: 400,
         },
         bold: {
-          fontWeight: 500,
+          fontWeight: 600,
         },
       },
     },
@@ -166,7 +187,7 @@ export const GlobalStyle = createGlobalStyle`
   html, 
   body {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     margin: 0;
     background-color: ${Theme.colors.primaryPink};
   }

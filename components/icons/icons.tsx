@@ -254,11 +254,11 @@ type LineProps = {
 }
 
 export const Line = ({ color = '#141313' }: LineProps) => {
-  const [width, setWidth] = useState(1280) // Initial width
+  const [width, setWidth] = useState(1280)
 
   useEffect(() => {
     const handleResize = () => {
-      const box = document.getElementById('main') // Use the id of the main Box
+      const box = document.getElementById('main')
       if (box) {
         const boxWidth = box.offsetWidth
         setWidth(boxWidth)
@@ -267,10 +267,8 @@ export const Line = ({ color = '#141313' }: LineProps) => {
 
     handleResize()
 
-    // Attach resize event listener
     window.addEventListener('resize', handleResize)
 
-    // Cleanup: remove event listener on component unmount
     return () => {
       window.removeEventListener('resize', handleResize)
     }
@@ -283,7 +281,20 @@ export const Line = ({ color = '#141313' }: LineProps) => {
       viewBox={`0 0 ${width} 4`}
       fill="none"
       xmlns="http://www.w3.org/2000/svg">
-      <path opacity="0.2" d={`M0 2H${width}`} stroke={color} strokeWidth="4" />
+      <path opacity="0.1" d={`M0 2H${width}`} stroke={color} strokeWidth="4" />
+    </svg>
+  )
+}
+
+export const Dash = () => {
+  return (
+    <svg
+      width="47"
+      height="2"
+      viewBox="0 0 47 2"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 1H47" stroke="#8B8B8B" stroke-width="2" />
     </svg>
   )
 }

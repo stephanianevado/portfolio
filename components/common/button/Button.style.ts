@@ -13,17 +13,24 @@ import type { PaddingProps } from 'utils/styledPadding'
 
 const {
   tertiaryBlack,
+  secondaryGrey,
   tertiaryGrey,
   primaryWhite,
   primaryBlue,
-  primaryPurple,
 } = Theme.colors
-const { fontFamily, fontSize, variants } = Theme.typography.luke
+const { fontFamily, fontSize, variants } = Theme.typography.kylo
 const { fontWeight } = variants.bold
 
 export type ButtonProps = PaddingProps &
   PropsWithChildren<{
-    fontFamily?: 'padme' | 'anakin' | 'ashoka' | 'leia' | 'luke' | 'obi'
+    fontFamily?:
+      | 'padme'
+      | 'anakin'
+      | 'ashoka'
+      | 'leia'
+      | 'luke'
+      | 'obi'
+      | 'kylo'
     fontSize?: number
     fontWeight?: number
     id?: string
@@ -46,7 +53,7 @@ export type ButtonProps = PaddingProps &
   }>
 
 export const StyledButton = styled.button<ButtonProps>`
-  padding: ${(props: PaddingProps) => multiplier(props.padding) || '20px 16px'};
+  padding: ${(props: PaddingProps) => multiplier(props.padding) || '16px 24px'};
   font-family: ${(props: ButtonProps) => props.fontFamily || fontFamily};
   font-size: ${(props: ButtonProps) => props.fontSize || fontSize}px;
   font-weight: ${(props: ButtonProps) => props.fontWeight || fontWeight};
@@ -58,7 +65,7 @@ export const StyledButton = styled.button<ButtonProps>`
   background-color: ${(props: ButtonProps) =>
     props.bg || 'rgba(0, 0, 0, 0.04)'};
   &:hover {
-    background-color:${primaryPurple};
+    background-color:${secondaryGrey};
     box-shadow: 0 0 0 1px ${primaryWhite};
   };
  &:disabled {

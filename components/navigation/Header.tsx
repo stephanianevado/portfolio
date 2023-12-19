@@ -56,7 +56,7 @@ export const Header = () => {
             }}>
             <Box
               animationName={fadeInDown}
-              animationDuration="1s"
+              animationDuration="200ms"
               animationTimingFunction="ease-out">
               <Items />
             </Box>
@@ -83,7 +83,7 @@ export const Header = () => {
         </Box>
         <Box
           animationName={fadeInDown}
-          animationDuration="2s"
+          animationDuration="200ms"
           animationTimingFunction="ease-out"
           breakpoints={{
             [Breakpoint.MOBILE_S]: { display: 'none' },

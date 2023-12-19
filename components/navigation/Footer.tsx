@@ -15,12 +15,12 @@ export const Footer = () => {
     <Box as="footer" width="100%" bottom={0}>
       <Line />
       <Spacer size={10} />
-      <Text variant="leia" color={primaryBlack}>
-        Copyright ©{currentYear} Stephania Nevado.
+      <Text variant="obi" color={primaryBlack}>
+        Copyright © {currentYear} Stephania Nevado.
       </Text>
-      <Spacer size={6} />
-      <Text variant="leia" color={primaryBlack}>
-        All right reserved.
+      <Spacer size={1} />
+      <Text variant="obi" color={primaryBlack}>
+        All rights reserved.
       </Text>
       <Spacer size={6} />
       <Box direction="row">
