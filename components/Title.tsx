@@ -9,11 +9,7 @@ type Props = {
   variant?: TextProps['variant']
 }
 
-export const Title = ({
-  header = 'h1',
-  subHeader = 'h2',
-  variant = 'vader',
-}: Props) => {
+export const Title = ({ header, subHeader, variant = 'vader' }: Props) => {
   const { secondaryBlack, primaryGrey, tertiaryPink } = Theme.colors
 
   return (
