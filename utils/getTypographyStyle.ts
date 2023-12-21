@@ -23,15 +23,11 @@ export const getTypographyStyle = <T extends Variant>(
 
   let styleToApply = typographyStyle
 
-  if (subStyle && typographyStyle.variants) {
-    const variantStyle = typographyStyle.variants[subStyle]
+  const variantStyle = subStyle && typographyStyle.variants[subStyle]
 
-    if (variantStyle) {
-      styleToApply = {
-        ...typographyStyle,
-        ...variantStyle,
-      }
-    }
+  styleToApply = {
+    ...typographyStyle,
+    ...variantStyle,
   }
 
   return {

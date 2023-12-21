@@ -70,7 +70,7 @@ export const Theme = {
   typography: {
     sith: {
       fontFamily: fonts.HEADING,
-      fontSize: 104,
+      fontSize: '104px',
       lineHeight: 48 / 40,
       letterSpacing: 0.6,
       variants: {
@@ -84,35 +84,63 @@ export const Theme = {
     },
     jedi: {
       fontFamily: fonts.HEADING,
-      fontWeight: 600,
-      fontSize: 72,
+      fontSize: '72px',
       lineHeight: 48 / 40,
       letterSpacing: 0.6,
+      variants: {
+        normal: {
+          fontWeight: 400,
+        },
+        bold: {
+          fontWeight: 600,
+        },
+      },
     },
     vader: {
       fontFamily: fonts.HEADING,
-      fontWeight: 600,
-      fontSize: 42,
+      fontSize: '42px',
       lineHeight: 48 / 40,
       letterSpacing: 0.6,
+      variants: {
+        normal: {
+          fontWeight: 400,
+        },
+        bold: {
+          fontWeight: 600,
+        },
+      },
     },
     padme: {
       fontFamily: fonts.HEADING,
-      fontWeight: 600,
-      fontSize: 40,
+      fontSize: '40px',
       lineHeight: 48 / 40,
       letterSpacing: 0.6,
+      variants: {
+        normal: {
+          fontWeight: 400,
+        },
+        bold: {
+          fontWeight: 600,
+        },
+      },
     },
     anakin: {
       fontFamily: fonts.HEADING,
-      fontWeight: 600,
-      fontSize: 28,
+      fontSize: '28px',
       lineHeight: 36 / 28,
       letterSpacing: 0.6,
+      variants: {
+        normal: {
+          fontWeight: 400,
+        },
+        bold: {
+          fontWeight: 600,
+        },
+      },
     },
     ashoka: {
       fontFamily: fonts.HEADING,
-      fontSize: 24,
+      fontSize: '24px',
       lineHeight: 32 / 24,
       letterSpacing: 0.6,
       variants: {
@@ -126,7 +154,7 @@ export const Theme = {
     },
     leia: {
       fontFamily: fonts.HEADING,
-      fontSize: 20,
+      fontSize: '20px',
       lineHeight: 28 / 20,
       letterSpacing: 0.6,
       variants: {
@@ -140,7 +168,7 @@ export const Theme = {
     },
     kylo: {
       fontFamily: fonts.BODY,
-      fontSize: 18,
+      fontSize: '18px',
       lineHeight: 24 / 16,
       letterSpacing: 0.6,
       variants: {
@@ -154,7 +182,7 @@ export const Theme = {
     },
     luke: {
       fontFamily: fonts.BODY,
-      fontSize: 16,
+      fontSize: '16px',
       lineHeight: 24 / 16,
       letterSpacing: 0.6,
       variants: {
@@ -168,7 +196,7 @@ export const Theme = {
     },
     obi: {
       fontFamily: fonts.BODY,
-      fontSize: 14,
+      fontSize: '14px',
       lineHeight: 20 / 14,
       letterSpacing: 0.6,
       variants: {

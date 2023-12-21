@@ -47,7 +47,13 @@ export default function Home() {
             </Text>
           </Box>
           <Spacer size={3} />
-          <Text as="h1" color={secondaryBlack} variant="jedi">
+          <Text
+            as="h1"
+            color={secondaryBlack}
+            breakpoints={{
+              [MOBILE_S]: { variant: 'vader', subStyle: 'bold' },
+              [LAPTOP]: { variant: 'jedi', subStyle: 'bold' },
+            }}>
             Frontend developer, manager and nutritionist located in Sweden ✨
           </Text>
           <Box

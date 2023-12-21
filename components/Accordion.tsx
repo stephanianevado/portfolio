@@ -34,7 +34,7 @@ export const Accordion = ({ title, text, description, children }: Props) => {
           [LAPTOP]: { direction: 'row', alignItems: 'center' },
         }}>
         <Box flex={2}>
-          <Text as="p" color={color} variant="anakin">
+          <Text as="p" color={color} variant="anakin" subStyle="bold">
             {title}
           </Text>
         </Box>

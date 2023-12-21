@@ -28,6 +28,7 @@ export const Title = ({ header, subHeader, variant = 'vader' }: Props) => {
         as="h2"
         color={primaryGrey}
         variant={variant}
+        subStyle="bold"
         animationName={fadeInRight}
         animationDuration="200ms"
         animationTimingFunction="ease-out">

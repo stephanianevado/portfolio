@@ -64,10 +64,10 @@ export type Fonts = {
 export type Typography = {
   fontFamily: string
   fontWeight?: number
-  fontSize: number
+  fontSize: string
   lineHeight: number
   letterSpacing: number
-  variants?: {
+  variants: {
     normal: {
       fontWeight: number
     }

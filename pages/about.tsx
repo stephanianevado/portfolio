@@ -81,14 +81,12 @@ export default function About() {
             <Image
               src="/images/me.png"
               alt="Picture of Stephania Nevado"
-              width={320}
-              height={600}
+              width={350}
+              height={370}
               priority
               style={{
                 objectFit: 'fill',
                 objectPosition: 'center',
-                width: 'auto',
-                height: 'auto',
               }}
             />
           </Box>
