@@ -34,7 +34,7 @@ export const Header = () => {
             [Breakpoint.LAPTOP]: { display: 'flex' },
           }}>
           <Image
-            src="/images/logo.png"
+            src="/images/logo.svg"
             alt="svg logo"
             width={144}
             height={40}
