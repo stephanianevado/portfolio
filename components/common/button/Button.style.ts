@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import type { Icon } from 'components/icons/icons'
 import { Theme } from 'components/Theme'
 
-import type { BreakpointStyles, Color, Size } from 'types/index'
+import type { BreakpointStyles, Color, JustifyContent, Size } from 'types/index'
 
 import { createResponsiveStyle } from 'utils/createResponsiveStyle'
 import multiplier from 'utils/multiplier'
@@ -42,7 +42,9 @@ export type ButtonProps = PaddingProps &
     disabled?: boolean
     children?: React.ReactNode
     border?: Color
+    width?: Size
     borderRadius?: Size
+    justifyContent?: JustifyContent
     href?: string
     target?: '_blank'
     breakpoints?: Record<string, BreakpointStyles>
@@ -77,8 +79,8 @@ export const StyledButton = styled.button<ButtonProps>`
   box-sizing: border-box;
   border-radius: ${(props: ButtonProps) =>
     multiplier(props.borderRadius) || multiplier(2)};
-  border: ${(props: ButtonProps) => props.border || `1px bold #E3E3E3`};
-  width: 100%;
+  border: ${(props: ButtonProps) => props.border || '1px bold #E3E3E3'};
+  width: ${(props: ButtonProps) => multiplier(props.width) || '100%'};
   max-width: 100%;
   min-width: 80px;
   display: flex;
@@ -87,7 +89,7 @@ export const StyledButton = styled.button<ButtonProps>`
   white-space: nowrap;
   overflow: hidden;
   text-align: center;
-  justify-content: center;
+  justify-content: ${(props: ButtonProps) => props.justifyContent || 'center'};
   align-items: center;
   flex-shrink: 1;
   appearance: none;

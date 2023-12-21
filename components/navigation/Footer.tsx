@@ -3,7 +3,7 @@ import { Spacer } from 'components/common/spacer/Spacer'
 import { Text } from 'components/common/text/Text'
 import { Line } from 'components/icons/icons'
 import { Theme } from 'components/Theme'
-import { footerItems, Id } from 'utils/footerItems'
+import { contactItems, Id } from 'utils/contactItems'
 
 export const Footer = () => {
   const currentDate = new Date()
@@ -12,7 +12,7 @@ export const Footer = () => {
   const { primaryBlack } = Theme.colors
 
   return (
-    <Box as="footer" width="100%" bottom={0}>
+    <Box as="footer" width="100%">
       <Line />
       <Spacer size={10} />
       <Text variant="obi" color={primaryBlack}>
@@ -25,7 +25,7 @@ export const Footer = () => {
       <Spacer size={6} />
       <Box direction="row">
         {Object.values(Id).map((id) => {
-          const item = footerItems[id]
+          const item = contactItems[id]
           const { text, href, icon: Icon } = item
 
           return (

@@ -1,10 +1,17 @@
-import { Box } from 'components/common/box/Box'
-
 import {
   StyledButton,
   type ButtonProps,
 } from 'components/common/button/Button.style'
 import { Spacer } from 'components/common/spacer/Spacer'
+
+export enum Mode {
+  STANDARD = 'STANDARD',
+  ALTERNATIVE = 'ALTERNATIVE',
+}
+
+type Props = {
+  mode?: Mode
+}
 
 export const Button = ({
   iconPosition = 'right',
@@ -12,13 +19,18 @@ export const Button = ({
   onClick,
   onSubmit,
   children,
+  mode = Mode.STANDARD,
   ...props
-}: ButtonProps) => {
+}: ButtonProps & Props) => {
   const boxBase = (
-    <Box direction="row" alignItems="center" justifyContent="center">
+    <>
       {iconPosition === 'left' && Icon && (
         <>
-          <Icon size={4} />
+          {mode === Mode.ALTERNATIVE ? (
+            <Icon size={10} color={props.color} />
+          ) : (
+            <Icon size={4} />
+          )}
           <Spacer size={2} />
         </>
       )}
@@ -26,12 +38,31 @@ export const Button = ({
       {iconPosition === 'right' && Icon && (
         <>
           <Spacer size={2} />
-          <Icon size={4} />
+          {mode === Mode.ALTERNATIVE ? (
+            <Icon size={10} color={props.color} />
+          ) : (
+            <Icon size={4} />
+          )}
         </>
       )}
-    </Box>
+    </>
   )
-
+  if (mode === Mode.ALTERNATIVE) {
+    return (
+      <StyledButton
+        width={40}
+        padding="4px"
+        direction="row"
+        borderRadius={10}
+        border="transparent"
+        justifyContent="flex-start"
+        onClick={onClick}
+        onSubmit={onSubmit}
+        {...props}>
+        {boxBase}
+      </StyledButton>
+    )
+  }
   return (
     <StyledButton onClick={onClick} onSubmit={onSubmit} {...props}>
       {boxBase}
