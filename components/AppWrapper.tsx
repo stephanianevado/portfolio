@@ -11,15 +11,17 @@ export default function AppWrapper({ children }: Props) {
   const { DESKTOP, LAPTOP, MOBILE_S } = Breakpoint
 
   return (
-    <Box
-      height="100%"
-      breakpoints={{
-        [MOBILE_S]: { margin: '24px 16px' },
-        [LAPTOP]: { margin: '24px 80px' },
-        [DESKTOP]: { margin: '24px 640px' },
-      }}>
+    <Box width="100vw" height="100vh">
       <Header />
-      <Box as="main" id="main" grow={1}>
+      <Box
+        as="main"
+        id="main"
+        grow={1}
+        breakpoints={{
+          [MOBILE_S]: { margin: '16px 16px' },
+          [LAPTOP]: { margin: '16px 80px' },
+          [DESKTOP]: { margin: '16px 640px' },
+        }}>
         {children}
       </Box>
       <Footer />

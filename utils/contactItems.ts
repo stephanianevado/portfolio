@@ -8,6 +8,7 @@ import {
 
 export enum Id {
   GITHUB = 'GITHUB',
+  PORTFOLIO = 'PORTFOLIO',
   LINKEDIN = 'LINKEDIN',
   INSTAGRAM = 'INSTAGRAM',
   FACEBOOK = 'FACEBOOK',
@@ -19,6 +20,12 @@ export const contactItems = {
     text: 'Go to my GitHub',
     alternativeText: 'My GitHub',
     href: 'https://github.com/stephanianevado',
+    icon: GitHub,
+  },
+  [Id.PORTFOLIO]: {
+    text: 'Go to my Portfolio',
+    alternativeText: 'Portfolio',
+    href: 'https://github.com/stephanianevado/portfolio?tab=readme-ov-file#stephania-nevados-portfolio',
     icon: GitHub,
   },
   [Id.LINKEDIN]: {

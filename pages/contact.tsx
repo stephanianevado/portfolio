@@ -22,7 +22,7 @@ export default function Contact() {
           content="If you are interested just contact me"
         />
       </Head>
-      <Box paddingVertical={20}>
+      <Box>
         <Title header="Contact" subHeader="REACH OUT ME" />
 
         <Box

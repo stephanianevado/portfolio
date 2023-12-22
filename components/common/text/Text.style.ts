@@ -20,8 +20,8 @@ import type {
 
 import { createResponsiveStyle } from 'utils/createResponsiveStyle'
 import { getTypographyStyle } from 'utils/getTypographyStyle'
-import { styledMargins, type MarginProps } from 'utils/styledMargins'
-import { styledPadding, type PaddingProps } from 'utils/styledPadding'
+import { type MarginProps } from 'utils/styledMargins'
+import { type PaddingProps } from 'utils/styledPadding'
 
 const { primaryBlue } = Theme.colors
 
@@ -76,8 +76,8 @@ export type TextProps = PaddingProps &
   }>
 
 export const StyledText = styled.div`
-  ${styledPadding};
-  ${styledMargins};
+  margin: 0;
+  padding: 8px 0px;
   id: ${(props: TextProps) => props.id};
   as: ${(props: TextProps) => props.as};
   display: ${(props: TextProps) => props.display || 'inline'};
@@ -100,7 +100,7 @@ export const StyledText = styled.div`
     props.textDecorationColor || 'none'};
     text-underline-offset: ${(props: TextProps) =>
       props.textUnderlineOffset || 'none'};
-  text-wrap:  ${(props: TextProps) => props.textWrap || 'balance'}; 
+  text-wrap:  ${(props: TextProps) => props.textWrap || 'wrap'}; 
   &:hover {
     ${(props: TextProps) => props.hover};
   };

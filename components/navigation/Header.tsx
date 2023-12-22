@@ -13,7 +13,7 @@ import { Breakpoint } from 'components/Theme'
 
 export const Header = () => {
   const [open, setOpen] = useState(false)
-
+  const { DESKTOP, LAPTOP, MOBILE_S } = Breakpoint
   return (
     <>
       <Menu open={open} onClose={() => setOpen(false)} />
@@ -21,10 +21,10 @@ export const Header = () => {
         as="header"
         direction="row"
         alignItems="center"
-        width="100%"
         breakpoints={{
-          [Breakpoint.MOBILE_S]: { justifyContent: 'flex-end' },
-          [Breakpoint.LAPTOP]: { justifyContent: 'space-between' },
+          [MOBILE_S]: { margin: '24px 16px', justifyContent: 'flex-end' },
+          [LAPTOP]: { margin: '24px 80px', justifyContent: 'space-between' },
+          [DESKTOP]: { margin: '24px 640px', justifyContent: 'space-between' },
         }}>
         <Box
           as="a"
@@ -66,7 +66,6 @@ export const Header = () => {
             breakpoints={{
               [Breakpoint.MOBILE_S]: {
                 display: 'flex',
-                margin: '0px 16px',
               },
               [Breakpoint.LAPTOP]: {
                 display: 'none',

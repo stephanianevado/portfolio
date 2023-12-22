@@ -14,7 +14,7 @@ export default function Work() {
           content="In this section you get to know my work"
         />
       </Head>
-      <Box paddingVertical={20}>
+      <Box>
         <Title header="Work" subHeader="RECENT PROJECT" />
 
         <ProjectBox

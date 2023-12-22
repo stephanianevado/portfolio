@@ -15,7 +15,7 @@ export default function MySkills() {
           content="In this section you get to know some of my skills"
         />
       </Head>
-      <Box paddingVertical={20}>
+      <Box>
         <Title header="Skills" subHeader="MY SPECIALTIES" />
 
         {Object.values(Id).map((id) => {

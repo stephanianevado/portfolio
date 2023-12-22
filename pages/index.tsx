@@ -25,8 +25,6 @@ export default function Home() {
         />
       </Head>
       <Box
-        alignItems="center"
-        paddingVertical={10}
         breakpoints={{
           [MOBILE_S]: { direction: 'column' },
           [LAPTOP]: { direction: 'row' },
@@ -46,7 +44,6 @@ export default function Home() {
               Stephania Nevado
             </Text>
           </Box>
-          <Spacer size={3} />
           <Text
             as="h1"
             color={secondaryBlack}
@@ -56,6 +53,7 @@ export default function Home() {
             }}>
             Frontend developer, manager and nutritionist located in Sweden ✨
           </Text>
+          <Spacer size={2} />
           <Box
             breakpoints={{
               [MOBILE_S]: { direction: 'column', alignItems: 'center' },

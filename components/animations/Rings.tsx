@@ -86,7 +86,6 @@ export default function Rings() {
           {ringColors.map((color, index) => (
             <Ring
               key={index}
-              className={`ring-${index + 1}`}
               style={{
                 color,
                 transform: `rotateY(${index * 4}deg)`,
