@@ -1,5 +1,3 @@
-import { Fragment } from 'react'
-
 import Head from 'next/head'
 
 import AppWrapper from 'components/AppWrapper'
@@ -7,14 +5,14 @@ import { Box } from 'components/common/box/Box'
 import { Button, Mode } from 'components/common/button/Button'
 import { Spacer } from 'components/common/spacer/Spacer'
 import { Text } from 'components/common/text/Text'
-import { Breakpoint, Theme } from 'components/Theme'
+import { Theme } from 'components/Theme'
 import { Title } from 'components/Title'
 import { Id, workItems } from 'utils/workItems'
 
 export default function Work() {
   const { secondaryBlack, secondaryBlue, secondaryGrey, primaryWhite } =
     Theme.colors
-  const { LAPTOP, MOBILE_S } = Breakpoint
+
   return (
     <AppWrapper>
       <Head>
@@ -36,17 +34,12 @@ export default function Work() {
             icon: Icon,
           } = item
           return (
-            <Fragment key={id}>
+            <Box key={id}>
               <Text
                 as="h3"
                 color={secondaryGrey}
                 variant="anakin"
-                subStyle="bold"
-                // breakpoints={{
-                //   [MOBILE_S]: { variant: 'vader', subStyle: 'bold' },
-                //   [LAPTOP]: { variant: 'jedi', subStyle: 'bold' },
-                // }}
-              >
+                subStyle="bold">
                 {title}
               </Text>
               <Text as="p" color={secondaryBlack} variant="luke">
@@ -62,6 +55,7 @@ export default function Work() {
                 </Text>
                 {technologies}
               </Text>
+              <Spacer size={2} />
               <Button
                 as="a"
                 href={href}
@@ -73,8 +67,8 @@ export default function Work() {
                 mode={Mode.ALTERNATIVE}>
                 {buttonText}
               </Button>
-              <Spacer size={4} />
-            </Fragment>
+              <Spacer size={2} />
+            </Box>
           )
         })}
       </Box>
