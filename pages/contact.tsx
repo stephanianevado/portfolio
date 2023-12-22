@@ -1,17 +1,18 @@
 import Head from 'next/head'
 
-import Rings from 'components/animations/Rings'
 import AppWrapper from 'components/AppWrapper'
 import { Box } from 'components/common/box/Box'
-import { Button } from 'components/common/button/Button'
-import { Link } from 'components/common/link/Link'
+import { Button, Mode } from 'components/common/button/Button'
+import { Grid } from 'components/common/grid/Grid'
+import { Spacer } from 'components/common/spacer/Spacer'
 import { Text } from 'components/common/text/Text'
 import { Headset } from 'components/icons/icons'
 import { Breakpoint, Theme } from 'components/Theme'
 import { Title } from 'components/Title'
+import { contactItems, Id } from 'utils/contactItems'
 
 export default function Contact() {
-  const { secondaryBlack, primaryBlue } = Theme.colors
+  const { secondaryBlack, primaryBlue, primaryWhite } = Theme.colors
   const { LAPTOP, MOBILE_S } = Breakpoint
 
   return (
@@ -24,30 +25,24 @@ export default function Contact() {
       </Head>
       <Box>
         <Title header="Contact" subHeader="REACH OUT ME" />
-
         <Box
-          alignItems="center"
           breakpoints={{
             [MOBILE_S]: { direction: 'column' },
             [LAPTOP]: { direction: 'row' },
           }}>
           <Box
             breakpoints={{
-              [LAPTOP]: { flex: 1 },
+              [LAPTOP]: { flex: 2 },
             }}>
-            <Text as="p" color={secondaryBlack} variant="leia">
-              My inbox is always open to discuss new opportunities. I&apos;m
-              always eager to learn new things and grow as a developer. Check
-              out my{' '}
-              <Link
-                href="https://github.com/stephanianevado"
-                target="_blank"
-                variant="leia"
-                color={primaryBlue}>
-                GitHub
-              </Link>
-              !
+            <Text as="p" color={secondaryBlack} variant="ashoka">
+              I&apos;m always enthusiastic about learning new things and
+              evolving as a developer.
             </Text>
+            <Text as="p" color={secondaryBlack} variant="ashoka">
+              My inbox is always open to discuss new opportunities. You can also
+              find me on social media.
+            </Text>
+            <Spacer size={5} />
             <Box
               breakpoints={{
                 [LAPTOP]: { alignSelf: 'flex-start' },
@@ -62,12 +57,48 @@ export default function Contact() {
               </Button>
             </Box>
           </Box>
+          <Spacer size={10} />
           <Box
             breakpoints={{
-              [MOBILE_S]: { paddingTop: '60px' },
-              [LAPTOP]: { paddingTop: '0px' },
+              [LAPTOP]: { flex: 2, justifyContent: 'center' },
             }}>
-            <Rings />
+            <Grid
+              breakpoints={{
+                [MOBILE_S]: { columns: 'repeat(1, 1fr)', gap: '16px' },
+                [LAPTOP]: {
+                  columns: 'repeat(2, 1fr)',
+                  gap: '40px',
+                },
+              }}>
+              {Object.values(Id)
+                .filter((id) => {
+                  return [
+                    Id.GITHUB,
+                    Id.LINKEDIN,
+                    Id.INSTAGRAM,
+                    Id.FACEBOOK,
+                  ].includes(id)
+                })
+                .map((id) => {
+                  const item = contactItems[id]
+                  const { alternativeText, href, icon: Icon } = item
+                  return (
+                    <Box key={id}>
+                      <Button
+                        as="a"
+                        href={href}
+                        target="_blank"
+                        icon={Icon}
+                        iconPosition="left"
+                        color={primaryWhite}
+                        bg={secondaryBlack}
+                        mode={Mode.ALTERNATIVE}>
+                        {alternativeText}
+                      </Button>
+                    </Box>
+                  )
+                })}
+            </Grid>
           </Box>
         </Box>
       </Box>
