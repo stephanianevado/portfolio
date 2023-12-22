@@ -9,7 +9,7 @@ export const Footer = () => {
   const currentDate = new Date()
   const currentYear = currentDate.getFullYear()
 
-  const { primaryBlack } = Theme.colors
+  const { primaryBlack, primaryBlue } = Theme.colors
   const { DESKTOP, LAPTOP, MOBILE_S } = Breakpoint
 
   return (
@@ -44,7 +44,7 @@ export const Footer = () => {
               aria-label={text}
               wrap="nowrap"
               paddingRight={6}>
-              <Icon size={5} />
+              <Icon size={5} hoverColor={primaryBlue} />
             </Box>
           )
         })}
