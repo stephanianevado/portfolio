@@ -29,13 +29,13 @@ export const contactItems = {
   },
   [Id.INSTAGRAM]: {
     text: 'Go to my Instagram',
-    alternativeText: 'Check me in real life',
+    alternativeText: 'Instagram',
     href: 'https://www.instagram.com/stephanianevado/',
     icon: Instagram,
   },
   [Id.FACEBOOK]: {
     text: 'Go to my Facebook',
-    alternativeText: 'Check me in real life',
+    alternativeText: 'Facebook',
     href: 'https://www.facebook.com/nevadostephania',
     icon: Facebook,
   },

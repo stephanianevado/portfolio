@@ -6,6 +6,8 @@ export type Color = string
 
 export type Direction = 'row' | 'column' | 'row-reverse' | 'column-reverse'
 
+export type AlignContent = 'start' | 'center' | 'space-between' | 'space-around'
+
 export type AlignItems =
   | 'start'
   | 'end'
@@ -26,7 +28,9 @@ export type JustifyContent =
   | 'space-around'
   | 'space-evenly'
 
-export type AlignContent = 'start' | 'center' | 'space-between' | 'space-around'
+export type JustifyItems = 'start' | 'end' | 'center' | 'stretch'
+
+export type JustifySelf = 'start' | 'end' | 'center' | 'stretch'
 
 export type Display =
   | 'none'

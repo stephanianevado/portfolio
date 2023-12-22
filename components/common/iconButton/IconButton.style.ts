@@ -65,12 +65,9 @@ export const StyledIcon = styled.button<IconButtonProps>`
   };
   overflow: hidden;
   cursor: pointer;
-    as: ${(props: IconButtonProps) => props.as && props.as};
+  as: ${(props: IconButtonProps) => props.as && props.as};
   href: ${(props: IconButtonProps) => props.href && props.href};
   target: ${(props: IconButtonProps) => props.target || '_blank'};
-  onclick: ${(props: IconButtonProps) => {
-    props.onClick ? props.onClick : undefined
-  }};
   ${({ breakpoints }: { breakpoints: IconButtonProps['breakpoints'] }) =>
     createResponsiveStyle(breakpoints)};
 `

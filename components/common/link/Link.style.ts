@@ -55,9 +55,6 @@ export const StyledLink = styled.a<LinkProps>`
   href: ${(props: LinkProps) => props.href};
   target:${(props: LinkProps) => props.target};
   ref:${(props: LinkProps) => props.ref};
-  onclick: ${(props: LinkProps) => {
-    props.onClick ? props.onClick : undefined
-  }};
   ${({ breakpoints }: { breakpoints: LinkProps['breakpoints'] }) =>
     createResponsiveStyle(breakpoints)};
 `

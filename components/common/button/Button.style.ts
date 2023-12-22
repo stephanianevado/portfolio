@@ -5,7 +5,13 @@ import styled from 'styled-components'
 import type { Icon } from 'components/icons/icons'
 import { Theme } from 'components/Theme'
 
-import type { BreakpointStyles, Color, JustifyContent, Size } from 'types/index'
+import type {
+  BreakpointStyles,
+  Color,
+  JustifyContent,
+  Size,
+  Variant,
+} from 'types/index'
 
 import { createResponsiveStyle } from 'utils/createResponsiveStyle'
 import multiplier from 'utils/multiplier'
@@ -23,14 +29,7 @@ const { fontWeight } = variants.bold
 
 export type ButtonProps = PaddingProps &
   PropsWithChildren<{
-    fontFamily?:
-      | 'padme'
-      | 'anakin'
-      | 'ashoka'
-      | 'leia'
-      | 'luke'
-      | 'obi'
-      | 'kylo'
+    fontFamily?: Variant
     fontSize?: number
     fontWeight?: number
     id?: string
