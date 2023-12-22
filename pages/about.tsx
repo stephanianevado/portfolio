@@ -1,4 +1,5 @@
 import Head from 'next/head'
+
 import Image from 'next/image'
 
 import AppWrapper from 'components/AppWrapper'
@@ -6,11 +7,12 @@ import { Box } from 'components/common/box/Box'
 import { Link } from 'components/common/link/Link'
 import { Text } from 'components/common/text/Text'
 
+import { Dash } from 'components/icons/icons'
 import { Breakpoint, Theme } from 'components/Theme'
 import { Title } from 'components/Title'
 
 export default function About() {
-  const { tertiaryBlack, primaryBlue } = Theme.colors
+  const { tertiaryBlack, primaryGrey, primaryPurple } = Theme.colors
   const { LAPTOP, MOBILE_S } = Breakpoint
 
   return (
@@ -21,7 +23,7 @@ export default function About() {
           content="In this section you get to know me better"
         />
       </Head>
-      <Box paddingVertical={20}>
+      <Box>
         <Title header="Nice to meet you!" subHeader="WELCOME" />
         <Box
           breakpoints={{
@@ -30,67 +32,140 @@ export default function About() {
           }}>
           <Box
             breakpoints={{
-              [LAPTOP]: { flex: 2 },
+              [LAPTOP]: { flex: 3 },
             }}>
-            <Text as="p" color={tertiaryBlack} variant="leia">
+            <Text as="p" color={primaryGrey} variant="leia" subStyle="bold">
+              <Dash />
+              {''} Who am I?
+            </Text>
+
+            <Text as="p" color={primaryGrey} variant="luke">
               Hello there! My name is Stephania Nevado. I&apos;m a Frontend
               developer, and I&apos;m very passionate and dedicated to my work.
-              My interest in web development started in 2020. I wanted to try
-              out creating a HealthTech product and get more hands-on experience
-              by taking a digital product from idea to release. That&apos;s how
-              Nutreto was born. Nutreto is a cloud-based platform for nutrition
-              and health, usable for both patients and clinics. Check it out at{' '}
+              My interest in programming started during the pandemic in 2020. As
+              a side project, I created a HealthTech product called Nutreto - a
+              cloud-based platform for nutrition and health. This turned into a
+              passion for web development, and a career change.
+            </Text>
+            <Box
+              breakpoints={{
+                [MOBILE_S]: { display: 'flex', alignSelf: 'center' },
+                [LAPTOP]: {
+                  display: 'none',
+                },
+              }}>
+              <Image
+                src="/images/me.png"
+                alt="Picture of Stephania Nevado"
+                width={280}
+                height={300}
+                priority
+                style={{
+                  objectFit: 'contain',
+                  objectPosition: 'center',
+                }}
+              />
+            </Box>
+
+            <Text as="p" color={primaryGrey} variant="leia" subStyle="bold">
+              <Dash />
+              {''} My first Frontend developer job
+            </Text>
+
+            <Text as="p" color={tertiaryBlack} variant="luke">
+              I built an{' '}
               <Link
-                href="https://nutreto.com/en/"
+                href="https://syndata.co/"
                 target="_blank"
-                variant="leia"
-                color={primaryBlue}>
-                nutreto.com
-              </Link>
-              !
-            </Text>
-            <Text as="p" color={tertiaryBlack} variant="leia">
-              Currently I&apos;m working at a start-up for buying, selling and
-              leasing electrified vehicles online. For the frontend we&apos;re
-              using modern web technologies (Next.js, TypeScript, React,
-              Cypress, Jest, Flora).
-            </Text>
-            <Text as="p" color={tertiaryBlack} variant="leia">
-              In my first job I built an AI product for synthetic data
-              generation. I created a frontend application from scratch using
-              modern web technologies (JavaScript, React, Styled components,
-              Jest). My aim was to create a modular, testable code base with a
-              high unit test coverage.
-            </Text>
-            <Text as="p" color={tertiaryBlack} variant="leia">
-              I&apos;m passionate about tech, leadership and health, change
-              management, process improvement and teamwork. I&apos;m also always
-              curious to learn new things. I&apos;m a well-organized person, a
-              problem solver with high attention to detail.
+                variant="luke"
+                subStyle="bold"
+                color={primaryPurple}>
+                AI
+              </Link>{' '}
+              product for synthetic data generation . There was no other
+              frontend developer in the entire company, so I created a frontend
+              application from scratch using modern web technologies
+              (JavaScript, React, Styled components and Jest).
             </Text>
           </Box>
           <Box
             breakpoints={{
-              [MOBILE_S]: { alignItems: 'center' },
+              [MOBILE_S]: { display: 'none' },
               [LAPTOP]: {
-                flex: 1,
+                display: 'flex',
                 alignItems: 'flex-end',
-                justifyContent: 'center',
+                alignSelf: 'flex-start',
               },
             }}>
             <Image
               src="/images/me.png"
               alt="Picture of Stephania Nevado"
-              width={350}
-              height={370}
+              width={280}
+              height={300}
               priority
               style={{
-                objectFit: 'fill',
+                objectFit: 'contain',
                 objectPosition: 'center',
               }}
             />
           </Box>
         </Box>
+
+        <Text as="p" color={primaryGrey} variant="leia" subStyle="bold">
+          <Dash />
+          {''} My current job as a Frontend developer
+        </Text>
+
+        <Text as="p" color={tertiaryBlack} variant="luke">
+          I work at{' '}
+          <Link
+            href="https://www.carla.se/"
+            target="_blank"
+            variant="luke"
+            subStyle="bold"
+            color={primaryPurple}>
+            Carla
+          </Link>{' '}
+          - a start-up for buying, selling and leasing electrified vehicles
+          online. We use Next.js, TypeScript and React for the app, as well as
+          Jest and Cypress for testing. The static content is served via
+          Contentful and the API layer uses GraphQL.
+        </Text>
+
+        <Text as="p" color={primaryGrey} variant="leia" subStyle="bold">
+          <Dash />
+          {''} Initiatives
+        </Text>
+
+        <Text as="ul" color={tertiaryBlack} variant="leia">
+          <Text as="li" color={tertiaryBlack} variant="luke">
+            * I pushed myself and my team at Carla to convert the entire
+            codebase from JavaScript to TypeScript.
+          </Text>
+          <Box as="br" />
+          <Text as="li" color={tertiaryBlack} variant="luke">
+            * I created a female engineering club to discuss problems and
+            solutions within the company and the tech world in general.
+          </Text>
+          <Box as="br" />
+          <Text as="li" color={tertiaryBlack} variant="luke">
+            * During the last year, I&apos;ve set aside 1 &quot;study hour&quot;
+            each day to deepen my web development knowledge.
+          </Text>
+        </Text>
+
+        <Text as="p" color={primaryGrey} variant="leia" subStyle="bold">
+          <Dash />
+          {''} My interests
+        </Text>
+
+        <Text as="p" color={tertiaryBlack} variant="luke">
+          I&apos;m passionate about tech, leadership, change management, process
+          improvement and teamwork. I&apos;m also always curious to learn new
+          things. I&apos;m a well-organized person, a problem solver, and I like
+          to create modular, readable and testable code which is easy to
+          maintain and extend.
+        </Text>
       </Box>
     </AppWrapper>
   )

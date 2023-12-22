@@ -1,11 +1,20 @@
+import { Fragment } from 'react'
+
 import Head from 'next/head'
 
 import AppWrapper from 'components/AppWrapper'
 import { Box } from 'components/common/box/Box'
-import { ProjectBox } from 'components/ProjectBox'
+import { Button, Mode } from 'components/common/button/Button'
+import { Spacer } from 'components/common/spacer/Spacer'
+import { Text } from 'components/common/text/Text'
+import { Breakpoint, Theme } from 'components/Theme'
 import { Title } from 'components/Title'
+import { Id, workItems } from 'utils/workItems'
 
 export default function Work() {
+  const { secondaryBlack, secondaryBlue, secondaryGrey, primaryWhite } =
+    Theme.colors
+  const { LAPTOP, MOBILE_S } = Breakpoint
   return (
     <AppWrapper>
       <Head>
@@ -16,20 +25,58 @@ export default function Work() {
       </Head>
       <Box>
         <Title header="Work" subHeader="RECENT PROJECT" />
-
-        <ProjectBox
-          image="/breeds.png"
-          title="My Cat Breeds App"
-          description="App built with Next.js, TypeScript, Styled Components and Jest."
-          github="https://github.com/stephanianevado/carla"
-          pages="https://carla.vercel.app/"
-        />
-        <ProjectBox
-          image="/My cat app 2.png"
-          title="My Cat App"
-          description="App built with React, Styled Components, Python, FastAPI and Postgresql."
-          github="https://github.com/stephanianevado/my-cat-app"
-        />
+        {Object.values(Id).map((id) => {
+          const item = workItems[id]
+          const {
+            title,
+            text,
+            technologies,
+            buttonText,
+            href,
+            icon: Icon,
+          } = item
+          return (
+            <Fragment key={id}>
+              <Text
+                as="h3"
+                color={secondaryGrey}
+                variant="anakin"
+                subStyle="bold"
+                // breakpoints={{
+                //   [MOBILE_S]: { variant: 'vader', subStyle: 'bold' },
+                //   [LAPTOP]: { variant: 'jedi', subStyle: 'bold' },
+                // }}
+              >
+                {title}
+              </Text>
+              <Text as="p" color={secondaryBlack} variant="luke">
+                {text}
+              </Text>
+              <Text as="p" color={secondaryBlack} variant="luke">
+                <Text
+                  as="span"
+                  color={secondaryBlue}
+                  variant="luke"
+                  subStyle="bold">
+                  Technologies used:{' '}
+                </Text>
+                {technologies}
+              </Text>
+              <Button
+                as="a"
+                href={href}
+                target="_blank"
+                icon={Icon}
+                iconPosition="left"
+                color={primaryWhite}
+                bg={secondaryBlack}
+                mode={Mode.ALTERNATIVE}>
+                {buttonText}
+              </Button>
+              <Spacer size={4} />
+            </Fragment>
+          )
+        })}
       </Box>
     </AppWrapper>
   )
