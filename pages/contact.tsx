@@ -12,7 +12,7 @@ import { Title } from 'components/Title'
 import { contactItems, Id } from 'utils/contactItems'
 
 export default function Contact() {
-  const { secondaryBlack, primaryBlue, primaryWhite } = Theme.colors
+  const { secondaryBlack, primaryWhite } = Theme.colors
   const { LAPTOP, MOBILE_S } = Breakpoint
 
   return (
