@@ -10,19 +10,21 @@ export enum Id {
 export const skillsItems = {
   [Id.LANGUAGES]: {
     title: 'Programming languages:',
-    description: 'Languages I have used for coding and web development.',
-    text: 'JavaScript (ES6), HTML, CSS/Styled components/Sass.',
+    description:
+      'The programming languages I have used for coding and web development.',
+    text: 'Typescript, JavaScript (ES6), HTML, CSS/Styled components/Sass.',
   },
   [Id.LIBRARIES]: {
     title: 'Libraries & frameworks:',
     description:
       'Frameworks and libraries I have used for building web applications.',
-    text: 'Typescript, React, Next.js, Cypress, Jest, GraphQL, React testing library, Node.js, Bootstrap, jQuery, Materialize, Redux, D3, FastAPI.',
+    text: 'React, Next.js, Cypress, Jest, GraphQL, React testing library, Node.js, Redux, D3, FastAPI.',
   },
   [Id.TOOLS]: {
     title: 'Development Tools:',
-    description: 'Tools I have used in the development process.',
-    text: 'GitHub, Prettier, Eslint, Vercel, Figma, Contentful, npm, pnpm, Terminal (bash/zsh), JSON, APIs, Docker.',
+    description:
+      'These are the diverse tools I have adeptly utilized throughout the development process.',
+    text: 'GitHub, Prettier, ESLint, Vercel, Figma, Contentful, npm, pnpm, Terminal (bash/zsh), JSON.',
   },
   [Id.PLATFORMS]: {
     title: 'Platforms:',
@@ -31,12 +33,13 @@ export const skillsItems = {
   },
   [Id.DATA_BASES]: {
     title: 'Databases:',
-    description: 'Databases I have used for storing and managing data.',
+    description: 'Databases for storing and managing data.',
     text: 'PostgreSQL, MongoDB.',
   },
   [Id.MANAGEMENT]: {
     title: 'Management:',
-    description: 'Skills related to project and team management.',
-    text: 'Shape Up, Process and planning, team management, personal development, stakeholder communication.',
+    description:
+      'These are my abilities related to project and team management.',
+    text: 'Process, planning, team management, personal development, stakeholder communication.',
   },
 }

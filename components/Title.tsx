@@ -1,4 +1,5 @@
 import { fadeInRight } from 'components/animations/animation'
+import { Spacer } from 'components/common/spacer/Spacer'
 import { Text } from 'components/common/text/Text'
 import type { TextProps } from 'components/common/text/Text.style'
 import { Theme } from 'components/Theme'
@@ -9,7 +10,7 @@ type Props = {
   variant?: TextProps['variant']
 }
 
-export const Title = ({ header, subHeader, variant = 'vader' }: Props) => {
+export const Title = ({ header, subHeader, variant = 'padme' }: Props) => {
   const { secondaryBlack, primaryGrey, tertiaryPink } = Theme.colors
 
   return (
@@ -34,6 +35,7 @@ export const Title = ({ header, subHeader, variant = 'vader' }: Props) => {
         animationTimingFunction="ease-out">
         {subHeader} &rarr;
       </Text>
+      <Spacer size={2} />
     </>
   )
 }

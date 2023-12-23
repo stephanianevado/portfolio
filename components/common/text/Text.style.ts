@@ -77,10 +77,10 @@ export type TextProps = PaddingProps &
 
 export const StyledText = styled.div`
   margin: 0;
-  padding: 8px 0px;
+  padding: 4px 0px;
   id: ${(props: TextProps) => props.id};
   as: ${(props: TextProps) => props.as};
-  display: ${(props: TextProps) => props.display || 'inline'};
+  display: ${(props: TextProps) => props.display || 'list'};
   flex-grow: ${(props: TextProps) => props.grow || 0};
   flex-shrink: ${(props: TextProps) => props.shrink || 0};
   flex-basis: ${(props: TextProps) => props.basis || 'auto'};
@@ -98,9 +98,10 @@ export const StyledText = styled.div`
   text-decoration: ${(props: TextProps) => props.textDecoration || 'none'};
   text-decoration-color: ${(props: TextProps) =>
     props.textDecorationColor || 'none'};
-    text-underline-offset: ${(props: TextProps) =>
-      props.textUnderlineOffset || 'none'};
+  text-underline-offset: ${(props: TextProps) =>
+    props.textUnderlineOffset || 'none'};
   text-wrap:  ${(props: TextProps) => props.textWrap || 'wrap'}; 
+  list-style-position: inside;
   &:hover {
     ${(props: TextProps) => props.hover};
   };

@@ -39,15 +39,16 @@ export const StyledGrid = styled.div<GridProps>`
   display: grid;
   id: ${(props: GridProps) => props.id};
   as: ${(props: GridProps) => props.as};
+  padding: 16px 0px;
   grid-gap: ${(props: GridProps) => multiplier(props.gap)};
   grid-template-columns: ${(props: GridProps) => props.columns};
   grid-template-rows: ${(props: GridProps) => props.rows};
   justify-content: ${(props: GridProps) => props.justifyContent};
-  justify-items: ${(props: GridProps) => props.justifyItems || 'center'};
+  justify-items: ${(props: GridProps) => props.justifyItems};
   justify-self: ${(props: GridProps) => props.justifySelf};
   align-content: ${(props: GridProps) => props.alignContent};
   align-items: ${(props: GridProps) => props.alignItems};
-  align-self: ${(props: GridProps) => props.alignSelf || 'center'};
+  align-self: ${(props: GridProps) => props.alignSelf};
   ${({ breakpoints }: { breakpoints: GridProps['breakpoints'] }) =>
     createResponsiveStyle(breakpoints)};
 `

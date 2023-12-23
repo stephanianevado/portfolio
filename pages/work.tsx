@@ -22,7 +22,7 @@ export default function Work() {
         />
       </Head>
       <Box>
-        <Title header="Work" subHeader="RECENT PROJECT" />
+        <Title header="Work" subHeader="RECENT PROJECTS" />
         {Object.values(Id).map((id) => {
           const item = workItems[id]
           const {
@@ -38,7 +38,7 @@ export default function Work() {
               <Text
                 as="h3"
                 color={secondaryGrey}
-                variant="anakin"
+                variant="ashoka"
                 subStyle="bold">
                 {title}
               </Text>
@@ -64,10 +64,11 @@ export default function Work() {
                 iconPosition="left"
                 color={primaryWhite}
                 bg={secondaryBlack}
-                mode={Mode.ALTERNATIVE}>
+                mode={Mode.ALTERNATIVE}
+                isCompact>
                 {buttonText}
               </Button>
-              <Spacer size={2} />
+              <Spacer size={10} />
             </Box>
           )
         })}

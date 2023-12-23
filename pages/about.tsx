@@ -7,7 +7,6 @@ import { Box } from 'components/common/box/Box'
 import { Link } from 'components/common/link/Link'
 import { Text } from 'components/common/text/Text'
 
-import { Dash } from 'components/icons/icons'
 import { Breakpoint, Theme } from 'components/Theme'
 import { Title } from 'components/Title'
 
@@ -35,17 +34,15 @@ export default function About() {
               [LAPTOP]: { flex: 3 },
             }}>
             <Text as="p" color={primaryGrey} variant="leia" subStyle="bold">
-              <Dash />
-              {''} Who am I?
+              ⸺ Who am I?
             </Text>
 
             <Text as="p" color={primaryGrey} variant="luke">
-              Hello there! My name is Stephania Nevado. I&apos;m a Frontend
-              developer, and I&apos;m very passionate and dedicated to my work.
-              My interest in programming started during the pandemic in 2020. As
-              a side project, I created a HealthTech product called Nutreto - a
-              cloud-based platform for nutrition and health. This turned into a
-              passion for web development, and a career change.
+              I&apos;m a Frontend developer, and my interest in programming
+              started during the pandemic in 2020. As a side project, I created
+              a HealthTech product called Nutreto - a cloud-based platform for
+              nutrition and health. This turned into a passion for web
+              development, and a career change.
             </Text>
             <Box
               breakpoints={{
@@ -66,12 +63,9 @@ export default function About() {
                 }}
               />
             </Box>
-
             <Text as="p" color={primaryGrey} variant="leia" subStyle="bold">
-              <Dash />
-              {''} My first Frontend developer job
+              ⸺ My first Frontend developer job
             </Text>
-
             <Text as="p" color={tertiaryBlack} variant="luke">
               I built an{' '}
               <Link
@@ -87,14 +81,17 @@ export default function About() {
               application from scratch using modern web technologies
               (JavaScript, React, Styled components and Jest).
             </Text>
+            <Text as="p" color={primaryGrey} variant="leia" subStyle="bold">
+              ⸺ My current job as a Frontend developer
+            </Text>
           </Box>
           <Box
             breakpoints={{
               [MOBILE_S]: { display: 'none' },
               [LAPTOP]: {
                 display: 'flex',
-                alignItems: 'flex-end',
-                alignSelf: 'flex-start',
+                position: 'sticky',
+                right: 0,
               },
             }}>
             <Image
@@ -110,11 +107,6 @@ export default function About() {
             />
           </Box>
         </Box>
-
-        <Text as="p" color={primaryGrey} variant="leia" subStyle="bold">
-          <Dash />
-          {''} My current job as a Frontend developer
-        </Text>
 
         <Text as="p" color={tertiaryBlack} variant="luke">
           I work at{' '}
@@ -133,30 +125,26 @@ export default function About() {
         </Text>
 
         <Text as="p" color={primaryGrey} variant="leia" subStyle="bold">
-          <Dash />
-          {''} Initiatives
+          ⸺ Initiatives
         </Text>
 
         <Text as="ul" color={tertiaryBlack} variant="leia">
           <Text as="li" color={tertiaryBlack} variant="luke">
-            * I pushed myself and my team at Carla to convert the entire
-            codebase from JavaScript to TypeScript.
+            I pushed myself and my team at Carla to convert the entire codebase
+            from JavaScript to TypeScript.
           </Text>
-          <Box as="br" />
           <Text as="li" color={tertiaryBlack} variant="luke">
-            * I created a female engineering club to discuss problems and
+            I created a female engineering club to discuss problems and
             solutions within the company and the tech world in general.
           </Text>
-          <Box as="br" />
           <Text as="li" color={tertiaryBlack} variant="luke">
-            * During the last year, I&apos;ve set aside 1 &quot;study hour&quot;
+            During the last year, I&apos;ve set aside 1 &quot;study hour&quot;
             each day to deepen my web development knowledge.
           </Text>
         </Text>
 
         <Text as="p" color={primaryGrey} variant="leia" subStyle="bold">
-          <Dash />
-          {''} My interests
+          ⸺ My interests
         </Text>
 
         <Text as="p" color={tertiaryBlack} variant="luke">

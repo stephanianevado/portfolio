@@ -27,7 +27,6 @@ export const propToCSSMap: Record<string, string> = {
   paddingRight: 'padding-right',
   paddingBottom: 'padding-bottom',
   paddingLeft: 'padding-left',
-  onClick: 'onclick',
   fontFamily: 'font-family',
   fontSize: 'font-size',
   fontWeight: 'font-weight',

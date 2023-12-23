@@ -38,6 +38,7 @@ export type ButtonProps = PaddingProps &
     type?: 'button' | 'reset' | 'submit'
     color?: Color
     bg?: Color
+    bgHover?: Color
     disabled?: boolean
     children?: React.ReactNode
     border?: Color
@@ -66,13 +67,12 @@ export const StyledButton = styled.button<ButtonProps>`
   background-color: ${(props: ButtonProps) =>
     props.bg || 'rgba(0, 0, 0, 0.04)'};
   &:hover {
-    background-color:${secondaryGrey};
+    background-color: ${(props: ButtonProps) => props.bgHover && props.bgHover};
     box-shadow: 0 0 0 1px ${primaryWhite};
   };
  &:disabled {
     color: ${primaryWhite};
     background-color: ${tertiaryGrey};
-    pointer-events: none;
     cursor: not-allowed;
   };
   box-sizing: border-box;

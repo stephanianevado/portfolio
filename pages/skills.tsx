@@ -16,7 +16,7 @@ export default function MySkills() {
         />
       </Head>
       <Box>
-        <Title header="Skills" subHeader="MY SPECIALTIES" />
+        <Title header="Skills" subHeader="MY EXPERIENCE" />
 
         {Object.values(Id).map((id) => {
           const item = skillsItems[id]

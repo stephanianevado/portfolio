@@ -24,7 +24,7 @@ export default function Contact() {
         />
       </Head>
       <Box>
-        <Title header="Contact" subHeader="REACH OUT ME" />
+        <Title header="Contact" subHeader="REACH OUT TO ME" />
         <Box
           breakpoints={{
             [MOBILE_S]: { direction: 'column' },
