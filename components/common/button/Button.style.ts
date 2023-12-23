@@ -17,13 +17,7 @@ import { createResponsiveStyle } from 'utils/createResponsiveStyle'
 import multiplier from 'utils/multiplier'
 import type { PaddingProps } from 'utils/styledPadding'
 
-const {
-  tertiaryBlack,
-  secondaryGrey,
-  tertiaryGrey,
-  primaryWhite,
-  primaryBlue,
-} = Theme.colors
+const { tertiaryBlack, tertiaryGrey, primaryWhite, primaryBlue } = Theme.colors
 const { fontFamily, fontSize, variants } = Theme.typography.kylo
 const { fontWeight } = variants.bold
 

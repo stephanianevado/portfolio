@@ -8,7 +8,7 @@ export enum Id {
 export const workItems = {
   [Id.PORTFOLIO]: {
     title: 'This portfolio',
-    text: `I could have created this portfolio with some online template or no-code solution - but I'm a programmer, so of course I didn't want to do that 🤓 Instead, I've used this portfolio as a way to showcase my skills and way of coding. If you look at GitHub, you'll find a well-organized, linted and strictly formatted project with my own custom theme structure.`,
+    text: `I could have created this portfolio with some online template or no-code solution - but I didn't want to do that 🤓 Instead, I've used this portfolio as a way to showcase my skills and way of coding. Look at GitHub, you'll find a well-organized, linted and strictly formatted project with my own custom theme structure.`,
     technologies: 'Next.js, React, TypeScript, Styled components.',
     buttonText: 'My Portfolio',
     href: 'https://github.com/stephanianevado/portfolio?tab=readme-ov-file#stephania-nevados-portfolio',

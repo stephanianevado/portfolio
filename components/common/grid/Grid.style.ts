@@ -40,7 +40,7 @@ export const StyledGrid = styled.div<GridProps>`
   id: ${(props: GridProps) => props.id};
   as: ${(props: GridProps) => props.as};
   padding: 16px 0px;
-  grid-gap: ${(props: GridProps) => multiplier(props.gap)};
+  gap: ${(props: GridProps) => multiplier(props.gap)};
   grid-template-columns: ${(props: GridProps) => props.columns};
   grid-template-rows: ${(props: GridProps) => props.rows};
   justify-content: ${(props: GridProps) => props.justifyContent};

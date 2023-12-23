@@ -53,21 +53,23 @@ export default function Contact() {
                 target="_blank"
                 icon={Headset}
                 iconPosition="left">
-                Let&apos;s talk with me
+                Let&apos;s have a chat
               </Button>
             </Box>
           </Box>
           <Spacer size={10} />
           <Box
             breakpoints={{
-              [LAPTOP]: { flex: 2, justifyContent: 'center' },
+              [LAPTOP]: { flex: 2 },
             }}>
             <Grid
+              justifyItems="center"
+              alignSelf="center"
               breakpoints={{
                 [MOBILE_S]: { columns: 'repeat(1, 1fr)', gap: '16px' },
                 [LAPTOP]: {
                   columns: 'repeat(2, 1fr)',
-                  gap: '40px',
+                  gap: '20px',
                 },
               }}>
               {Object.values(Id)
@@ -83,19 +85,18 @@ export default function Contact() {
                   const item = contactItems[id]
                   const { alternativeText, href, icon: Icon } = item
                   return (
-                    <Box key={id}>
-                      <Button
-                        as="a"
-                        href={href}
-                        target="_blank"
-                        icon={Icon}
-                        iconPosition="left"
-                        color={primaryWhite}
-                        bg={secondaryBlack}
-                        mode={Mode.ALTERNATIVE}>
-                        {alternativeText}
-                      </Button>
-                    </Box>
+                    <Button
+                      as="a"
+                      key={id}
+                      href={href}
+                      target="_blank"
+                      icon={Icon}
+                      iconPosition="left"
+                      color={primaryWhite}
+                      bg={secondaryBlack}
+                      mode={Mode.ALTERNATIVE}>
+                      {alternativeText}
+                    </Button>
                   )
                 })}
             </Grid>
