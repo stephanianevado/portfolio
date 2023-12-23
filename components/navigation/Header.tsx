@@ -30,8 +30,8 @@ export const Header = () => {
           as="a"
           href="/"
           breakpoints={{
-            [Breakpoint.MOBILE_S]: { display: 'none' },
-            [Breakpoint.LAPTOP]: { display: 'flex' },
+            [MOBILE_S]: { display: 'none' },
+            [LAPTOP]: { display: 'flex' },
           }}>
           <Image
             src="/images/logo.png"
@@ -51,8 +51,8 @@ export const Header = () => {
         <Box>
           <Box
             breakpoints={{
-              [Breakpoint.MOBILE_S]: { display: 'none' },
-              [Breakpoint.LAPTOP]: { display: 'flex' },
+              [MOBILE_S]: { display: 'none' },
+              [LAPTOP]: { display: 'flex' },
             }}>
             <Box
               animationName={fadeInDown}
@@ -64,10 +64,10 @@ export const Header = () => {
 
           <Box
             breakpoints={{
-              [Breakpoint.MOBILE_S]: {
+              [MOBILE_S]: {
                 display: 'flex',
               },
-              [Breakpoint.LAPTOP]: {
+              [LAPTOP]: {
                 display: 'none',
               },
             }}>
@@ -85,8 +85,8 @@ export const Header = () => {
           animationDuration="200ms"
           animationTimingFunction="ease-out"
           breakpoints={{
-            [Breakpoint.MOBILE_S]: { display: 'none' },
-            [Breakpoint.LAPTOP]: { display: 'flex' },
+            [MOBILE_S]: { display: 'none' },
+            [LAPTOP]: { display: 'flex' },
           }}>
           <Button
             as="a"
