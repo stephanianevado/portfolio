@@ -34,11 +34,11 @@ export default function Contact() {
             breakpoints={{
               [LAPTOP]: { flex: 2 },
             }}>
-            <Text as="p" color={secondaryBlack} variant="ashoka">
+            <Text as="p" color={secondaryBlack} variant="luke">
               I&apos;m always enthusiastic about learning new things and
               evolving as a developer.
             </Text>
-            <Text as="p" color={secondaryBlack} variant="ashoka">
+            <Text as="p" color={secondaryBlack} variant="luke">
               My inbox is always open to discuss new opportunities. You can also
               find me on social media.
             </Text>

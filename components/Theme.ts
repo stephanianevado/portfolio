@@ -6,6 +6,7 @@ export enum Color {
   TERTIARY_BLACK = 'tertiaryBlack',
   PRIMARY_BLUE = 'primaryBlue',
   SECONDARY_BLUE = 'secondaryBlue',
+  PRIMARY_GREEN = 'primaryGreen',
   PRIMARY_GREY = 'primaryGrey',
   SECONDARY_GREY = 'secondaryGrey',
   TERTIARY_GREY = 'tertiaryGrey',
@@ -16,8 +17,11 @@ export enum Color {
   TERTIARY_PINK = 'tertiaryPink',
   PRIMARY_PURPLE = 'primaryPurple',
   SECONDARY_PURPLE = 'secondaryPurple',
+  PRIMARY_RED = 'primaryRed',
   PRIMARY_WHITE = 'primaryWhite',
   SECONDARY_WHITE = 'secondaryWhite',
+  HOVER_STANDARD = 'hoverStandard',
+  HOVER_ALTERNATIVE = 'hoverAlternative',
 }
 
 export enum Breakpoint {
@@ -43,6 +47,7 @@ export const Theme = {
     [Color.TERTIARY_BLACK]: '#020C1B',
     [Color.PRIMARY_BLUE]: '#342CDB',
     [Color.SECONDARY_BLUE]: '#0C8CE9',
+    [Color.PRIMARY_GREEN]: '#00FF00',
     [Color.PRIMARY_GREY]: '#454545',
     [Color.SECONDARY_GREY]: '#8B8B8B',
     [Color.TERTIARY_GREY]: '#F5F5F5',
@@ -53,8 +58,11 @@ export const Theme = {
     [Color.TERTIARY_PINK]: '#FF00A8',
     [Color.PRIMARY_PURPLE]: '#8638E5',
     [Color.SECONDARY_PURPLE]: '#681ABB',
+    [Color.PRIMARY_RED]: '#FF0000',
     [Color.PRIMARY_WHITE]: '#FFFFFF',
     [Color.SECONDARY_WHITE]: '#E6F1FF',
+    [Color.HOVER_STANDARD]: '#0000001A',
+    [Color.HOVER_ALTERNATIVE]: '#020C1BCC',
   },
   breakpoints: {
     [Breakpoint.MOBILE_S]: '@media (min-width: 320px)',

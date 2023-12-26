@@ -2,7 +2,7 @@ import styled, { keyframes } from 'styled-components'
 
 import { Theme } from 'components/Theme'
 
-const { primaryPurple, tertiaryPink } = Theme.colors
+const { primaryGreen, tertiaryPink, primaryPurple } = Theme.colors
 
 const rotate = keyframes`
   from {
@@ -81,21 +81,27 @@ const Face = styled(Polyhedron)`
 const FaceWithColor = styled(Face)`
   &:nth-child(6n):before {
     border-bottom-color: ${primaryPurple};
+    opacity: 0.9;
   }
   &:nth-child(6n + 1):before {
-    border-bottom-color: rgba(0, 255, 0, 0.2);
+    border-bottom-color: ${primaryGreen};
+    opacity: 0.2;
   }
   &:nth-child(6n + 2):before {
     border-bottom-color: ${tertiaryPink};
+    opacity: 0.8;
   }
   &:nth-child(6n + 3):before {
-    border-bottom-color: rgba(255, 255, 0, 0.2);
+    border-bottom-color: ${primaryPurple};
+    opacity: 0.8;
   }
   &:nth-child(6n + 4):before {
-    border-bottom-color: rgba(255, 0, 255, 0.2);
+    border-bottom-color: #00ff00;
+    opacity: 0.2;
   }
   &:nth-child(6n + 5):before {
-    border-bottom-color: rgba(0, 255, 255, 0.2);
+    border-bottom-color: ${tertiaryPink};
+    opacity: 0.9;
   }
 `
 

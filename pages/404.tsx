@@ -43,7 +43,7 @@ export default function NotFound() {
               to see what happens. Please, turn on the speakers for a better
               experience.
             </Text>
-
+            <Spacer size={6} />
             <Button as="a" href="/" icon={Link} iconPosition="right">
               Return to the light side
             </Button>

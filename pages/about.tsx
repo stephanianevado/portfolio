@@ -84,6 +84,21 @@ export default function About() {
             <Text as="p" color={primaryGrey} variant="leia" subStyle="bold">
               ⸺ My current job as a Frontend developer
             </Text>
+            <Text as="p" color={tertiaryBlack} variant="luke">
+              I work at{' '}
+              <Link
+                href="https://www.carla.se/"
+                target="_blank"
+                variant="luke"
+                subStyle="bold"
+                color={primaryPurple}>
+                Carla
+              </Link>{' '}
+              - a start-up for buying, selling and leasing electrified vehicles
+              online. We use Next.js, TypeScript and React for the app, as well
+              as Jest and Cypress for testing. The static content is served via
+              Contentful and the API layer uses GraphQL.
+            </Text>
           </Box>
           <Box
             breakpoints={{
@@ -107,22 +122,6 @@ export default function About() {
             />
           </Box>
         </Box>
-
-        <Text as="p" color={tertiaryBlack} variant="luke">
-          I work at{' '}
-          <Link
-            href="https://www.carla.se/"
-            target="_blank"
-            variant="luke"
-            subStyle="bold"
-            color={primaryPurple}>
-            Carla
-          </Link>{' '}
-          - a start-up for buying, selling and leasing electrified vehicles
-          online. We use Next.js, TypeScript and React for the app, as well as
-          Jest and Cypress for testing. The static content is served via
-          Contentful and the API layer uses GraphQL.
-        </Text>
 
         <Text as="p" color={primaryGrey} variant="leia" subStyle="bold">
           ⸺ Initiatives

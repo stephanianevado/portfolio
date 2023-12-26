@@ -4,9 +4,7 @@ import styled, { keyframes } from 'styled-components'
 
 import { Theme } from 'components/Theme'
 
-const bladeColor = 'red'
-
-const { primaryGrey } = Theme.colors
+const { primaryGrey, primaryRed } = Theme.colors
 
 const wiggle = keyframes`
   0% {
@@ -40,10 +38,10 @@ const Blade = styled.div`
         position: relative;
         transition: all 4s ease-in-out;
         height: 500px;
-        background: ${bladeColor};
+        background: ${primaryRed};
         border-top-right-radius: 20px;
         border-top-left-radius: 20px;
-        box-shadow: 0 0 20px ${bladeColor};
+        box-shadow: 0 0 20px ${primaryRed};
       `
       : `transition: all 15s ease-in-out;`}
 `
@@ -63,7 +61,7 @@ const Button = styled.div`
   height: 20px;
   width: 8px;
   border: 2px solid ${primaryGrey};
-  background: ${bladeColor};
+  background: ${primaryRed};
   position: relative;
   top: 30%;
   left: 50%;

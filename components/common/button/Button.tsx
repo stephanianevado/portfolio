@@ -5,7 +5,7 @@ import {
 import { Spacer } from 'components/common/spacer/Spacer'
 import { Theme } from 'components/Theme'
 
-const { tertiaryBlack, secondaryGrey } = Theme.colors
+const { hoverAlternative, hoverStandard } = Theme.colors
 
 export enum Mode {
   STANDARD = 'STANDARD',
@@ -27,9 +27,8 @@ export const Button = ({
   mode = Mode.STANDARD,
   ...props
 }: ButtonProps & Props) => {
-  const size = isCompact ? 5 : 10
-  const width = isCompact ? 38 : 40
-  const padding = isCompact ? '2px' : '4px'
+  const size = isCompact ? 6 : 10
+  const width = isCompact ? 42 : 40
 
   const boxBase = (
     <>
@@ -60,12 +59,12 @@ export const Button = ({
     return (
       <StyledButton
         width={width}
-        padding={padding}
+        padding={1}
         direction="row"
         borderRadius={10}
         border="transparent"
         justifyContent="flex-start"
-        bgHover={tertiaryBlack}
+        bgHover={hoverAlternative}
         onClick={onClick}
         onSubmit={onSubmit}
         {...props}>
@@ -75,7 +74,7 @@ export const Button = ({
   }
   return (
     <StyledButton
-      bgHover={secondaryGrey}
+      bgHover={hoverStandard}
       onClick={onClick}
       onSubmit={onSubmit}
       {...props}>

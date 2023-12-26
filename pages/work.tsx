@@ -5,6 +5,7 @@ import { Box } from 'components/common/box/Box'
 import { Button, Mode } from 'components/common/button/Button'
 import { Spacer } from 'components/common/spacer/Spacer'
 import { Text } from 'components/common/text/Text'
+import { Link } from 'components/icons/icons'
 import { Theme } from 'components/Theme'
 import { Title } from 'components/Title'
 import { Id, workItems } from 'utils/workItems'
@@ -67,6 +68,8 @@ export default function Work() {
                 mode={Mode.ALTERNATIVE}
                 isCompact>
                 {buttonText}
+                <Spacer size={2} />
+                <Link color={primaryWhite} size={3} />
               </Button>
               <Spacer size={10} />
             </Box>
