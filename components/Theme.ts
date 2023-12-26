@@ -1,0 +1,258 @@
+import { createGlobalStyle } from 'styled-components'
+
+export enum Color {
+  PRIMARY_BLACK = 'primaryBlack',
+  SECONDARY_BLACK = 'secondaryBlack',
+  TERTIARY_BLACK = 'tertiaryBlack',
+  PRIMARY_BLUE = 'primaryBlue',
+  SECONDARY_BLUE = 'secondaryBlue',
+  PRIMARY_GREEN = 'primaryGreen',
+  PRIMARY_GREY = 'primaryGrey',
+  SECONDARY_GREY = 'secondaryGrey',
+  TERTIARY_GREY = 'tertiaryGrey',
+  PRIMARY_ORANGE = 'primaryOrange',
+  SECONDARY_ORANGE = 'secondaryOrange',
+  PRIMARY_PINK = 'primaryPink',
+  SECONDARY_PINK = 'secondaryPink',
+  TERTIARY_PINK = 'tertiaryPink',
+  PRIMARY_PURPLE = 'primaryPurple',
+  SECONDARY_PURPLE = 'secondaryPurple',
+  PRIMARY_RED = 'primaryRed',
+  PRIMARY_WHITE = 'primaryWhite',
+  SECONDARY_WHITE = 'secondaryWhite',
+  HOVER_STANDARD = 'hoverStandard',
+  HOVER_ALTERNATIVE = 'hoverAlternative',
+}
+
+export enum Breakpoint {
+  MOBILE_S = 'MOBILE_S',
+  MOBILE_M = 'MOBILE_M',
+  MOBILE_L = 'MOBILE_L',
+  TABLET = 'TABLET',
+  LAPTOP = 'LAPTOP',
+  LAPTOP_M = 'LAPTOP_M',
+  LAPTOP_L = 'LAPTOP_L',
+  DESKTOP = 'DESKTOP',
+}
+
+const fonts = {
+  HEADING: 'Clash Display, Spline Sans, Poppins, Pangea, sans-serif',
+  BODY: 'Clash Display, Spline Sans, Poppins, Pangea Text, sans-serif',
+}
+
+export const Theme = {
+  colors: {
+    [Color.PRIMARY_BLACK]: '#000000',
+    [Color.SECONDARY_BLACK]: '#1A2029',
+    [Color.TERTIARY_BLACK]: '#020C1B',
+    [Color.PRIMARY_BLUE]: '#342CDB',
+    [Color.SECONDARY_BLUE]: '#0C8CE9',
+    [Color.PRIMARY_GREEN]: '#00FF00',
+    [Color.PRIMARY_GREY]: '#454545',
+    [Color.SECONDARY_GREY]: '#8B8B8B',
+    [Color.TERTIARY_GREY]: '#F5F5F5',
+    [Color.PRIMARY_ORANGE]: '#97240D',
+    [Color.SECONDARY_ORANGE]: '#F24822',
+    [Color.PRIMARY_PINK]: '#F5F5FF',
+    [Color.SECONDARY_PINK]: '#F6EEF4',
+    [Color.TERTIARY_PINK]: '#FF00A8',
+    [Color.PRIMARY_PURPLE]: '#8638E5',
+    [Color.SECONDARY_PURPLE]: '#681ABB',
+    [Color.PRIMARY_RED]: '#FF0000',
+    [Color.PRIMARY_WHITE]: '#FFFFFF',
+    [Color.SECONDARY_WHITE]: '#E6F1FF',
+    [Color.HOVER_STANDARD]: '#0000001A',
+    [Color.HOVER_ALTERNATIVE]: '#020C1BCC',
+  },
+  breakpoints: {
+    [Breakpoint.MOBILE_S]: '@media (min-width: 320px)',
+    [Breakpoint.MOBILE_M]: '@media (min-width: 375px)',
+    [Breakpoint.MOBILE_L]: '@media (min-width: 425px)',
+    [Breakpoint.TABLET]: '@media (min-width: 768px)',
+    [Breakpoint.LAPTOP]: '@media (min-width: 1024px)',
+    [Breakpoint.LAPTOP_M]: '@media (min-width: 1260px)',
+    [Breakpoint.LAPTOP_L]: '@media (min-width: 1440px)',
+    [Breakpoint.DESKTOP]: '@media (min-width: 2560px)',
+  },
+  fonts,
+  typography: {
+    sith: {
+      fontFamily: fonts.HEADING,
+      fontSize: '104px',
+      lineHeight: 48 / 40,
+      letterSpacing: 0.6,
+      variants: {
+        normal: {
+          fontWeight: 400,
+        },
+        bold: {
+          fontWeight: 600,
+        },
+      },
+    },
+    jedi: {
+      fontFamily: fonts.HEADING,
+      fontSize: '72px',
+      lineHeight: 48 / 40,
+      letterSpacing: 0.6,
+      variants: {
+        normal: {
+          fontWeight: 400,
+        },
+        bold: {
+          fontWeight: 600,
+        },
+      },
+    },
+    vader: {
+      fontFamily: fonts.HEADING,
+      fontSize: '42px',
+      lineHeight: 48 / 40,
+      letterSpacing: 0.6,
+      variants: {
+        normal: {
+          fontWeight: 400,
+        },
+        bold: {
+          fontWeight: 600,
+        },
+      },
+    },
+    padme: {
+      fontFamily: fonts.HEADING,
+      fontSize: '40px',
+      lineHeight: 48 / 40,
+      letterSpacing: 0.6,
+      variants: {
+        normal: {
+          fontWeight: 400,
+        },
+        bold: {
+          fontWeight: 600,
+        },
+      },
+    },
+    anakin: {
+      fontFamily: fonts.HEADING,
+      fontSize: '28px',
+      lineHeight: 36 / 28,
+      letterSpacing: 0.6,
+      variants: {
+        normal: {
+          fontWeight: 400,
+        },
+        bold: {
+          fontWeight: 600,
+        },
+      },
+    },
+    ashoka: {
+      fontFamily: fonts.HEADING,
+      fontSize: '24px',
+      lineHeight: 32 / 24,
+      letterSpacing: 0.6,
+      variants: {
+        normal: {
+          fontWeight: 400,
+        },
+        bold: {
+          fontWeight: 600,
+        },
+      },
+    },
+    leia: {
+      fontFamily: fonts.HEADING,
+      fontSize: '20px',
+      lineHeight: 28 / 20,
+      letterSpacing: 0.6,
+      variants: {
+        normal: {
+          fontWeight: 400,
+        },
+        bold: {
+          fontWeight: 600,
+        },
+      },
+    },
+    kylo: {
+      fontFamily: fonts.BODY,
+      fontSize: '18px',
+      lineHeight: 24 / 16,
+      letterSpacing: 0.6,
+      variants: {
+        normal: {
+          fontWeight: 400,
+        },
+        bold: {
+          fontWeight: 600,
+        },
+      },
+    },
+    luke: {
+      fontFamily: fonts.BODY,
+      fontSize: '16px',
+      lineHeight: 24 / 16,
+      letterSpacing: 0.6,
+      variants: {
+        normal: {
+          fontWeight: 400,
+        },
+        bold: {
+          fontWeight: 600,
+        },
+      },
+    },
+    obi: {
+      fontFamily: fonts.BODY,
+      fontSize: '14px',
+      lineHeight: 20 / 14,
+      letterSpacing: 0.6,
+      variants: {
+        normal: {
+          fontWeight: 400,
+        },
+        bold: {
+          fontWeight: 600,
+        },
+      },
+    },
+  },
+}
+
+export const GlobalStyle = createGlobalStyle`
+  html, 
+  body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: ${Theme.colors.primaryPink};
+  }
+
+  body {
+    display: flex; 
+    flex-direction: column; 
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  button,
+  input {
+    font-family: ${Theme.typography.padme.fontFamily};
+    margin-top: 0
+  }
+
+  body,
+  p,
+  a,
+  footer {
+    font-family: ${Theme.typography.luke.fontFamily};
+    font-size: ${Theme.typography.luke.fontSize};
+    font-weight: ${Theme.typography.luke.variants.normal};
+    line-height: ${Theme.typography.luke.lineHeight};
+    color: ${Theme.colors.tertiaryBlack};
+  }
+`

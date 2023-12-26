@@ -1,24 +1,41 @@
-import styled from 'styled-components'
+import { fadeInRight } from 'components/animations/animation'
+import { Spacer } from 'components/common/spacer/Spacer'
+import { Text } from 'components/common/text/Text'
+import type { TextProps } from 'components/common/text/Text.style'
+import { Theme } from 'components/Theme'
 
-import { pink, white } from 'components/colors'
-
-const TitleH5 = styled.h5`
-  font-size: 2rem;
-  color: ${white};
-  b {
-    color: ${pink};
-  }
-`
 type Props = {
-  number: string
-  title: string
+  header?: string
+  subHeader: string
+  variant?: TextProps['variant']
 }
 
-export const Title = ({ number, title }: Props) => {
+export const Title = ({ header, subHeader, variant = 'padme' }: Props) => {
+  const { secondaryBlack, primaryGrey, tertiaryPink } = Theme.colors
+
   return (
-    <TitleH5>
-      <b>{`${number}. `}</b>
-      {`${title} `}&rarr;
-    </TitleH5>
+    <>
+      <Text
+        as="h1"
+        color={secondaryBlack}
+        variant="leia"
+        textDecoration="underline"
+        textDecorationColor={tertiaryPink}
+        textUnderlineOffset="8px">
+        {header}
+      </Text>
+
+      <Text
+        as="h2"
+        color={primaryGrey}
+        variant={variant}
+        subStyle="bold"
+        animationName={fadeInRight}
+        animationDuration="200ms"
+        animationTimingFunction="ease-out">
+        {subHeader} &rarr;
+      </Text>
+      <Spacer size={2} />
+    </>
   )
 }

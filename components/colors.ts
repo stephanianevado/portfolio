@@ -1,5 +1,0 @@
-export const dark = '#020c1b'
-export const grey = '#758ba9'
-export const grey2 = '#677a94'
-export const white = '#e6f1ff'
-export const pink = '#F64C72'

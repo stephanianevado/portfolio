@@ -1,109 +1,92 @@
+import { Fragment } from 'react'
+
 import Head from 'next/head'
 
-import styled from 'styled-components'
-
-import { Breakpoints } from 'components/Breakpoints'
-import { Card } from 'components/Card'
-import { grey, pink, white } from 'components/colors'
-import { FooterPortfolio } from 'components/FooterPortfolio'
-import { NavBar } from 'components/NavBar'
-
-const Main = styled.main`
-  padding: 2rem;
-  ${Breakpoints.laptop} {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 3rem;
-    padding-right: 3rem;
-    padding-left: 3rem;
-  }
-`
-const Section = styled.section`
-  padding-bottom: 2rem;
-  h1 {
-    color: ${pink};
-    font-size: 1rem;
-  }
-  h2 {
-    color: ${white};
-    font-size: 2.5rem;
-  }
-  h3 {
-    color: ${grey};
-    font-size: 1.5rem;
-  }
-  h4 {
-    color: ${grey};
-    font-size: 1rem;
-    margin-bottom: 2.5rem;
-  }
-  ${Breakpoints.laptop} {
-    padding: 1rem 8rem 2.5rem 8rem;
-    h1 {
-      font-size: 1rem;
-    }
-    h2 {
-      font-size: 3rem;
-    }
-    h4 {
-      font-size: 1.5rem;
-    }
-  }
-`
-
-const Row = styled.div`
-  margin: 0, 1rem;
-  ${Breakpoints.laptop} {
-    display: flex;
-    flex-wrap: wrap;
-  }
-`
+import Icosahedron from 'components/animations/Icosahedron'
+import AppWrapper from 'components/AppWrapper'
+import { Box } from 'components/common/box/Box'
+import { Button, Mode } from 'components/common/button/Button'
+import { Spacer } from 'components/common/spacer/Spacer'
+import { Text } from 'components/common/text/Text'
+import { Dash } from 'components/icons/icons'
+import { Breakpoint, Theme } from 'components/Theme'
+import { contactItems, Id } from 'utils/contactItems'
 
 export default function Home() {
+  const { secondaryBlack, secondaryGrey, primaryWhite } = Theme.colors
+  const { LAPTOP, MOBILE_S } = Breakpoint
+
   return (
-    <>
+    <AppWrapper>
       <Head>
-        <title>Stephania Nevado's portfolio</title>
-        <link rel="icon" href="/favicon.svg" />
+        <meta
+          name="description"
+          content="This is my portfolio showcase landing page"
+        />
       </Head>
-      <NavBar />
-      <Main>
-        <Section>
-          <h1>Hi! My name is</h1>
-          <h2>Stephania Nevado.</h2>
-          <h3>
-            I'm a frontend developer currently working at a start-up creating a
-            product to buy or lease an electrified vehicle online. I love to
-            code - it was an amazing discovery for me &hearts;
-          </h3>
-        </Section>
-        <Row>
-          <Card href="/about" number="01" title="About" text="Get to know me" />
-          <Card
-            href="/myskills"
-            number="02"
-            title="Skills"
-            text="What I know"
-          />
-        </Row>
-        <Row>
-          <Card
-            href="/work"
-            number="03"
-            title="Work"
-            text="Some things I've built"
-          />
-          <Card
-            href="/contact"
-            number="04"
-            title="Contact"
-            text="What's next? Get in touch!"
-          />
-        </Row>
-      </Main>
-      <FooterPortfolio />
-    </>
+      <Box
+        breakpoints={{
+          [MOBILE_S]: { direction: 'column' },
+          [LAPTOP]: { direction: 'row' },
+        }}>
+        <Box
+          breakpoints={{
+            [LAPTOP]: { flex: 1 },
+          }}>
+          <Box direction="row" alignItems="center">
+            <Dash />
+            <Spacer size={1} />
+            <Text
+              as="span"
+              color={secondaryGrey}
+              variant="kylo"
+              subStyle="bold">
+              Stephania Nevado
+            </Text>
+          </Box>
+          <Text
+            as="h1"
+            color={secondaryBlack}
+            breakpoints={{
+              [MOBILE_S]: { variant: 'vader', subStyle: 'bold' },
+              [LAPTOP]: { variant: 'jedi', subStyle: 'bold' },
+            }}>
+            Frontend developer, manager and nutritionist located in Sweden ✨
+          </Text>
+          <Spacer size={2} />
+          <Box
+            breakpoints={{
+              [MOBILE_S]: { direction: 'column', alignItems: 'center' },
+              [LAPTOP]: { direction: 'row' },
+            }}>
+            {Object.values(Id)
+              .filter((id) => {
+                return [Id.GITHUB, Id.LINKEDIN, Id.EMAIL].includes(id)
+              })
+              .map((id) => {
+                const item = contactItems[id]
+                const { alternativeText, href, icon: Icon } = item
+                return (
+                  <Fragment key={id}>
+                    <Button
+                      as="a"
+                      href={href}
+                      target="_blank"
+                      icon={Icon}
+                      iconPosition="left"
+                      color={primaryWhite}
+                      bg={secondaryBlack}
+                      mode={Mode.ALTERNATIVE}>
+                      {alternativeText}
+                    </Button>
+                    <Spacer size={4} />
+                  </Fragment>
+                )
+              })}
+          </Box>
+        </Box>
+        <Icosahedron />
+      </Box>
+    </AppWrapper>
   )
 }

@@ -1,116 +1,108 @@
 import Head from 'next/head'
 
-import styled from 'styled-components'
-
-import { Breakpoints } from 'components/Breakpoints'
-import { grey, pink, white } from 'components/colors'
-import { FooterPortfolio } from 'components/FooterPortfolio'
-import { NavBar } from 'components/NavBar'
+import AppWrapper from 'components/AppWrapper'
+import { Box } from 'components/common/box/Box'
+import { Button, Mode } from 'components/common/button/Button'
+import { Grid } from 'components/common/grid/Grid'
+import { Spacer } from 'components/common/spacer/Spacer'
+import { Text } from 'components/common/text/Text'
+import { Headset } from 'components/icons/icons'
+import { Breakpoint, Theme } from 'components/Theme'
 import { Title } from 'components/Title'
+import { contactItems, Id } from 'utils/contactItems'
 
-const Main = styled.main`
-  padding: 2.5rem;
-  ${Breakpoints.laptop} {
-    padding-top: 3rem;
-    padding-right: 3rem;
-    padding-left: 3rem;
-  }
-`
-const Row = styled.div`
-  ${Breakpoints.laptop} {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 5rem;
-  }
-`
-const Column = styled.div`
-  padding-top: 4rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  h4 {
-    color: ${white};
-    align-self: center;
-  }
-  p {
-    color: ${grey};
-  }
-  a {
-    color: ${pink};
-    text-decoration: none;
-  }
-  ${Breakpoints.laptop} {
-    padding: 2rem;
-    width: 30rem;
-  }
-`
+export default function Contact() {
+  const { secondaryBlack, primaryWhite } = Theme.colors
+  const { LAPTOP, MOBILE_S } = Breakpoint
 
-const Button = styled.button`
-  cursor: pointer;
-  margin: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-  border: 1px solid ${pink};
-  border-radius: 5px;
-  width: 10rem;
-  height: 3rem;
-  a {
-    display: inline-block;
-    text-decoration: none;
-    color: ${white};
-  }
-  a:hover {
-    color: ${white};
-    background-color: ${pink};
-  }
-  &:hover {
-    background-color: ${pink};
-    opacity: 0.5;
-  }
-`
-const MyContacts = () => {
   return (
-    <>
+    <AppWrapper>
       <Head>
-        <title>Stephania Nevado's portfolio</title>
-        <link rel="icon" href="/favicon.svg" />
+        <meta
+          name="description"
+          content="If you are interested just contact me"
+        />
       </Head>
-      <NavBar />
-      <Main>
-        <Title number="04" title="Contact me" />
-        <Row>
-          <Column>
-            <h4>Get in touch</h4>
-            <p>My inbox is always open to discuss new opportunities.</p>
-            <p>
-              I love to code - it was an amazing discovery for me. I'm always
-              eager to learn new things and grow as a developer. Check out my
-              <a
-                href="https://github.com/stephanianevado"
-                target="_blank"
-                rel="noreferrer">
-                {' '}
-                GitHub
-              </a>{' '}
-              !
-            </p>
-            <Button>
-              <a
+      <Box>
+        <Title header="Contact" subHeader="REACH OUT TO ME" />
+        <Box
+          breakpoints={{
+            [MOBILE_S]: { direction: 'column' },
+            [LAPTOP]: { direction: 'row' },
+          }}>
+          <Box
+            breakpoints={{
+              [LAPTOP]: { flex: 2 },
+            }}>
+            <Text as="p" color={secondaryBlack} variant="luke">
+              I&apos;m always enthusiastic about learning new things and
+              evolving as a developer.
+            </Text>
+            <Text as="p" color={secondaryBlack} variant="luke">
+              My inbox is always open to discuss new opportunities. You can also
+              find me on social media.
+            </Text>
+            <Spacer size={5} />
+            <Box
+              breakpoints={{
+                [LAPTOP]: { alignSelf: 'flex-start' },
+              }}>
+              <Button
+                as="a"
                 href="mailto:stephania.arantxa@gmail.com"
                 target="_blank"
-                rel="noreferrer">
-                Say hello
-              </a>
-            </Button>
-          </Column>
-        </Row>
-      </Main>
-      <FooterPortfolio />
-    </>
+                icon={Headset}
+                iconPosition="left">
+                Let&apos;s have a chat
+              </Button>
+            </Box>
+          </Box>
+          <Spacer size={10} />
+          <Box
+            breakpoints={{
+              [LAPTOP]: { flex: 2 },
+            }}>
+            <Grid
+              justifyItems="center"
+              alignSelf="center"
+              breakpoints={{
+                [MOBILE_S]: { columns: 'repeat(1, 1fr)', gap: '16px' },
+                [LAPTOP]: {
+                  columns: 'repeat(2, 1fr)',
+                  gap: '20px',
+                },
+              }}>
+              {Object.values(Id)
+                .filter((id) => {
+                  return [
+                    Id.GITHUB,
+                    Id.LINKEDIN,
+                    Id.INSTAGRAM,
+                    Id.FACEBOOK,
+                  ].includes(id)
+                })
+                .map((id) => {
+                  const item = contactItems[id]
+                  const { alternativeText, href, icon: Icon } = item
+                  return (
+                    <Button
+                      as="a"
+                      key={id}
+                      href={href}
+                      target="_blank"
+                      icon={Icon}
+                      iconPosition="left"
+                      color={primaryWhite}
+                      bg={secondaryBlack}
+                      mode={Mode.ALTERNATIVE}>
+                      {alternativeText}
+                    </Button>
+                  )
+                })}
+            </Grid>
+          </Box>
+        </Box>
+      </Box>
+    </AppWrapper>
   )
 }
-
-export default MyContacts
