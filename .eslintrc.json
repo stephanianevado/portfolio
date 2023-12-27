@@ -12,37 +12,26 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "overrides": [
-    {
-      "files": ["*.ts", "*.tsx"],
-      "parser": "@typescript-eslint/parser",
-      "parserOptions": {
-        "sourceType": "module"
-      },
-      "extends": [
-        "eslint:recommended",
-        "plugin:@typescript-eslint/recommended",
-        "next"
-      ],
-      "plugins": ["@typescript-eslint", "react", "import"],
-      "rules": {
-        "@typescript-eslint/no-unused-vars": "error",
-        "@typescript-eslint/no-explicit-any": ["error"],
-        "@typescript-eslint/consistent-type-imports": "error",
-        "react/no-unescaped-entities": "warn",
-        "react/prop-types": "warn",
-        "react/display-name": "off",
-        "import/no-unresolved": "error",
-        "no-sparse-arrays": "off",
-        "no-useless-escape": "off",
-        "no-useless-catch": "warn",
-        "no-console": "error",
-        "eqeqeq": ["error", "always", { "null": "ignore" }]
-      }
-    }
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
-  "plugins": ["import"],
+  "plugins": ["@typescript-eslint", "react", "import"],
   "rules": {
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": ["error"],
+    "@typescript-eslint/consistent-type-imports": "error",
+    "react/no-unescaped-entities": "warn",
+    "react/prop-types": "warn",
+    "react/display-name": "off",
+    "import/no-unresolved": "error",
+    "no-sparse-arrays": "off",
+    "no-useless-escape": "off",
+    "no-useless-catch": "warn",
+    "no-console": "error",
+    "eqeqeq": ["error", "always", { "null": "ignore" }],
     "prefer-const": "error",
     "import/order": [
       "error",

@@ -4,6 +4,7 @@ import { Accordion } from 'components/Accordion'
 import AppWrapper from 'components/AppWrapper'
 import { Box } from 'components/common/box/Box'
 import { Title } from 'components/Title'
+
 import { Id, skillsItems } from 'utils/skillsItems'
 
 export default function MySkills() {

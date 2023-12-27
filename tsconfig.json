@@ -22,7 +22,15 @@
       "public/*": ["public/*"],
       "types/*": ["types/*"],
       "utils/*": ["utils/*"]
-    }
+    },
+     "plugins": [
+        {
+          "transform": "typescript-plugin-styled-components",
+          "type": "config",
+          "minify": true,
+          "ssr": true
+        }
+      ]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]

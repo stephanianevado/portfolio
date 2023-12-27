@@ -6,7 +6,6 @@ import AppWrapper from 'components/AppWrapper'
 import { Box } from 'components/common/box/Box'
 import { Link } from 'components/common/link/Link'
 import { Text } from 'components/common/text/Text'
-
 import { Breakpoint, Theme } from 'components/Theme'
 import { Title } from 'components/Title'
 

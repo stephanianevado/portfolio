@@ -8,6 +8,7 @@ import { Text } from 'components/common/text/Text'
 import { Link } from 'components/icons/icons'
 import { Theme } from 'components/Theme'
 import { Title } from 'components/Title'
+
 import { Id, workItems } from 'utils/workItems'
 
 export default function Work() {

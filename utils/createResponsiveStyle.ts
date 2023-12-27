@@ -1,7 +1,7 @@
 import type { TextProps } from 'components/common/text/Text.style'
+import type { Breakpoint } from 'components/Theme'
 import { Theme } from 'components/Theme'
 
-import type { Breakpoint } from 'components/Theme'
 import type { BreakpointStyles, Variant } from 'types/index'
 
 import { getTypographyStyle } from 'utils/getTypographyStyle'

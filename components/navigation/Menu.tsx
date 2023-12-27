@@ -48,6 +48,7 @@ export const Menu = ({ open, onClose }: Props) => {
               objectFit: 'fill',
               objectPosition: 'center',
               width: 'auto',
+              height: 'auto'
             }}
             priority
           />

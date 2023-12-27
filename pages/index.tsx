@@ -10,6 +10,7 @@ import { Spacer } from 'components/common/spacer/Spacer'
 import { Text } from 'components/common/text/Text'
 import { Dash } from 'components/icons/icons'
 import { Breakpoint, Theme } from 'components/Theme'
+
 import { contactItems, Id } from 'utils/contactItems'
 
 export default function Home() {
