@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "lint": "1.1.2",
-    "next": "13.5.6",
+    "next": "14.0.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-is": "18.2.0",
@@ -22,15 +22,15 @@
   "devDependencies": {
     "@next/eslint-plugin-next": "14.0.4",
     "@types/node": "20.2.3",
-    "@types/react": "18.2.7",
-    "@typescript-eslint/eslint-plugin": "5.59.7",
+    "@types/react": "18.2.45",
+    "@typescript-eslint/eslint-plugin": "6.16.0",
     "babel-plugin-styled-components": "2.1.4",
-    "eslint-config-next": "13.4.3",
-    "eslint-import-resolver-typescript": "3.5.5",
-    "eslint-plugin-import": "2.27.5",
-    "eslint-plugin-react": "7.32.2",
-    "prettier": "2.8.8",
-    "typescript": "5.0.4"
+    "eslint-config-next": "14.0.4",
+    "eslint-import-resolver-typescript": "3.6.1",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-react": "7.33.2",
+    "prettier": "3.1.1",
+    "typescript": "5.3.3"
   },
   "engines": {
     "npm": ">=7.0.0",
