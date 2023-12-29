@@ -20,7 +20,7 @@ export default function AppWrapper({ children }: Props) {
         breakpoints={{
           [MOBILE_S]: { margin: '16px 16px' },
           [LAPTOP]: { margin: '16px 80px' },
-          [DESKTOP]: { margin: '16px 640px' },
+          [DESKTOP]: { margin: '100px 640px' },
         }}>
         {children}
       </Box>
