@@ -60,6 +60,8 @@ export type BoxProps = PaddingProps &
     target?: Target
     hover?: Record<string, unknown>
     onClick?: MouseEventHandler<HTMLInputElement> | ((a: unknown) => void)
+    onMouseEnter?: React.MouseEventHandler<HTMLInputElement>
+    onMouseLeave?: React.MouseEventHandler<HTMLInputElement>
     onSubmit?: (event: React.SyntheticEvent) => void
     href?: string
     cursor?: 'pointer'
