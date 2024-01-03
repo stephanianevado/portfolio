@@ -1,6 +1,7 @@
 import styled, { keyframes } from 'styled-components'
 
 import { Theme } from 'components/Theme'
+import { Tooltip } from 'components/Tooltip'
 
 const { primaryGreen, tertiaryPink, primaryPurple } = Theme.colors
 
@@ -199,11 +200,13 @@ export default function Icosahedron() {
   return (
     <Wrapper>
       <Polyhedron>
-        <Container>
-          {[...Array(20)].map((_, index) => (
-            <IcosahedronFace key={index} />
-          ))}
-        </Container>
+        <Tooltip text="I created this animation using pure CSS">
+          <Container>
+            {[...Array(20)].map((_, index) => (
+              <IcosahedronFace key={index} />
+            ))}
+          </Container>
+        </Tooltip>
       </Polyhedron>
     </Wrapper>
   )
