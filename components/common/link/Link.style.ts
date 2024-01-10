@@ -31,7 +31,6 @@ export type LinkProps = PaddingProps &
 
 export const StyledLink = styled.a<LinkProps>`
   padding: ${(props: PaddingProps) => multiplier(props.padding)};
-  id: ${(props: LinkProps) => props.id && props.id};
   &:disabled {
     color: ${tertiaryGrey};
     pointer-events: none;
@@ -51,10 +50,6 @@ export const StyledLink = styled.a<LinkProps>`
   white-space: nowrap;
   cursor: pointer;
   text-decoration:${(props: LinkProps) => `underline ${props.color}`};
-  as: ${(props: LinkProps) => props.as};
-  href: ${(props: LinkProps) => props.href};
-  target:${(props: LinkProps) => props.target};
-  ref:${(props: LinkProps) => props.ref};
   ${({ breakpoints }: { breakpoints: LinkProps['breakpoints'] }) =>
     createResponsiveStyle(breakpoints)};
 `

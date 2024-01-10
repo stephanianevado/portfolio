@@ -85,8 +85,6 @@ export type BoxProps = PaddingProps &
 export const StyledBox = styled.div<BoxProps>`
   ${styledPadding};
   ${styledMargins};
-  id: ${(props: BoxProps) => props.id};
-  as: ${(props: BoxProps) => props.as};
   box-sizing: ${(props: BoxProps) => props.boxSizing || 'border-box'};
   background-color: ${(props: BoxProps) => props.bg || 'transparent'};
   border: ${(props: BoxProps) => props.border || 'transparent'};
@@ -116,11 +114,6 @@ export const StyledBox = styled.div<BoxProps>`
     props.alignContent && props.alignContent};
   align-items: ${(props: BoxProps) => props.alignItems || 'stretch'};
   align-self: ${(props: BoxProps) => props.alignSelf && props.alignSelf};
-  ref: ${(props: BoxProps) => props.ref};
-  class-name: ${(props: BoxProps) => props.className};
-  target: ${(props: BoxProps) => props.target || '_blank'};
-  href: ${(props: BoxProps) => props.href};
-  cursor: ${(props: BoxProps) => props.cursor};
   text-decoration: ${(props: BoxProps) => props.textDecoration || 'none'};
   animation-name: ${(props: BoxProps) => props.animationName};
   animation-duration: ${(props: BoxProps) => props.animationDuration};

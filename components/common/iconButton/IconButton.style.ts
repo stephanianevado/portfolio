@@ -32,8 +32,6 @@ export type IconButtonProps = PaddingProps &
 
 export const StyledIcon = styled.button<IconButtonProps>`
   padding: ${(props: PaddingProps) => multiplier(props.padding) || '0px'};
-  id: ${(props: IconButtonProps) => props.id && props.id};
-  name: ${(props: IconButtonProps) => props.name || ''};
   color: ${(props: IconButtonProps) => props.color || 'transparent'};
   background-color: ${(props: IconButtonProps) => props.bg || 'transparent'};
   border: 0px;
@@ -43,9 +41,9 @@ export const StyledIcon = styled.button<IconButtonProps>`
     cursor: not-allowed;
   };
   width: ${(props: IconButtonProps) =>
-    multiplier(props.size) || multiplier(10)}};
+    multiplier(props.size) || multiplier(10)};
   height: ${(props: IconButtonProps) =>
-    multiplier(props.size) || multiplier(10)}};
+    multiplier(props.size) || multiplier(10)};
   max-width: 100%;
   display: flex;
   flex-direction: row;
@@ -65,9 +63,6 @@ export const StyledIcon = styled.button<IconButtonProps>`
   };
   overflow: hidden;
   cursor: pointer;
-  as: ${(props: IconButtonProps) => props.as && props.as};
-  href: ${(props: IconButtonProps) => props.href && props.href};
-  target: ${(props: IconButtonProps) => props.target || '_blank'};
   ${({ breakpoints }: { breakpoints: IconButtonProps['breakpoints'] }) =>
     createResponsiveStyle(breakpoints)};
 `

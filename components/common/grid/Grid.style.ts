@@ -37,8 +37,6 @@ export type GridProps = PaddingProps &
 
 export const StyledGrid = styled.div<GridProps>`
   display: grid;
-  id: ${(props: GridProps) => props.id};
-  as: ${(props: GridProps) => props.as};
   padding: 16px 0px;
   gap: ${(props: GridProps) => multiplier(props.gap)};
   grid-template-columns: ${(props: GridProps) => props.columns};

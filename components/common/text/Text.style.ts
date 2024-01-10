@@ -78,8 +78,6 @@ export type TextProps = PaddingProps &
 export const StyledText = styled.div`
   margin: 0;
   padding: 4px 0px;
-  id: ${(props: TextProps) => props.id};
-  as: ${(props: TextProps) => props.as};
   display: ${(props: TextProps) => props.display || 'list'};
   flex-grow: ${(props: TextProps) => props.grow || 0};
   flex-shrink: ${(props: TextProps) => props.shrink || 0};
@@ -92,7 +90,6 @@ export const StyledText = styled.div`
   align-content: ${(props: TextProps) => props.alignContent || 'start'};
   align-items: ${(props: TextProps) => props.alignItems || 'stretch'};
   align-self: ${(props: TextProps) => props.alignSelf};
-  rel: ${(props: TextProps) => props.rel};
   color: ${(props: TextProps) => props.color || 'transparent'};
   text-align: ${(props: TextProps) => props.align || 'left'};
   text-decoration: ${(props: TextProps) => props.textDecoration || 'none'};
