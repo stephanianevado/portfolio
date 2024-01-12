@@ -51,17 +51,17 @@
         "pathGroups": [
           {
             "pattern": "react",
-            "group": "external",
+            "group": "builtin",
             "position": "before"
           },
           {
             "pattern": "next/**",
-            "group": "external",
+            "group": "builtin",
             "position": "after"
           },
           {
             "pattern": "styled-components",
-            "group": "external",
+            "group": "builtin",
             "position": "after"
           }
         ],

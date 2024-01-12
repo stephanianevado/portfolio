@@ -2,7 +2,6 @@ import { useState } from 'react'
 
 import Image from 'next/image'
 
-import { fadeInDown } from 'components/animations/animation'
 import { Box } from 'components/common/box/Box'
 import { Button } from 'components/common/button/Button'
 import { IconButton } from 'components/common/iconButton/IconButton'
@@ -54,10 +53,7 @@ export const Header = () => {
               [MOBILE_S]: { display: 'none' },
               [LAPTOP]: { display: 'flex' },
             }}>
-            <Box
-              animationName={fadeInDown}
-              animationDuration="200ms"
-              animationTimingFunction="ease-out">
+            <Box animation="fadeInDown">
               <Items />
             </Box>
           </Box>
@@ -81,9 +77,7 @@ export const Header = () => {
           </Box>
         </Box>
         <Box
-          animationName={fadeInDown}
-          animationDuration="200ms"
-          animationTimingFunction="ease-out"
+          animation="fadeInDown"
           breakpoints={{
             [MOBILE_S]: { display: 'none' },
             [LAPTOP]: { display: 'flex' },

@@ -1,8 +1,8 @@
 import type { PropsWithChildren } from 'react'
 
-import type { keyframes } from 'styled-components'
 import styled from 'styled-components'
 
+import { getAnimation } from 'components/animations/animation'
 import { Theme } from 'components/Theme'
 
 import type {
@@ -58,18 +58,7 @@ export type TextProps = PaddingProps &
       | 'pre-wrap'
       | 'pre-line'
       | 'break-spaces'
-    animationName?: string | typeof keyframes
-    animationDuration?: string
-    animationTimingFunction?:
-      | 'ease'
-      | 'linear'
-      | 'ease-in'
-      | 'ease-out'
-      | 'ease-in-out'
-      | 'step-start'
-      | 'step-end'
-      | 'steps'
-      | 'cubic-bezier'
+    animation?: string
     hover?: Record<string, unknown>
     disabled?: boolean
     breakpoints?: Record<string, BreakpointStyles>
@@ -109,10 +98,8 @@ export const StyledText = styled.div`
       box-shadow: none;
     },
   };
-  animation-name: ${(props: TextProps) => props.animationName};
-  animation-duration: ${(props: TextProps) => props.animationDuration};
-  animation-timing-function: ${(props: TextProps) =>
-    props.animationTimingFunction};
+  animation: ${(props: TextProps) =>
+    props.animation && getAnimation(props.animation)};
   ${({
     variant,
     subStyle,

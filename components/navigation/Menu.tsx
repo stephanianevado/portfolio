@@ -1,6 +1,5 @@
 import Image from 'next/image'
 
-import { fadeInLeft } from 'components/animations/animation'
 import { Box } from 'components/common/box/Box'
 import { Button } from 'components/common/button/Button'
 import { IconButton } from 'components/common/iconButton/IconButton'
@@ -48,7 +47,7 @@ export const Menu = ({ open, onClose }: Props) => {
               objectFit: 'fill',
               objectPosition: 'center',
               width: 'auto',
-              height: 'auto'
+              height: 'auto',
             }}
             priority
           />
@@ -61,10 +60,7 @@ export const Menu = ({ open, onClose }: Props) => {
           aria-label="Close navigation menu"
         />
       </Box>
-      <Box
-        animationName={fadeInLeft}
-        animationDuration="200ms"
-        animationTimingFunction="ease-out">
+      <Box animation="fadeInLeft">
         <Items />
       </Box>
       <Box marginHorizontal={3} marginVertical={4}>
