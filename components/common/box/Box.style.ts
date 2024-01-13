@@ -1,7 +1,8 @@
 import type { FC, MouseEventHandler, PropsWithChildren } from 'react'
 
-import type { keyframes } from 'styled-components'
 import styled from 'styled-components'
+
+import { getAnimation } from 'components/animations/animation'
 
 import {
   type AlignContent,
@@ -66,18 +67,7 @@ export type BoxProps = PaddingProps &
     href?: string
     cursor?: 'pointer'
     textDecoration?: 'none' | 'underline'
-    animationName?: string | typeof keyframes
-    animationDuration?: string
-    animationTimingFunction?:
-      | 'ease'
-      | 'linear'
-      | 'ease-in'
-      | 'ease-out'
-      | 'ease-in-out'
-      | 'step-start'
-      | 'step-end'
-      | 'steps'
-      | 'cubic-bezier'
+    animation?: string
     zIndex?: string | number
     breakpoints?: Record<string, BreakpointStyles>
   }>
@@ -115,10 +105,8 @@ export const StyledBox = styled.div<BoxProps>`
   align-items: ${(props: BoxProps) => props.alignItems || 'stretch'};
   align-self: ${(props: BoxProps) => props.alignSelf && props.alignSelf};
   text-decoration: ${(props: BoxProps) => props.textDecoration || 'none'};
-  animation-name: ${(props: BoxProps) => props.animationName};
-  animation-duration: ${(props: BoxProps) => props.animationDuration};
-  animation-timing-function: ${(props: BoxProps) =>
-    props.animationTimingFunction};
+  animation: ${(props: BoxProps) =>
+    props.animation && getAnimation(props.animation)};
   z-index: ${(props: BoxProps) => props.zIndex};
   &:hover {
     ${(props: BoxProps) => props.hover};

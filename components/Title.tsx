@@ -1,4 +1,3 @@
-import { fadeInRight } from 'components/animations/animation'
 import { Spacer } from 'components/common/spacer/Spacer'
 import { Text } from 'components/common/text/Text'
 import type { TextProps } from 'components/common/text/Text.style'
@@ -30,9 +29,7 @@ export const Title = ({ header, subHeader, variant = 'padme' }: Props) => {
         color={primaryGrey}
         variant={variant}
         subStyle="bold"
-        animationName={fadeInRight}
-        animationDuration="200ms"
-        animationTimingFunction="ease-out">
+        animation="fadeInRight">
         {subHeader} &rarr;
       </Text>
       <Spacer size={2} />

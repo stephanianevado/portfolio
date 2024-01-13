@@ -1,6 +1,5 @@
 import { useState } from 'react'
 
-import { fadeInUp } from 'components/animations/animation'
 import { Box } from 'components/common/box/Box'
 import { Text } from 'components/common/text/Text'
 import { Breakpoint, Theme } from 'components/Theme'
@@ -35,9 +34,7 @@ export const Tooltip = ({ text, children }: Props) => {
           bg={primaryGrey}
           borderRadius={4}
           paddingHorizontal={4}
-          animationName={fadeInUp}
-          animationDuration="200ms"
-          animationTimingFunction="ease-out">
+          animation="fadeInUp">
           <Text
             color={primaryWhite}
             breakpoints={{
