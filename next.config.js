@@ -1,11 +1,10 @@
 /** @type {import('next').NextConfig} */
 
-module.exports = ({ defaultConfig }) => {
+module.exports = () => {
   const nextConfig = {
     compiler: {
       styledComponents: true,
     },
-    ...defaultConfig,
   }
   return nextConfig
 }
