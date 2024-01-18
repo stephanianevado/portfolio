@@ -1,4 +1,4 @@
-import type { Breakpoint } from 'components/Theme'
+import type { Breakpoint, Variant } from 'components/Theme'
 
 export type BreakpointStyles = Record<string, string | number>
 
@@ -49,18 +49,6 @@ export type Size = number | string
 
 export type Target = '_blank' | '_self' | '_parent' | '_top' | 'framename'
 
-export type Variant =
-  | 'sith'
-  | 'jedi'
-  | 'vader'
-  | 'padme'
-  | 'anakin'
-  | 'ashoka'
-  | 'kylo'
-  | 'leia'
-  | 'luke'
-  | 'obi'
-
 export type Fonts = {
   HEADER: string
   BODY: string
@@ -80,16 +68,13 @@ export type Typography = {
     }
   }
 }
+
 export type ThemeProps = {
   colors: Color
   breakpoints: Breakpoint
-  fonts: Fonts
-  typography: {
-    padme: Typography
-    anakin: Typography
-    ashoka: Typography
-    leia: Typography
-    luke: Typography
-    obi: Typography
-  }
+  fontFamily: string
+  fontWeight?: number
+  fontSize: Array<Variant>
+  lineHeight: number
+  letterSpacing: string
 }

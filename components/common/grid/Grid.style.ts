@@ -47,6 +47,5 @@ export const StyledGrid = styled.div<GridProps>`
   align-content: ${(props: GridProps) => props.alignContent};
   align-items: ${(props: GridProps) => props.alignItems};
   align-self: ${(props: GridProps) => props.alignSelf};
-  ${({ breakpoints }: { breakpoints: GridProps['breakpoints'] }) =>
-    createResponsiveStyle(breakpoints)};
+  ${(props: GridProps) => createResponsiveStyle(props.breakpoints)};
 `

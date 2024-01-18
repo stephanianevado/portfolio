@@ -17,8 +17,8 @@ export type IconProps = {
 export type Icon = (props: IconProps) => JSX.Element
 
 export const Icon = styled.svg`
-  width: ${(props: IconProps) => multiplier(props.size) || multiplier(6)};
-  height: ${(props: IconProps) => multiplier(props.size) || multiplier(6)};
+  width: ${(props: IconProps) => multiplier(props.size) ?? multiplier(6)};
+  height: ${(props: IconProps) => multiplier(props.size) ?? multiplier(6)};
   &:hover path,
   &:active path {
     fill: ${(props: IconProps) => props.hoverColor};

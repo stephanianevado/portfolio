@@ -1,4 +1,4 @@
-import Head from 'next/head'
+'use client'
 
 import AppWrapper from 'components/AppWrapper'
 import { Box } from 'components/common/box/Box'
@@ -13,17 +13,20 @@ import { Title } from 'components/Title'
 import { contactItems, Id } from 'utils/contactItems'
 
 export default function Contact() {
-  const { secondaryBlack, primaryWhite } = Theme.colors
+  const {
+    colors: { secondaryBlack, primaryWhite },
+    fontSize: { small },
+  } = Theme
   const { LAPTOP, MOBILE_S } = Breakpoint
 
   return (
     <AppWrapper>
-      <Head>
+      {/* <Head>
         <meta
           name="description"
           content="If you are interested just contact me"
         />
-      </Head>
+      </Head> */}
       <Box>
         <Title header="Contact" subHeader="REACH OUT TO ME" />
         <Box
@@ -35,11 +38,11 @@ export default function Contact() {
             breakpoints={{
               [LAPTOP]: { flex: 2 },
             }}>
-            <Text as="p" color={secondaryBlack} variant="luke">
+            <Text as="p" color={secondaryBlack} variant={small}>
               I&apos;m always enthusiastic about learning new things and
               evolving as a developer.
             </Text>
-            <Text as="p" color={secondaryBlack} variant="luke">
+            <Text as="p" color={secondaryBlack} variant={small}>
               My inbox is always open to discuss new opportunities. You can also
               find me on social media.
             </Text>

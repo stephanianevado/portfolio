@@ -1,15 +1,11 @@
-module.exports = {
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=3600, must-revalidate',
-          },
-        ],
-      },
-    ]
-  },
+/** @type {import('next').NextConfig} */
+
+module.exports = ({ defaultConfig }) => {
+  const nextConfig = {
+    compiler: {
+      styledComponents: true,
+    },
+    ...defaultConfig,
+  }
+  return nextConfig
 }

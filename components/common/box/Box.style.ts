@@ -75,42 +75,41 @@ export type BoxProps = PaddingProps &
 export const StyledBox = styled.div<BoxProps>`
   ${styledPadding};
   ${styledMargins};
-  box-sizing: ${(props: BoxProps) => props.boxSizing || 'border-box'};
-  background-color: ${(props: BoxProps) => props.bg || 'transparent'};
-  border: ${(props: BoxProps) => props.border || 'transparent'};
-  border-radius: ${(props: BoxProps) => multiplier(props.borderRadius) || 0};
+  box-sizing: ${(props: BoxProps) => props.boxSizing ?? 'border-box'};
+  background-color: ${(props: BoxProps) => props.bg ?? 'transparent'};
+  border: ${(props: BoxProps) => props.border ?? 'transparent'};
+  border-radius: ${(props: BoxProps) => multiplier(props.borderRadius) ?? 0};
   height: ${(props: BoxProps) => multiplier(props.height)};
   max-height: ${(props: BoxProps) => multiplier(props.maxHeight)};
   min-height: ${(props: BoxProps) => multiplier(props.minHeight)};
-  width: ${(props: BoxProps) => props.width && multiplier(props.width)};
-  max-width: ${(props: BoxProps) => multiplier(props.maxWidth) || '100%'};
-  position: ${(props: BoxProps) => props.position || 'unset'};
+  width: ${(props: BoxProps) => props.width ?? multiplier(props.width)};
+  max-width: ${(props: BoxProps) => multiplier(props.maxWidth) ?? '100%'};
+  position: ${(props: BoxProps) => props.position ?? 'unset'};
   top: ${(props: BoxProps) => multiplier(props.top)};
   right: ${(props: BoxProps) => multiplier(props.right)};
   bottom: ${(props: BoxProps) => multiplier(props.bottom)};
   left: ${(props: BoxProps) => multiplier(props.left)};
-  overflow: ${(props: BoxProps) => props.overflow || 'auto'};
-  overflow-y: ${(props: BoxProps) => props.overflow || 'auto'};
-  overflow-x: ${(props: BoxProps) => props.overflow || 'auto'};
-  display: ${(props: BoxProps) => props.display || 'flex'};
-  flex-grow: ${(props: BoxProps) => props.grow || 0};
-  flex-shrink: ${(props: BoxProps) => props.shrink || 0};
-  flex-basis: ${(props: BoxProps) => props.basis || 'auto'};
+  overflow: ${(props: BoxProps) => props.overflow ?? 'auto'};
+  overflow-y: ${(props: BoxProps) => props.overflow ?? 'auto'};
+  overflow-x: ${(props: BoxProps) => props.overflow ?? 'auto'};
+  display: ${(props: BoxProps) => props.display ?? 'flex'};
+  flex-grow: ${(props: BoxProps) => props.grow ?? 0};
+  flex-shrink: ${(props: BoxProps) => props.shrink ?? 0};
+  flex-basis: ${(props: BoxProps) => props.basis ?? 'auto'};
   flex: ${(props: BoxProps) => props.flex};
-  flex-direction: ${(props: BoxProps) => props.direction || 'column'};
-  flex-wrap: ${(props: BoxProps) => props.wrap || 'nowrap'};
-  justify-content: ${(props: BoxProps) => props.justifyContent || 'flex-start'};
+  flex-direction: ${(props: BoxProps) => props.direction ?? 'column'};
+  flex-wrap: ${(props: BoxProps) => props.wrap ?? 'nowrap'};
+  justify-content: ${(props: BoxProps) => props.justifyContent ?? 'flex-start'};
   align-content: ${(props: BoxProps) =>
-    props.alignContent && props.alignContent};
-  align-items: ${(props: BoxProps) => props.alignItems || 'stretch'};
-  align-self: ${(props: BoxProps) => props.alignSelf && props.alignSelf};
-  text-decoration: ${(props: BoxProps) => props.textDecoration || 'none'};
+    props.alignContent ?? props.alignContent};
+  align-items: ${(props: BoxProps) => props.alignItems ?? 'stretch'};
+  align-self: ${(props: BoxProps) => props.alignSelf ?? props.alignSelf};
+  text-decoration: ${(props: BoxProps) => props.textDecoration ?? 'none'};
   animation: ${(props: BoxProps) =>
     props.animation && getAnimation(props.animation)};
   z-index: ${(props: BoxProps) => props.zIndex};
   &:hover {
     ${(props: BoxProps) => props.hover};
   }
-  ${({ breakpoints }: { breakpoints: BoxProps['breakpoints'] }) =>
-    createResponsiveStyle(breakpoints)};
+  ${(props: BoxProps) => createResponsiveStyle(props.breakpoints)};
 `

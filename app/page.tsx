@@ -1,6 +1,6 @@
-import { Fragment } from 'react'
+'use client'
 
-import Head from 'next/head'
+import { Fragment } from 'react'
 
 import Icosahedron from 'components/animations/Icosahedron'
 import AppWrapper from 'components/AppWrapper'
@@ -14,17 +14,16 @@ import { Breakpoint, Theme } from 'components/Theme'
 import { contactItems, Id } from 'utils/contactItems'
 
 export default function Home() {
-  const { secondaryBlack, secondaryGrey, primaryWhite } = Theme.colors
+  const {
+    colors: { secondaryBlack, secondaryGrey, primaryWhite },
+    fontSize: { normal, xxxl, huge },
+    fontWeight: { bold },
+    lineHeight: { xl },
+  } = Theme
   const { LAPTOP, MOBILE_S } = Breakpoint
 
   return (
     <AppWrapper>
-      <Head>
-        <meta
-          name="description"
-          content="This is my portfolio showcase landing page"
-        />
-      </Head>
       <Box
         breakpoints={{
           [MOBILE_S]: { direction: 'column' },
@@ -40,17 +39,18 @@ export default function Home() {
             <Text
               as="span"
               color={secondaryGrey}
-              variant="kylo"
-              subStyle="bold">
+              variant={normal}
+              subStyle={bold}>
               Stephania Nevado
             </Text>
           </Box>
           <Text
             as="h1"
             color={secondaryBlack}
+            lineHeight={xl}
             breakpoints={{
-              [MOBILE_S]: { variant: 'vader', subStyle: 'bold' },
-              [LAPTOP]: { variant: 'jedi', subStyle: 'bold' },
+              [MOBILE_S]: { variant: xxxl, subStyle: bold },
+              [LAPTOP]: { variant: huge, subStyle: bold },
             }}>
             Frontend developer, manager and nutritionist located in Sweden ✨
           </Text>

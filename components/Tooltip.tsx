@@ -12,7 +12,11 @@ type Props = {
 export const Tooltip = ({ text, children }: Props) => {
   const [isHovered, setIsHovered] = useState(false)
 
-  const { primaryGrey, primaryWhite } = Theme.colors
+  const {
+    colors: { primaryGrey, primaryWhite },
+    fontSize: { large },
+    fontWeight: { bold },
+  } = Theme
   const { LAPTOP, MOBILE_S } = Breakpoint
 
   const handleOnMouseEnter = () => {
@@ -38,8 +42,8 @@ export const Tooltip = ({ text, children }: Props) => {
           <Text
             color={primaryWhite}
             breakpoints={{
-              [MOBILE_S]: { variant: 'ashoka', subStyle: 'bold' },
-              [LAPTOP]: { variant: 'anakin', subStyle: 'bold' },
+              [MOBILE_S]: { variant: large, subStyle: bold },
+              [LAPTOP]: { variant: large, subStyle: bold },
             }}>
             {text} &rarr;
           </Text>

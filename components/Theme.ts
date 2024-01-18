@@ -1,3 +1,4 @@
+'use client'
 import { createGlobalStyle } from 'styled-components'
 
 export enum Color {
@@ -35,9 +36,16 @@ export enum Breakpoint {
   DESKTOP = 'DESKTOP',
 }
 
-const fonts = {
-  HEADING: 'Clash Display, Spline Sans, Poppins, Pangea, sans-serif',
-  BODY: 'Clash Display, Spline Sans, Poppins, Pangea Text, sans-serif',
+export enum Variant {
+  XS = 'xs',
+  SMALL = 'small',
+  NORMAL = 'normal',
+  MEDIUM = 'medium',
+  LARGE = 'large',
+  XL = 'xl',
+  XXL = 'xxl',
+  XXXL = 'xxxl',
+  HUGE = 'huge',
 }
 
 export const Theme = {
@@ -74,149 +82,31 @@ export const Theme = {
     [Breakpoint.LAPTOP_L]: '@media (min-width: 1440px)',
     [Breakpoint.DESKTOP]: '@media (min-width: 2560px)',
   },
-  fonts,
-  typography: {
-    sith: {
-      fontFamily: fonts.HEADING,
-      fontSize: '104px',
-      lineHeight: 48 / 40,
-      letterSpacing: 0.6,
-      variants: {
-        normal: {
-          fontWeight: 400,
-        },
-        bold: {
-          fontWeight: 600,
-        },
-      },
-    },
-    jedi: {
-      fontFamily: fonts.HEADING,
-      fontSize: '72px',
-      lineHeight: 48 / 40,
-      letterSpacing: 0.6,
-      variants: {
-        normal: {
-          fontWeight: 400,
-        },
-        bold: {
-          fontWeight: 600,
-        },
-      },
-    },
-    vader: {
-      fontFamily: fonts.HEADING,
-      fontSize: '42px',
-      lineHeight: 48 / 40,
-      letterSpacing: 0.6,
-      variants: {
-        normal: {
-          fontWeight: 400,
-        },
-        bold: {
-          fontWeight: 600,
-        },
-      },
-    },
-    padme: {
-      fontFamily: fonts.HEADING,
-      fontSize: '40px',
-      lineHeight: 48 / 40,
-      letterSpacing: 0.6,
-      variants: {
-        normal: {
-          fontWeight: 400,
-        },
-        bold: {
-          fontWeight: 600,
-        },
-      },
-    },
-    anakin: {
-      fontFamily: fonts.HEADING,
-      fontSize: '28px',
-      lineHeight: 36 / 28,
-      letterSpacing: 0.6,
-      variants: {
-        normal: {
-          fontWeight: 400,
-        },
-        bold: {
-          fontWeight: 600,
-        },
-      },
-    },
-    ashoka: {
-      fontFamily: fonts.HEADING,
-      fontSize: '24px',
-      lineHeight: 32 / 24,
-      letterSpacing: 0.6,
-      variants: {
-        normal: {
-          fontWeight: 400,
-        },
-        bold: {
-          fontWeight: 600,
-        },
-      },
-    },
-    leia: {
-      fontFamily: fonts.HEADING,
-      fontSize: '20px',
-      lineHeight: 28 / 20,
-      letterSpacing: 0.6,
-      variants: {
-        normal: {
-          fontWeight: 400,
-        },
-        bold: {
-          fontWeight: 600,
-        },
-      },
-    },
-    kylo: {
-      fontFamily: fonts.BODY,
-      fontSize: '18px',
-      lineHeight: 24 / 16,
-      letterSpacing: 0.6,
-      variants: {
-        normal: {
-          fontWeight: 400,
-        },
-        bold: {
-          fontWeight: 600,
-        },
-      },
-    },
-    luke: {
-      fontFamily: fonts.BODY,
-      fontSize: '16px',
-      lineHeight: 24 / 16,
-      letterSpacing: 0.6,
-      variants: {
-        normal: {
-          fontWeight: 400,
-        },
-        bold: {
-          fontWeight: 600,
-        },
-      },
-    },
-    obi: {
-      fontFamily: fonts.BODY,
-      fontSize: '14px',
-      lineHeight: 20 / 14,
-      letterSpacing: 0.6,
-      variants: {
-        normal: {
-          fontWeight: 400,
-        },
-        bold: {
-          fontWeight: 600,
-        },
-      },
-    },
+  fontFamily: 'Clash Display, Spline Sans, Poppins, sans-serif',
+  fontSize: {
+    [Variant.XS]: '14px',
+    [Variant.SMALL]: '16px',
+    [Variant.NORMAL]: '18px',
+    [Variant.MEDIUM]: '20px',
+    [Variant.LARGE]: '24px',
+    [Variant.XL]: '28px',
+    [Variant.XXL]: '40px',
+    [Variant.XXXL]: '42px',
+    [Variant.HUGE]: '72px',
   },
+  fontWeight: {
+    bold: 600,
+    normal: 400,
+  },
+  lineHeight: {
+    xs: 20 / 14,
+    small: 24 / 16,
+    normal: 28 / 20,
+    medium: 32 / 24,
+    large: 36 / 28,
+    xl: 48 / 40,
+  },
+  letterSpacing: '0.6px',
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -241,7 +131,6 @@ export const GlobalStyle = createGlobalStyle`
   h6,
   button,
   input {
-    font-family: ${Theme.typography.padme.fontFamily};
     margin-top: 0
   }
 
@@ -249,10 +138,9 @@ export const GlobalStyle = createGlobalStyle`
   p,
   a,
   footer {
-    font-family: ${Theme.typography.luke.fontFamily};
-    font-size: ${Theme.typography.luke.fontSize};
-    font-weight: ${Theme.typography.luke.variants.normal};
-    line-height: ${Theme.typography.luke.lineHeight};
+    font-size: ${Theme.fontSize.normal};
+    font-weight: ${Theme.fontWeight.normal};
+    line-height: ${Theme.lineHeight.small};
     color: ${Theme.colors.tertiaryBlack};
   }
 `

@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router'
+import { usePathname } from 'next/navigation'
 
 import { Box } from 'components/common/box/Box'
 import { Text } from 'components/common/text/Text'
@@ -7,9 +7,13 @@ import { Breakpoint, Theme } from 'components/Theme'
 import { Id, items } from 'utils/items'
 
 export const Items = () => {
-  const router = useRouter()
+  const pathname = usePathname()
   const { MOBILE_S, LAPTOP } = Breakpoint
-  const { secondaryGrey, tertiaryPink } = Theme.colors
+  const {
+    colors: { secondaryGrey, tertiaryPink },
+    fontSize: { normal },
+    fontWeight: { bold },
+  } = Theme
 
   return (
     <Box
@@ -24,7 +28,7 @@ export const Items = () => {
       {Object.values(Id).map((id) => {
         const item = items[id]
         const { title, href } = item
-        const isActivePage = router.pathname === href
+        const isActivePage = pathname === href
 
         return (
           <Box
@@ -40,8 +44,8 @@ export const Items = () => {
               color={isActivePage ? tertiaryPink : secondaryGrey}
               textDecoration={isActivePage ? 'underline' : 'none'}
               textUnderlineOffset="4px"
-              variant="kylo"
-              subStyle="bold"
+              variant={normal}
+              subStyle={bold}
               hover={{
                 color: tertiaryPink,
                 textDecoration: 'underline',

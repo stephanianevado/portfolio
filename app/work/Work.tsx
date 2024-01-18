@@ -1,4 +1,4 @@
-import Head from 'next/head'
+'use client'
 
 import AppWrapper from 'components/AppWrapper'
 import { Box } from 'components/common/box/Box'
@@ -12,17 +12,20 @@ import { Title } from 'components/Title'
 import { Id, workItems } from 'utils/workItems'
 
 export default function Work() {
-  const { secondaryBlack, secondaryBlue, secondaryGrey, primaryWhite } =
-    Theme.colors
+  const {
+    colors: { secondaryBlack, secondaryBlue, secondaryGrey, primaryWhite },
+    fontSize: { small, large },
+    fontWeight: { bold },
+  } = Theme
 
   return (
     <AppWrapper>
-      <Head>
+      {/* <Head>
         <meta
           name="description"
           content="In this section you get to know my work"
         />
-      </Head>
+      </Head> */}
       <Box>
         <Title header="Work" subHeader="RECENT PROJECTS" />
         {Object.values(Id).map((id) => {
@@ -40,19 +43,19 @@ export default function Work() {
               <Text
                 as="h3"
                 color={secondaryGrey}
-                variant="ashoka"
-                subStyle="bold">
+                variant={large}
+                subStyle={bold}>
                 {title}
               </Text>
-              <Text as="p" color={secondaryBlack} variant="luke">
+              <Text as="p" color={secondaryBlack} variant={small}>
                 {text}
               </Text>
-              <Text as="p" color={secondaryBlack} variant="luke">
+              <Text as="p" color={secondaryBlack} variant={small}>
                 <Text
                   as="span"
                   color={secondaryBlue}
-                  variant="luke"
-                  subStyle="bold">
+                  variant={small}
+                  subStyle={bold}>
                   Technologies used:{' '}
                 </Text>
                 {technologies}

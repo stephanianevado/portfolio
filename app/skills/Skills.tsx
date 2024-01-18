@@ -1,3 +1,5 @@
+'use client'
+
 import Head from 'next/head'
 
 import { Accordion } from 'components/Accordion'
@@ -7,7 +9,7 @@ import { Title } from 'components/Title'
 
 import { Id, skillsItems } from 'utils/skillsItems'
 
-export default function MySkills() {
+export default function Skills() {
   return (
     <AppWrapper>
       <Head>
