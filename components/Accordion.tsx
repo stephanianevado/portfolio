@@ -16,7 +16,11 @@ type Props = {
 
 export const Accordion = ({ title, text, description, children }: Props) => {
   const [isOpen, setIsOpen] = useState(false)
-  const { secondaryBlack, tertiaryBlack, primaryBlue } = Theme.colors
+  const {
+    colors: { secondaryBlack, tertiaryBlack, primaryBlue },
+    fontSize: { small, medium },
+    fontWeight: { bold },
+  } = Theme
   const { LAPTOP, MOBILE_S } = Breakpoint
 
   const toggle = useCallback(() => setIsOpen(!isOpen), [isOpen])
@@ -36,10 +40,10 @@ export const Accordion = ({ title, text, description, children }: Props) => {
               alignItems: 'center',
             },
           }}>
-          <Text as="p" color={color} variant="leia" subStyle="bold">
+          <Text as="p" color={color} variant={medium} subStyle={bold}>
             {title}
           </Text>
-          <Text as="p" color={tertiaryBlack} variant="luke">
+          <Text as="p" color={tertiaryBlack} variant={small}>
             {isOpen ? (
               <>
                 {text}

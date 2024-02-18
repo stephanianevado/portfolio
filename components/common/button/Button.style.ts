@@ -5,25 +5,21 @@ import styled from 'styled-components'
 import type { Icon } from 'components/icons/icons'
 import { Theme } from 'components/Theme'
 
-import type {
-  BreakpointStyles,
-  Color,
-  JustifyContent,
-  Size,
-  Variant,
-} from 'types/index'
+import type { BreakpointStyles, Color, JustifyContent, Size } from 'types/index'
 
 import { createResponsiveStyle } from 'utils/createResponsiveStyle'
 import multiplier from 'utils/multiplier'
 import type { PaddingProps } from 'utils/styledPadding'
 
-const { tertiaryBlack, tertiaryGrey, primaryWhite, primaryBlue } = Theme.colors
-const { fontFamily, fontSize, variants } = Theme.typography.kylo
-const { fontWeight } = variants.bold
+const {
+  colors: { tertiaryBlack, tertiaryGrey, primaryWhite, primaryBlue },
+  fontSize: { small },
+  fontWeight: { bold },
+} = Theme
 
 export type ButtonProps = PaddingProps &
   PropsWithChildren<{
-    fontFamily?: Variant
+    fontFamily?: string
     fontSize?: number
     fontWeight?: number
     id?: string
@@ -49,14 +45,14 @@ export type ButtonProps = PaddingProps &
   }>
 
 export const StyledButton = styled.button<ButtonProps>`
-  padding: ${(props: PaddingProps) => multiplier(props.padding) || '16px 24px'};
-  font-family: ${(props: ButtonProps) => props.fontFamily || fontFamily};
-  font-size: ${(props: ButtonProps) => props.fontSize || fontSize}px;
-  font-weight: ${(props: ButtonProps) => props.fontWeight || fontWeight};
+  padding: ${(props: PaddingProps) => multiplier(props.padding) ?? '16px 24px'};
+  font-family: ${(props: ButtonProps) => props.fontFamily};
+  font-size: ${(props: ButtonProps) => props.fontSize ?? small};
+  font-weight: ${(props: ButtonProps) => props.fontWeight ?? bold};
   line-height: 1;
-  color: ${(props: ButtonProps) => props.color || tertiaryBlack};
+  color: ${(props: ButtonProps) => props.color ?? tertiaryBlack};
   background-color: ${(props: ButtonProps) =>
-    props.bg || 'rgba(0, 0, 0, 0.04)'};
+    props.bg ?? 'rgba(0, 0, 0, 0.04)'};
   &:hover {
     background-color: ${(props: ButtonProps) => props.bgHover && props.bgHover};
     box-shadow: 0 0 0 1px ${primaryWhite};
@@ -68,9 +64,9 @@ export const StyledButton = styled.button<ButtonProps>`
   };
   box-sizing: border-box;
   border-radius: ${(props: ButtonProps) =>
-    multiplier(props.borderRadius) || multiplier(2)};
-  border: ${(props: ButtonProps) => props.border || '1px bold #E3E3E3'};
-  width: ${(props: ButtonProps) => multiplier(props.width) || '100%'};
+    multiplier(props.borderRadius) ?? multiplier(2)};
+  border: ${(props: ButtonProps) => props.border ?? '1px bold #E3E3E3'};
+  width: ${(props: ButtonProps) => multiplier(props.width) ?? '100%'};
   max-width: 100%;
   min-width: 80px;
   display: flex;
@@ -79,7 +75,7 @@ export const StyledButton = styled.button<ButtonProps>`
   white-space: nowrap;
   overflow: hidden;
   text-align: center;
-  justify-content: ${(props: ButtonProps) => props.justifyContent || 'center'};
+  justify-content: ${(props: ButtonProps) => props.justifyContent ?? 'center'};
   align-items: center;
   flex-shrink: 1;
   appearance: none;
@@ -96,6 +92,5 @@ export const StyledButton = styled.button<ButtonProps>`
     },
   };
   cursor: pointer;
-  ${({ breakpoints }: { breakpoints: ButtonProps['breakpoints'] }) =>
-    createResponsiveStyle(breakpoints)};
+${(props: ButtonProps) => createResponsiveStyle(props.breakpoints)};
 `

@@ -1,3 +1,5 @@
+/** @type {import('next').NextConfig} */
+
 module.exports = {
   async headers() {
     return [
@@ -12,4 +14,12 @@ module.exports = {
       },
     ]
   },
+  ...(() => {
+    const nextConfig = {
+      compiler: {
+        styledComponents: true,
+      },
+    }
+    return nextConfig
+  })(),
 }

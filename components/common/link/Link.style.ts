@@ -50,6 +50,5 @@ export const StyledLink = styled.a<LinkProps>`
   white-space: nowrap;
   cursor: pointer;
   text-decoration:${(props: LinkProps) => `underline ${props.color}`};
-  ${({ breakpoints }: { breakpoints: LinkProps['breakpoints'] }) =>
-    createResponsiveStyle(breakpoints)};
+ ${(props: LinkProps) => createResponsiveStyle(props.breakpoints)};
 `

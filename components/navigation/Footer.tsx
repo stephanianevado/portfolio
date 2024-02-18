@@ -10,7 +10,10 @@ export const Footer = () => {
   const currentDate = new Date()
   const currentYear = currentDate.getFullYear()
 
-  const { primaryBlack, primaryBlue } = Theme.colors
+  const {
+    colors: { primaryBlack, primaryBlue },
+    fontSize: { xs },
+  } = Theme
   const { DESKTOP, LAPTOP, MOBILE_S } = Breakpoint
 
   return (
@@ -23,10 +26,10 @@ export const Footer = () => {
       }}>
       <Line />
       <Spacer size={2} />
-      <Text variant="obi" color={primaryBlack}>
+      <Text variant={xs} color={primaryBlack}>
         Copyright © {currentYear} Stephania Nevado.
       </Text>
-      <Text variant="obi" color={primaryBlack}>
+      <Text variant={xs} color={primaryBlack}>
         All rights reserved.
       </Text>
       <Spacer size={2} />

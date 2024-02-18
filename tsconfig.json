@@ -23,15 +23,18 @@
       "types/*": ["types/*"],
       "utils/*": ["utils/*"]
     },
-     "plugins": [
-        {
-          "transform": "typescript-plugin-styled-components",
-          "type": "config",
-          "minify": true,
-          "ssr": true
-        }
-      ]
+    "plugins": [
+      {
+        "transform": "typescript-plugin-styled-components",
+        "type": "config",
+        "minify": true,
+        "ssr": true
+      },
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
