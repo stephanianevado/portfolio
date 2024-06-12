@@ -52,7 +52,7 @@ export default function Home() {
               [MOBILE_S]: { variant: xxxl, subStyle: bold },
               [LAPTOP]: { variant: huge, subStyle: bold },
             }}>
-            Frontend developer, manager and nutritionist located in Sweden ✨
+            Full stack developer, manager and nutritionist located in Sweden ✨
           </Text>
           <Spacer size={2} />
           <Box

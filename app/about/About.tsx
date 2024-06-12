@@ -41,7 +41,7 @@ export default function About() {
             </Text>
 
             <Text as="p" color={primaryGrey} variant={small}>
-              I&apos;m a Frontend developer, and my interest in programming
+              I&apos;m a Full stack developer, and my interest in programming
               started during the pandemic in 2020. As a side project, I created
               a HealthTech product called Nutreto - a cloud-based platform for
               nutrition and health. This turned into a passion for web
