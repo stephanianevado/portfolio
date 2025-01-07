@@ -1,93 +1,71 @@
 {
   "git.ignoreLimitWarning": true,
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.organizeImports": "explicit",
-    "source.fixAll.eslint": "explicit"
+    "source.fixAll.eslint": "explicit",
+    "source.removeUnusedImports": "always"
   },
+  "workbench.colorTheme": "Real IntelliJ Light",
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontSize": 12,
+  "editor.renderLineHighlight": "all",
+  "editor.letterSpacing": -0.2,
+  "workbench.tree.indent": 12,
+  "workbench.fontAliasing": "default",
+  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-light",
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
-        "scope": "entity.other.attribute-name",
+        "scope": [
+          "entity.name.function.member",
+          "support.function.builtin",
+          "entity.name.method",
+          "variable.other.object.property"
+        ],
         "settings": {
-          "foreground": "#0000FF",
-          "fontStyle": "bold"
+          "foreground": "#914c07"
         }
       },
       {
-        "scope": "support.class.component",
+        "scope": ["entity.name.function"],
         "settings": {
-          "foreground": "#000080",
-          "fontStyle": "bold"
-        }
-      },
-      {
-        "scope": "string",
-        "settings": {
-          "foreground": "#008000",
-          "fontStyle": "bold"
-        }
-      },
-      {
-        "scope": "entity.name.function",
-        "settings": {
-          "foreground": "#000000",
-          "fontStyle": "italic"
-        }
-      },
-      {
-        "scope": "variable.other.readwrite.alias",
-        "settings": {
-          "foreground": "#000000",
-          "fontStyle": "italic"
-        }
-      },
-      {
-        "scope": "variable.other.constant",
-        "settings": {
-          "foreground": "#458383"
-        }
-      },
-      {
-        "scope": "variable.object.property",
-        "settings": {
-          "foreground": "#660E7A",
-          "fontStyle": "bold"
-        }
-      },
-      {
-        "scope": "constant.numeric",
-        "settings": {
-          "foreground": "#0000FF",
-          "fontStyle": "bold"
-        }
-      },
-      {
-        "scope": "keyword.control",
-        "settings": {
-          "foreground": "#000080",
-          "fontStyle": "bold"
-        }
-      },
-      {
-        "scope": "comment",
-        "settings": {
-          "foreground": "#808080",
-          "fontStyle": "italic"
+          "foreground": "#101010"
         }
       }
     ]
   },
+  "editor.bracketPairColorization.enabled": false,
   "workbench.colorCustomizations": {
-    "editorUnnecessaryCode.opacity": "#ff0000",
-    "editorUnnecessaryCode.border": "#ff0000"
+    "sideBar.background": "#f7f8fa",
+    "sideBar.border": "#E0E0E0",
+    "sideBarSectionHeader.background": "#f7f8fa",
+    "sideBarSectionHeader.border": "#E0E0E0",
+    "editorGroupHeader.tabsBackground": "#f7f8fa",
+    "tab.inactiveBackground": "#F2F2F2",
+    "statusBar.background": "#f7f8fa",
+    "statusBar.noFolderBackground": "#f7f8fa",
+    "statusBar.border": "#E0E0E0",
+    "editorGutter.background": "#ffffff",
+    "editorLineNumber.foreground": "#aeaeae",
+    "editor.lineHighlightBackground": "#fcfaee",
+    "editor.selectionBackground": "#A6D2FF"
   },
-  "editor.fontFamily": "JetBrains Mono",
-  "editor.fontSize": 16,
-  "editor.fontLigatures": true,
-  "editor.smoothScrolling": true,
-  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "editor.glyphMargin": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "cSpell.words": ["anakin", "ashoka", "kylo", "leia", "padme", "sith", "vader"]
+  "cSpell.words": [
+    "anakin",
+    "ashoka",
+    "kylo",
+    "leia",
+    "padme",
+    "sith",
+    "vader"
+  ],
+  "github.copilot.editor.enableAutoCompletions": true
 }
