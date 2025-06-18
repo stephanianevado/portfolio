@@ -67,5 +67,7 @@
     "sith",
     "vader"
   ],
-  "github.copilot.editor.enableAutoCompletions": true
+  "github.copilot.enable": {
+    "enabled": true
+  }
 }
