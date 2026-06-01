@@ -20,6 +20,9 @@
     "styled-components": "6.1.8",
     "tailwindcss": "^4.1.11"
   },
+  "overrides": {
+    "postcss": "^8.5.10"
+  },
   "devDependencies": {
     "@emotion/is-prop-valid": "1.2.1",
     "@next/eslint-plugin-next": "15.3.3",
