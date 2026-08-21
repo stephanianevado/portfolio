@@ -1,4 +1,4 @@
-import type { FC, MouseEventHandler, PropsWithChildren } from 'react'
+import type { FC, JSX, MouseEventHandler, PropsWithChildren } from 'react'
 
 import styled from 'styled-components'
 

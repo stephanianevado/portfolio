@@ -1,7 +1,5 @@
 'use client'
 
-import Head from 'next/head'
-
 import { Accordion } from 'components/Accordion'
 import AppWrapper from 'components/AppWrapper'
 import { Box } from 'components/common/box/Box'
@@ -12,12 +10,6 @@ import { Id, skillsItems } from 'utils/skillsItems'
 export default function Skills() {
   return (
     <AppWrapper>
-      <Head>
-        <meta
-          name="description"
-          content="In this section you get to know some of my skills"
-        />
-      </Head>
       <Box>
         <Title header="Skills" subHeader="MY EXPERIENCE" />
 

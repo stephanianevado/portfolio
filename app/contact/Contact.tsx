@@ -21,12 +21,6 @@ export default function Contact() {
 
   return (
     <AppWrapper>
-      {/* <Head>
-        <meta
-          name="description"
-          content="If you are interested just contact me"
-        />
-      </Head> */}
       <Box>
         <Title header="Contact" subHeader="REACH OUT TO ME" />
         <Box

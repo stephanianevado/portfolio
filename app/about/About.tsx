@@ -19,12 +19,6 @@ export default function About() {
 
   return (
     <AppWrapper>
-      {/* <Head>
-        <meta
-          name="description"
-          content="In this section you get to know me better"
-        />
-      </Head> */}
       <Box>
         <Title header="Nice to meet you!" subHeader="WELCOME" />
         <Box

@@ -8,7 +8,7 @@ portfolio as a way to showcase my skills and way of coding.
 If you have a look inside this repository you'll find a well-organized, linted
 and strictly formatted project with my own custom theme structure.
 
-The code is formatted with [Prettier](.prettierrc.json) and linted with [ESLint](.eslintrc.json).
+The code is formatted with [Prettier](.prettierrc.json) and linted with [ESLint](eslint.config.mjs).
 
 ---
 
@@ -22,7 +22,8 @@ The code is formatted with [Prettier](.prettierrc.json) and linted with [ESLint]
 ### Running
 
 - Install dependencies by running `npm i` in the root.
-- Run the app locally with `next dev`.
+- Run the app locally with `npm run dev`.
+- Typecheck the project with `npm run typecheck`.
 
 ---
 

@@ -1,6 +1,9 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
+  compiler: {
+    styledComponents: true,
+  },
   async headers() {
     return [
       {
@@ -14,14 +17,6 @@ const nextConfig: NextConfig = {
       },
     ]
   },
-  ...(() => {
-    const nextConfig = {
-      compiler: {
-        styledComponents: true,
-      },
-    }
-    return nextConfig
-  })(),
 }
 
 export default nextConfig
