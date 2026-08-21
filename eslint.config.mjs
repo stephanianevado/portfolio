@@ -6,6 +6,9 @@ import react from 'eslint-plugin-react'
 
 export default [
   {
+    ignores: ['.next/**', 'node_modules/**', 'next-env.d.ts'],
+  },
+  {
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2022,

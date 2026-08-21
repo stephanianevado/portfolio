@@ -1,4 +1,4 @@
-import type { FC, PropsWithChildren } from 'react'
+import type { FC, JSX, PropsWithChildren } from 'react'
 
 import styled from 'styled-components'
 

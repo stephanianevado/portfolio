@@ -20,12 +20,6 @@ export default function Work() {
 
   return (
     <AppWrapper>
-      {/* <Head>
-        <meta
-          name="description"
-          content="In this section you get to know my work"
-        />
-      </Head> */}
       <Box>
         <Title header="Work" subHeader="RECENT PROJECTS" />
         {Object.values(Id).map((id) => {
