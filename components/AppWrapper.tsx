@@ -1,3 +1,5 @@
+'use client'
+
 import { Box } from 'components/common/box/Box'
 import { Footer } from 'components/navigation/Footer'
 import { Header } from 'components/navigation/Header'

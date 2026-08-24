@@ -1,3 +1,5 @@
+'use client'
+
 import { useState } from 'react'
 
 import Image from 'next/image'
@@ -9,6 +11,7 @@ import { Hamburger, Link } from 'components/icons/icons'
 import { Items } from 'components/navigation/Items'
 import { Menu } from 'components/navigation/Menu'
 import { Breakpoint } from 'components/Theme'
+import { ThemeToggle } from 'components/ThemeToggle'
 
 export const Header = () => {
   const [open, setOpen] = useState(false)
@@ -37,6 +40,7 @@ export const Header = () => {
             alt="svg logo"
             width={144}
             height={40}
+            className="portfolio-logo"
             style={{
               objectFit: 'fill',
               objectPosition: 'center',
@@ -77,11 +81,15 @@ export const Header = () => {
           </Box>
         </Box>
         <Box
+          direction="row"
+          alignItems="center"
           animation="fadeInDown"
           breakpoints={{
             [MOBILE_S]: { display: 'none' },
             [LAPTOP]: { display: 'flex' },
           }}>
+          <ThemeToggle />
+          <Box width={4} />
           <Button
             as="a"
             href="/documents/cv.pdf"

@@ -6,6 +6,7 @@ import { IconButton } from 'components/common/iconButton/IconButton'
 import { Close, Link } from 'components/icons/icons'
 import { Items } from 'components/navigation/Items'
 import { Theme } from 'components/Theme'
+import { ThemeToggle } from 'components/ThemeToggle'
 
 type Props = {
   open: boolean
@@ -43,6 +44,7 @@ export const Menu = ({ open, onClose }: Props) => {
             alt="svg logo"
             width={100}
             height={40}
+            className="portfolio-logo"
             style={{
               objectFit: 'fill',
               objectPosition: 'center',
@@ -62,6 +64,13 @@ export const Menu = ({ open, onClose }: Props) => {
       </Box>
       <Box animation="fadeInLeft">
         <Items />
+      </Box>
+      <Box
+        direction="row"
+        alignItems="center"
+        marginHorizontal={4}
+        marginVertical={2}>
+        <ThemeToggle />
       </Box>
       <Box marginHorizontal={3} marginVertical={4}>
         <Button

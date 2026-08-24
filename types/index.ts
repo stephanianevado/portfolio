@@ -1,5 +1,3 @@
-export type BreakpointStyles = Record<string, string | number>
-
 export type Color = string
 
 export type Direction = 'row' | 'column' | 'row-reverse' | 'column-reverse'
