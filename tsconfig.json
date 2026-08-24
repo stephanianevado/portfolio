@@ -39,12 +39,6 @@
     },
     "plugins": [
       {
-        "transform": "typescript-plugin-styled-components",
-        "type": "config",
-        "minify": true,
-        "ssr": true
-      },
-      {
         "name": "next"
       }
     ]

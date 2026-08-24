@@ -79,11 +79,6 @@ export default [
               group: 'builtin',
               position: 'after',
             },
-            {
-              pattern: 'styled-components',
-              group: 'builtin',
-              position: 'after',
-            },
           ],
           pathGroupsExcludedImportTypes: ['react'],
         },

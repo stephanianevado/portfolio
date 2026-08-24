@@ -1,0 +1,160 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --breakpoint-mobile-s: 20rem;
+  --breakpoint-mobile-m: 23.4375rem;
+  --breakpoint-mobile-l: 26.5625rem;
+  --breakpoint-tablet: 48rem;
+  --breakpoint-laptop: 64rem;
+  --breakpoint-laptop-m: 78.75rem;
+  --breakpoint-laptop-l: 90rem;
+  --breakpoint-desktop: 160rem;
+
+  --animate-fade-in-right: fade-in-right 200ms ease-out;
+  --animate-fade-in-left: fade-in-left 200ms ease-out;
+  --animate-fade-in-up: fade-in-up 200ms ease-out;
+  --animate-fade-in-down: fade-in-down 200ms ease-out;
+  --animate-fade-out-right: fade-out-right 200ms ease-out;
+}
+
+:root {
+  --bg: #f5f5ff;
+  --fg: #020c1b;
+  --muted: #f6eef4;
+  --muted-foreground: #8b8b8b;
+  --accent: #ff00a8;
+  --accent-foreground: #ffffff;
+  --border: #8b8b8b;
+  --card: #ffffff;
+  --button-surface: rgba(0, 0, 0, 0.04);
+  --button-border: transparent;
+  --primary: #342cdb;
+  --primary-foreground: #ffffff;
+  --secondary: #8638e5;
+  --secondary-foreground: #ffffff;
+}
+
+.dark {
+  --bg: #020c1b;
+  --fg: #f5f5ff;
+  --muted: #1a2029;
+  --muted-foreground: #a0a4ac;
+  --accent: #ff2ab8;
+  --accent-foreground: #ffffff;
+  --border: #6b7280;
+  --card: #1a2029;
+  --button-surface: #1a2029;
+  --button-border: #6b7280;
+  --primary: #6a9df0;
+  --primary-foreground: #020c1b;
+  --secondary: #b47cff;
+  --secondary-foreground: #020c1b;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.dark .portfolio-logo {
+  filter: invert(1);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input {
+  margin-top: 0;
+}
+
+body,
+p,
+a,
+footer {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+@keyframes fade-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-out-right {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}

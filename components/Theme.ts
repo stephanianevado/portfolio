@@ -1,6 +1,3 @@
-'use client'
-import { createGlobalStyle } from 'styled-components'
-
 export enum Color {
   PRIMARY_BLACK = 'primaryBlack',
   SECONDARY_BLACK = 'secondaryBlack',
@@ -48,39 +45,40 @@ export enum Variant {
   HUGE = 'huge',
 }
 
+export const breakpointPx: Record<Breakpoint, number> = {
+  [Breakpoint.MOBILE_S]: 320,
+  [Breakpoint.MOBILE_M]: 375,
+  [Breakpoint.MOBILE_L]: 425,
+  [Breakpoint.TABLET]: 768,
+  [Breakpoint.LAPTOP]: 1024,
+  [Breakpoint.LAPTOP_M]: 1260,
+  [Breakpoint.LAPTOP_L]: 1440,
+  [Breakpoint.DESKTOP]: 2560,
+}
+
 export const Theme = {
   colors: {
-    [Color.PRIMARY_BLACK]: '#000000',
-    [Color.SECONDARY_BLACK]: '#1A2029',
-    [Color.TERTIARY_BLACK]: '#020C1B',
-    [Color.PRIMARY_BLUE]: '#342CDB',
-    [Color.SECONDARY_BLUE]: '#0C8CE9',
+    [Color.PRIMARY_BLACK]: 'var(--fg)',
+    [Color.SECONDARY_BLACK]: 'var(--fg)',
+    [Color.TERTIARY_BLACK]: 'var(--fg)',
+    [Color.PRIMARY_BLUE]: 'var(--primary)',
+    [Color.SECONDARY_BLUE]: 'var(--secondary)',
     [Color.PRIMARY_GREEN]: '#00FF00',
-    [Color.PRIMARY_GREY]: '#454545',
-    [Color.SECONDARY_GREY]: '#8B8B8B',
-    [Color.TERTIARY_GREY]: '#F5F5F5',
+    [Color.PRIMARY_GREY]: 'var(--muted-foreground)',
+    [Color.SECONDARY_GREY]: 'var(--muted-foreground)',
+    [Color.TERTIARY_GREY]: 'var(--muted)',
     [Color.PRIMARY_ORANGE]: '#97240D',
-    [Color.SECONDARY_ORANGE]: '#F24822',
-    [Color.PRIMARY_PINK]: '#F5F5FF',
-    [Color.SECONDARY_PINK]: '#F6EEF4',
-    [Color.TERTIARY_PINK]: '#FF00A8',
-    [Color.PRIMARY_PURPLE]: '#8638E5',
-    [Color.SECONDARY_PURPLE]: '#681ABB',
+    [Color.SECONDARY_ORANGE]: 'var(--accent)',
+    [Color.PRIMARY_PINK]: 'var(--bg)',
+    [Color.SECONDARY_PINK]: 'var(--muted)',
+    [Color.TERTIARY_PINK]: 'var(--accent)',
+    [Color.PRIMARY_PURPLE]: 'var(--secondary)',
+    [Color.SECONDARY_PURPLE]: 'var(--secondary)',
     [Color.PRIMARY_RED]: '#FF0000',
-    [Color.PRIMARY_WHITE]: '#FFFFFF',
-    [Color.SECONDARY_WHITE]: '#E6F1FF',
-    [Color.HOVER_STANDARD]: '#0000001A',
-    [Color.HOVER_ALTERNATIVE]: '#020C1BCC',
-  },
-  breakpoints: {
-    [Breakpoint.MOBILE_S]: '@media (min-width: 320px)',
-    [Breakpoint.MOBILE_M]: '@media (min-width: 375px)',
-    [Breakpoint.MOBILE_L]: '@media (min-width: 425px)',
-    [Breakpoint.TABLET]: '@media (min-width: 768px)',
-    [Breakpoint.LAPTOP]: '@media (min-width: 1024px)',
-    [Breakpoint.LAPTOP_M]: '@media (min-width: 1260px)',
-    [Breakpoint.LAPTOP_L]: '@media (min-width: 1440px)',
-    [Breakpoint.DESKTOP]: '@media (min-width: 2560px)',
+    [Color.PRIMARY_WHITE]: 'var(--bg)',
+    [Color.SECONDARY_WHITE]: 'var(--muted)',
+    [Color.HOVER_STANDARD]: 'color-mix(in srgb, var(--fg) 10%, transparent)',
+    [Color.HOVER_ALTERNATIVE]: 'color-mix(in srgb, var(--fg) 80%, transparent)',
   },
   fontFamily: 'Clash Display, Spline Sans, Poppins, sans-serif',
   fontSize: {
@@ -108,39 +106,3 @@ export const Theme = {
   },
   letterSpacing: '0.6px',
 }
-
-export const GlobalStyle = createGlobalStyle`
-  html, 
-  body {
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    background-color: ${Theme.colors.primaryPink};
-  }
-
-  body {
-    display: flex; 
-    flex-direction: column; 
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  button,
-  input {
-    margin-top: 0
-  }
-
-  body,
-  p,
-  a,
-  footer {
-    font-size: ${Theme.fontSize.normal};
-    font-weight: ${Theme.fontWeight.normal};
-    line-height: ${Theme.lineHeight.small};
-    color: ${Theme.colors.tertiaryBlack};
-  }
-`

@@ -2,7 +2,9 @@ import type { Metadata } from 'next'
 
 import localFont from 'next/font/local'
 
-import StyledComponentsRegistry from 'app/registry'
+import { ThemeProvider } from 'components/ThemeProvider'
+
+import 'app/globals.css'
 
 export const metadata: Metadata = {
   title: "Stephania Nevado's portfolio",
@@ -11,7 +13,7 @@ export const metadata: Metadata = {
 }
 
 const font = localFont({
-  src: '/fonts/ClashDisplay-Variable.woff2',
+  src: './fonts/ClashDisplay-Variable.woff2',
   display: 'swap',
   preload: true,
 })
@@ -22,9 +24,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={font.className}>
+    <html lang="en" className={font.className} suppressHydrationWarning>
       <body>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   )

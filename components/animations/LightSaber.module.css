@@ -1,0 +1,63 @@
+.container {
+  position: relative;
+  width: 22px;
+}
+
+.saber {
+  animation: saberWiggle 2.5s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
+@keyframes saberWiggle {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  5% {
+    transform: rotateZ(5deg);
+  }
+  10%,
+  15% {
+    transform: rotateZ(-5deg);
+  }
+  15%,
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+.blade {
+  transition: all 15s ease-in-out;
+}
+
+.bladeActive {
+  position: relative;
+  transition: all 4s ease-in-out;
+  height: 500px;
+  background: #ff0000;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  box-shadow: 0 0 20px #ff0000;
+}
+
+.hilt {
+  height: 100px;
+  width: 20px;
+  border: 1px solid #454545;
+  background: #454545;
+  border-top: 4px solid #5f5f5f;
+  border-bottom: 4px solid #5f5f5f;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.button {
+  height: 20px;
+  width: 8px;
+  border: 2px solid #454545;
+  background: #ff0000;
+  position: relative;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
