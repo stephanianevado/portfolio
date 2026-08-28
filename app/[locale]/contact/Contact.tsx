@@ -1,5 +1,7 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
+
 import AppWrapper from 'components/AppWrapper'
 import { Box } from 'components/common/box/Box'
 import { Button, Mode } from 'components/common/button/Button'
@@ -18,11 +20,13 @@ export default function Contact() {
     fontSize: { small },
   } = Theme
   const { LAPTOP, MOBILE_S } = Breakpoint
+  const t = useTranslations('contact')
+  const tItems = useTranslations('contactItems')
 
   return (
     <AppWrapper>
       <Box>
-        <Title header="Contact" subHeader="REACH OUT TO ME" />
+        <Title header={t('header')} subHeader={t('subHeader')} />
         <Box
           breakpoints={{
             [MOBILE_S]: { direction: 'column' },
@@ -33,12 +37,10 @@ export default function Contact() {
               [LAPTOP]: { flex: 2 },
             }}>
             <Text as="p" color={secondaryBlack} variant={small}>
-              I&apos;m always enthusiastic about learning new things and
-              evolving as a developer.
+              {t('intro1')}
             </Text>
             <Text as="p" color={secondaryBlack} variant={small}>
-              My inbox is always open to discuss new opportunities. You can also
-              find me on social media.
+              {t('intro2')}
             </Text>
             <Spacer size={5} />
             <Box
@@ -51,7 +53,7 @@ export default function Contact() {
                 target="_blank"
                 icon={Headset}
                 iconPosition="left">
-                Let&apos;s have a chat
+                {t('cta')}
               </Button>
             </Box>
           </Box>
@@ -81,7 +83,7 @@ export default function Contact() {
                 })
                 .map((id) => {
                   const item = contactItems[id]
-                  const { alternativeText, href, icon: Icon } = item
+                  const { href, icon: Icon } = item
                   return (
                     <Button
                       as="a"
@@ -93,7 +95,7 @@ export default function Contact() {
                       color={primaryWhite}
                       bg={secondaryBlack}
                       mode={Mode.ALTERNATIVE}>
-                      {alternativeText}
+                      {tItems(`${id}.alternativeText`)}
                     </Button>
                   )
                 })}

@@ -1,0 +1,171 @@
+{
+  "metadata": {
+    "home": {
+      "title": "Stephania Nevado's portfolio",
+      "description": "This is my portfolio showcase landing page"
+    },
+    "about": {
+      "title": "Stephania Nevado's portfolio | About section",
+      "description": "In this section you get to know me better"
+    },
+    "skills": {
+      "title": "Stephania Nevado's portfolio | Skills section",
+      "description": "In this section you get to know some of my skills"
+    },
+    "work": {
+      "title": "Stephania Nevado's portfolio | Work section",
+      "description": "In this section you get to know my work"
+    },
+    "contact": {
+      "title": "Stephania Nevado's portfolio | Contact section",
+      "description": "If you are interested just contact me"
+    },
+    "notFound": {
+      "title": "Stephania Nevado's portfolio | Page not found",
+      "description": "The page you are looking for could not be found"
+    }
+  },
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "work": "Work",
+    "contact": "Contact",
+    "resume": "Resume",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu"
+  },
+  "home": {
+    "name": "Stephania Nevado",
+    "tagline": "Full stack developer, manager and nutritionist located in Sweden ✨"
+  },
+  "about": {
+    "header": "Nice to meet you!",
+    "subHeader": "WELCOME",
+    "who": "⸺ Who am I?",
+    "whoBody": "I'm a Full stack developer, and my interest in programming started during the pandemic in 2020. As a side project, I created a HealthTech product called Nutreto - a cloud-based platform for nutrition and health. This turned into a passion for web development, and a career change.",
+    "firstJob": "⸺ My first Frontend developer job",
+    "firstJobPre": "I built an ",
+    "firstJobLinkLabel": "AI",
+    "firstJobPost": " product for synthetic data generation . There was no other frontend developer in the entire company, so I created a frontend application from scratch using modern web technologies (JavaScript, React, Styled components and Jest).",
+    "currentJob": "⸺ My current job as a Frontend developer",
+    "currentJobPre": "I work at ",
+    "currentJobLinkLabel": "Carla",
+    "currentJobPost": " - a start-up for buying, selling and leasing electrified vehicles online. We use Next.js, TypeScript and React for the app, as well as Jest and Cypress for testing. The static content is served via Contentful and the API layer uses GraphQL.",
+    "initiatives": "⸺ Initiatives",
+    "initiative1": "I pushed myself and my team at Carla to convert the entire codebase from JavaScript to TypeScript.",
+    "initiative2": "I created a female engineering club to discuss problems and solutions within the company and the tech world in general.",
+    "initiative3": "During the last year, I've set aside 1 \"study hour\" each day to deepen my web development knowledge.",
+    "interests": "⸺ My interests",
+    "interestsBody": "I'm passionate about tech, leadership, change management, process improvement and teamwork. I'm also always curious to learn new things. I'm a well-organized person, a problem solver, and I like to create modular, readable and testable code which is easy to maintain and extend.",
+    "portraitAlt": "Picture of Stephania Nevado"
+  },
+  "skills": {
+    "header": "Skills",
+    "subHeader": "MY EXPERIENCE",
+    "items": {
+      "LANGUAGES": {
+        "title": "Programming languages:",
+        "description": "The programming languages I have used for coding and web development.",
+        "text": "Typescript, JavaScript (ES6), HTML, CSS/Styled components/Sass."
+      },
+      "LIBRARIES": {
+        "title": "Libraries & frameworks:",
+        "description": "Frameworks and libraries I have used for building web applications.",
+        "text": "React, Next.js, Cypress, Jest, GraphQL, React testing library, Node.js, Redux, D3, FastAPI."
+      },
+      "TOOLS": {
+        "title": "Development Tools:",
+        "description": "These are the diverse tools I have adeptly utilized throughout the development process.",
+        "text": "GitHub, Prettier, ESLint, Vercel, Figma, Contentful, npm, pnpm, Terminal (bash/zsh), JSON."
+      },
+      "PLATFORMS": {
+        "title": "Platforms:",
+        "description": "Development environments and editors.",
+        "text": "VSCode, IntelliJ."
+      },
+      "DATA_BASES": {
+        "title": "Databases:",
+        "description": "Databases for storing and managing data.",
+        "text": "PostgreSQL, MongoDB."
+      },
+      "MANAGEMENT": {
+        "title": "Management:",
+        "description": "These are my abilities related to project and team management.",
+        "text": "Process, planning, team management, personal development, stakeholder communication."
+      }
+    }
+  },
+  "work": {
+    "header": "Work",
+    "subHeader": "RECENT PROJECTS",
+    "technologiesLabel": "Technologies used: ",
+    "items": {
+      "PORTFOLIO": {
+        "title": "This portfolio",
+        "text": "I could have created this portfolio with some online template or no-code solution - but I didn't want to do that 🤓 Instead, I've used this portfolio as a way to showcase my skills and way of coding. Look at GitHub, you'll find a well-organized, linted and strictly formatted project with my own custom theme structure.",
+        "technologies": "Next.js, React, TypeScript, Styled components.",
+        "buttonText": "My Portfolio"
+      },
+      "CAT_BREEDS_APP": {
+        "title": "Cat Breeds app",
+        "text": "It's no secret that I love cats 😻 When I applied to the role as a Frontend developer at Carla, I created this cat breeds app. I wanted to show a part of who I am, but also - of course - my programming skills. The project also has a few tests just to showcase how I usually structure them.",
+        "technologies": "Next.js, React, TypeScript, Styled components, Jest.",
+        "buttonText": "My Cat App"
+      }
+    }
+  },
+  "contact": {
+    "header": "Contact",
+    "subHeader": "REACH OUT TO ME",
+    "intro1": "I'm always enthusiastic about learning new things and evolving as a developer.",
+    "intro2": "My inbox is always open to discuss new opportunities. You can also find me on social media.",
+    "cta": "Let's have a chat"
+  },
+  "contactItems": {
+    "GITHUB": {
+      "text": "Go to my GitHub",
+      "alternativeText": "My GitHub"
+    },
+    "LINKEDIN": {
+      "text": "Go to my LinkedIn",
+      "alternativeText": "LinkedIn"
+    },
+    "INSTAGRAM": {
+      "text": "Go to my Instagram",
+      "alternativeText": "Instagram"
+    },
+    "FACEBOOK": {
+      "text": "Go to my Facebook",
+      "alternativeText": "Facebook"
+    },
+    "EMAIL": {
+      "text": "Send me a message",
+      "alternativeText": "Let's chat"
+    }
+  },
+  "notFound": {
+    "header": "404",
+    "subHeader": "Welcome to the dark side of the force",
+    "bodyPre": "Could not find requested resource. In the meantime, ",
+    "bodyHighlight": "click the Lightsaber button",
+    "bodyPost": " to see what happens. Please, turn on the speakers for a better experience.",
+    "backHome": "Return to the light side",
+    "toggleSaberAria": "Toggle lightsaber"
+  },
+  "footer": {
+    "copyright": "Copyright © {year} Stephania Nevado.",
+    "rights": "All rights reserved."
+  },
+  "common": {
+    "language": "Language",
+    "themeSystem": "System",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "switchThemeAriaMounted": "Switch theme (currently {theme})",
+    "switchThemeAria": "Switch theme",
+    "switchLanguageAria": "Switch language"
+  },
+  "icosahedron": {
+    "tooltip": "I created this animation using pure CSS"
+  }
+}

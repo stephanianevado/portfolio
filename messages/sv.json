@@ -1,0 +1,171 @@
+{
+  "metadata": {
+    "home": {
+      "title": "Stephania Nevados portfolio",
+      "description": "Detta är startsidan för min portfolio"
+    },
+    "about": {
+      "title": "Stephania Nevados portfolio | Om mig-sektionen",
+      "description": "I den här sektionen får du lära känna mig lite bättre"
+    },
+    "skills": {
+      "title": "Stephania Nevados portfolio | Kompetenser",
+      "description": "I den här sektionen får du se några av mina kompetenser"
+    },
+    "work": {
+      "title": "Stephania Nevados portfolio | Arbete",
+      "description": "I den här sektionen får du se mitt arbete"
+    },
+    "contact": {
+      "title": "Stephania Nevados portfolio | Kontakt",
+      "description": "Om du är intresserad, kontakta mig gärna"
+    },
+    "notFound": {
+      "title": "Stephania Nevados portfolio | Sidan finns inte",
+      "description": "Sidan du letar efter kunde inte hittas"
+    }
+  },
+  "nav": {
+    "about": "Om mig",
+    "skills": "Kompetenser",
+    "work": "Arbete",
+    "contact": "Kontakt",
+    "resume": "CV",
+    "openMenu": "Öppna navigationsmenyn",
+    "closeMenu": "Stäng navigationsmenyn"
+  },
+  "home": {
+    "name": "Stephania Nevado",
+    "tagline": "Fullstack-utvecklare, chef och nutritionist baserad i Sverige ✨"
+  },
+  "about": {
+    "header": "Kul att träffas!",
+    "subHeader": "VÄLKOMMEN",
+    "who": "⸺ Vem är jag?",
+    "whoBody": "Jag är fullstack-utvecklare, och mitt intresse för programmering började under pandemin 2020. Som ett sidoprojekt skapade jag en HealthTech-produkt som heter Nutreto – en molnbaserad plattform för nutrition och hälsa. Detta blev en passion för webbutveckling och en karriärförändring.",
+    "firstJob": "⸺ Mitt första jobb som frontend-utvecklare",
+    "firstJobPre": "Jag byggde en ",
+    "firstJobLinkLabel": "AI-produkt",
+    "firstJobPost": " för generering av syntetisk data. Det fanns ingen annan frontend-utvecklare i hela företaget, så jag skapade en frontend-applikation från grunden med moderna webbteknologier (JavaScript, React, Styled components och Jest).",
+    "currentJob": "⸺ Mitt nuvarande jobb som frontend-utvecklare",
+    "currentJobPre": "Jag jobbar på ",
+    "currentJobLinkLabel": "Carla",
+    "currentJobPost": " – en start-up för att köpa, sälja och leasa elektrifierade fordon online. Vi använder Next.js, TypeScript och React för appen, samt Jest och Cypress för testning. Det statiska innehållet levereras via Contentful och API-lagret använder GraphQL.",
+    "initiatives": "⸺ Initiativ",
+    "initiative1": "Jag drev fram att jag och mitt team på Carla konverterade hela kodbasen från JavaScript till TypeScript.",
+    "initiative2": "Jag startade en klubb för kvinnliga ingenjörer för att diskutera problem och lösningar inom företaget och tech-världen i stort.",
+    "initiative3": "Under det senaste året har jag avsatt 1 ”studietimme” varje dag för att fördjupa mina kunskaper inom webbutveckling.",
+    "interests": "⸺ Mina intressen",
+    "interestsBody": "Jag brinner för teknik, ledarskap, förändringsledning, processförbättring och lagarbete. Jag är också alltid nyfiken på att lära mig nya saker. Jag är välorganiserad, en problemlösare och gillar att skapa modulär, läsbar och testbar kod som är enkel att underhålla och bygga vidare på.",
+    "portraitAlt": "Bild på Stephania Nevado"
+  },
+  "skills": {
+    "header": "Kompetenser",
+    "subHeader": "MIN ERFARENHET",
+    "items": {
+      "LANGUAGES": {
+        "title": "Programmeringsspråk:",
+        "description": "Programmeringsspråken jag har använt för kodning och webbutveckling.",
+        "text": "Typescript, JavaScript (ES6), HTML, CSS/Styled components/Sass."
+      },
+      "LIBRARIES": {
+        "title": "Bibliotek och ramverk:",
+        "description": "Ramverk och bibliotek jag har använt för att bygga webbapplikationer.",
+        "text": "React, Next.js, Cypress, Jest, GraphQL, React testing library, Node.js, Redux, D3, FastAPI."
+      },
+      "TOOLS": {
+        "title": "Utvecklingsverktyg:",
+        "description": "Det här är de olika verktyg jag har använt genom utvecklingsprocessen.",
+        "text": "GitHub, Prettier, ESLint, Vercel, Figma, Contentful, npm, pnpm, Terminal (bash/zsh), JSON."
+      },
+      "PLATFORMS": {
+        "title": "Plattformar:",
+        "description": "Utvecklingsmiljöer och editorer.",
+        "text": "VSCode, IntelliJ."
+      },
+      "DATA_BASES": {
+        "title": "Databaser:",
+        "description": "Databaser för att lagra och hantera data.",
+        "text": "PostgreSQL, MongoDB."
+      },
+      "MANAGEMENT": {
+        "title": "Ledarskap:",
+        "description": "Det här är mina förmågor kopplade till projekt- och teamledning.",
+        "text": "Process, planering, teamledning, personlig utveckling, kommunikation med intressenter."
+      }
+    }
+  },
+  "work": {
+    "header": "Arbete",
+    "subHeader": "SENASTE PROJEKTEN",
+    "technologiesLabel": "Teknologier som använts: ",
+    "items": {
+      "PORTFOLIO": {
+        "title": "Denna portfolio",
+        "text": "Jag hade kunnat skapa portfolion med en färdig mall eller no-code-lösning – men det ville jag inte 🤓 Istället har jag använt portfolion för att visa upp mina kompetenser och mitt sätt att koda. Titta gärna på GitHub så hittar du ett välorganiserat, lint-anpassat och strikt formaterat projekt med min egen tema-struktur.",
+        "technologies": "Next.js, React, TypeScript, Styled components.",
+        "buttonText": "Min Portfolio"
+      },
+      "CAT_BREEDS_APP": {
+        "title": "Kattraser-app",
+        "text": "Det är ingen hemlighet att jag älskar katter 😻 När jag sökte rollen som frontend-utvecklare på Carla skapade jag denna kattraser-app. Jag ville visa upp en del av vem jag är, men också – självklart – mina programmeringskunskaper. Projektet har även några tester för att visa hur jag brukar strukturera dem.",
+        "technologies": "Next.js, React, TypeScript, Styled components, Jest.",
+        "buttonText": "Min Kattapp"
+      }
+    }
+  },
+  "contact": {
+    "header": "Kontakt",
+    "subHeader": "HÖR AV DIG TILL MIG",
+    "intro1": "Jag är alltid entusiastisk över att lära mig nya saker och utvecklas som utvecklare.",
+    "intro2": "Min inkorg är alltid öppen för att diskutera nya möjligheter. Du hittar mig också på sociala medier.",
+    "cta": "Vi hörs"
+  },
+  "contactItems": {
+    "GITHUB": {
+      "text": "Gå till min GitHub",
+      "alternativeText": "Min GitHub"
+    },
+    "LINKEDIN": {
+      "text": "Gå till min LinkedIn",
+      "alternativeText": "LinkedIn"
+    },
+    "INSTAGRAM": {
+      "text": "Gå till min Instagram",
+      "alternativeText": "Instagram"
+    },
+    "FACEBOOK": {
+      "text": "Gå till min Facebook",
+      "alternativeText": "Facebook"
+    },
+    "EMAIL": {
+      "text": "Skicka mig ett meddelande",
+      "alternativeText": "Vi hörs"
+    }
+  },
+  "notFound": {
+    "header": "404",
+    "subHeader": "Välkommen till kraftens mörka sida",
+    "bodyPre": "Kunde inte hitta den begärda resursen. Under tiden, ",
+    "bodyHighlight": "tryck på ljussabelknappen",
+    "bodyPost": " för att se vad som händer. Slå gärna på högtalarna för en bättre upplevelse.",
+    "backHome": "Återvänd till den ljusa sidan",
+    "toggleSaberAria": "Slå på eller av ljussabeln"
+  },
+  "footer": {
+    "copyright": "Copyright © {year} Stephania Nevado.",
+    "rights": "Alla rättigheter förbehålles."
+  },
+  "common": {
+    "language": "Språk",
+    "themeSystem": "System",
+    "themeLight": "Ljust",
+    "themeDark": "Mörkt",
+    "switchThemeAriaMounted": "Byt tema (för närvarande {theme})",
+    "switchThemeAria": "Byt tema",
+    "switchLanguageAria": "Byt språk"
+  },
+  "icosahedron": {
+    "tooltip": "Jag skapade denna animation med enbart CSS"
+  }
+}

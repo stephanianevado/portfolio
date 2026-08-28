@@ -1,0 +1,171 @@
+{
+  "metadata": {
+    "home": {
+      "title": "Portfolio de Stephania Nevado",
+      "description": "Esta es la página principal de mi portfolio"
+    },
+    "about": {
+      "title": "Portfolio de Stephania Nevado | Sección Sobre mí",
+      "description": "En esta sección puedes conocerme mejor"
+    },
+    "skills": {
+      "title": "Portfolio de Stephania Nevado | Sección Habilidades",
+      "description": "En esta sección puedes conocer algunas de mis habilidades"
+    },
+    "work": {
+      "title": "Portfolio de Stephania Nevado | Sección Trabajo",
+      "description": "En esta sección puedes conocer mi trabajo"
+    },
+    "contact": {
+      "title": "Portfolio de Stephania Nevado | Sección Contacto",
+      "description": "Si estás interesado, simplemente contáctame"
+    },
+    "notFound": {
+      "title": "Portfolio de Stephania Nevado | Página no encontrada",
+      "description": "La página que buscas no se ha podido encontrar"
+    }
+  },
+  "nav": {
+    "about": "Sobre mí",
+    "skills": "Habilidades",
+    "work": "Trabajo",
+    "contact": "Contacto",
+    "resume": "CV",
+    "openMenu": "Abrir menú de navegación",
+    "closeMenu": "Cerrar menú de navegación"
+  },
+  "home": {
+    "name": "Stephania Nevado",
+    "tagline": "Desarrolladora full stack, manager y nutricionista ubicada en Suecia ✨"
+  },
+  "about": {
+    "header": "¡Encantada de conocerte!",
+    "subHeader": "BIENVENIDO",
+    "who": "⸺ ¿Quién soy?",
+    "whoBody": "Soy desarrolladora full stack, y mi interés por la programación empezó durante la pandemia en 2020. Como proyecto paralelo, creé un producto de HealthTech llamado Nutreto - una plataforma en la nube para nutrición y salud. Esto se convirtió en una pasión por el desarrollo web y en un cambio de carrera.",
+    "firstJob": "⸺ Mi primer trabajo como desarrolladora frontend",
+    "firstJobPre": "Construí un producto de ",
+    "firstJobLinkLabel": "IA",
+    "firstJobPost": " para la generación de datos sintéticos. No había ninguna otra desarrolladora frontend en toda la empresa, así que creé una aplicación frontend desde cero utilizando tecnologías web modernas (JavaScript, React, Styled components y Jest).",
+    "currentJob": "⸺ Mi trabajo actual como desarrolladora frontend",
+    "currentJobPre": "Trabajo en ",
+    "currentJobLinkLabel": "Carla",
+    "currentJobPost": " - una start-up para comprar, vender y arrendar vehículos electrificados en línea. Utilizamos Next.js, TypeScript y React para la aplicación, así como Jest y Cypress para las pruebas. El contenido estático se sirve a través de Contentful y la capa de API usa GraphQL.",
+    "initiatives": "⸺ Iniciativas",
+    "initiative1": "Impulsé a mi equipo en Carla para convertir el código base entero de JavaScript a TypeScript.",
+    "initiative2": "Creé un club de ingeniería femenina para discutir problemas y soluciones dentro de la empresa y del mundo tech en general.",
+    "initiative3": "Durante el último año, he reservado 1 «hora de estudio» cada día para profundizar mis conocimientos de desarrollo web.",
+    "interests": "⸺ Mis intereses",
+    "interestsBody": "Me apasiona la tecnología, el liderazgo, la gestión del cambio, la mejora de procesos y el trabajo en equipo. También siempre tengo curiosidad por aprender cosas nuevas. Soy una persona organizada, resolutiva, y me gusta crear código modular, legible y comprobable que sea fácil de mantener y ampliar.",
+    "portraitAlt": "Foto de Stephania Nevado"
+  },
+  "skills": {
+    "header": "Habilidades",
+    "subHeader": "MI EXPERIENCIA",
+    "items": {
+      "LANGUAGES": {
+        "title": "Lenguajes de programación:",
+        "description": "Los lenguajes de programación que he utilizado para programar y para el desarrollo web.",
+        "text": "Typescript, JavaScript (ES6), HTML, CSS/Styled components/Sass."
+      },
+      "LIBRARIES": {
+        "title": "Librerías y frameworks:",
+        "description": "Frameworks y librerías que he utilizado para construir aplicaciones web.",
+        "text": "React, Next.js, Cypress, Jest, GraphQL, React testing library, Node.js, Redux, D3, FastAPI."
+      },
+      "TOOLS": {
+        "title": "Herramientas de desarrollo:",
+        "description": "Estas son las diversas herramientas que he sabido utilizar a lo largo del proceso de desarrollo.",
+        "text": "GitHub, Prettier, ESLint, Vercel, Figma, Contentful, npm, pnpm, Terminal (bash/zsh), JSON."
+      },
+      "PLATFORMS": {
+        "title": "Plataformas:",
+        "description": "Entornos y editores de desarrollo.",
+        "text": "VSCode, IntelliJ."
+      },
+      "DATA_BASES": {
+        "title": "Bases de datos:",
+        "description": "Bases de datos para almacenar y gestionar datos.",
+        "text": "PostgreSQL, MongoDB."
+      },
+      "MANAGEMENT": {
+        "title": "Gestión:",
+        "description": "Estas son mis habilidades relacionadas con la gestión de proyectos y equipos.",
+        "text": "Procesos, planificación, gestión de equipos, desarrollo personal, comunicación con stakeholders."
+      }
+    }
+  },
+  "work": {
+    "header": "Trabajo",
+    "subHeader": "PROYECTOS RECIENTES",
+    "technologiesLabel": "Tecnologías utilizadas: ",
+    "items": {
+      "PORTFOLIO": {
+        "title": "Este portfolio",
+        "text": "Podría haber creado este portfolio con alguna plantilla en línea o solución no-code - pero no quería hacer eso 🤓 En cambio, he utilizado este portfolio como una forma de mostrar mis habilidades y mi manera de programar. Echa un vistazo a GitHub, encontrarás un proyecto bien organizado, con linting y formato estricto, y con mi propia estructura de temas.",
+        "technologies": "Next.js, React, TypeScript, Styled components.",
+        "buttonText": "Mi Portfolio"
+      },
+      "CAT_BREEDS_APP": {
+        "title": "Aplicación de razas de gatos",
+        "text": "No es ningún secreto que me encantan los gatos 😻 Cuando apliqué al puesto de desarrolladora frontend en Carla, creé esta aplicación de razas de gatos. Quería mostrar una parte de quién soy, pero también - por supuesto - mis habilidades de programación. El proyecto también tiene algunas pruebas para mostrar cómo suelo estructurarlas.",
+        "technologies": "Next.js, React, TypeScript, Styled components, Jest.",
+        "buttonText": "Mi App de Gatos"
+      }
+    }
+  },
+  "contact": {
+    "header": "Contacto",
+    "subHeader": "PONTE EN CONTACTO",
+    "intro1": "Siempre tengo mucho entusiasmo por aprender cosas nuevas y evolucionar como desarrolladora.",
+    "intro2": "Mi bandeja de entrada siempre está abierta para discutir nuevas oportunidades. También puedes encontrarme en las redes sociales.",
+    "cta": "Charlemos"
+  },
+  "contactItems": {
+    "GITHUB": {
+      "text": "Ir a mi GitHub",
+      "alternativeText": "Mi GitHub"
+    },
+    "LINKEDIN": {
+      "text": "Ir a mi LinkedIn",
+      "alternativeText": "LinkedIn"
+    },
+    "INSTAGRAM": {
+      "text": "Ir a mi Instagram",
+      "alternativeText": "Instagram"
+    },
+    "FACEBOOK": {
+      "text": "Ir a mi Facebook",
+      "alternativeText": "Facebook"
+    },
+    "EMAIL": {
+      "text": "Envíame un mensaje",
+      "alternativeText": "Charlemos"
+    }
+  },
+  "notFound": {
+    "header": "404",
+    "subHeader": "Bienvenido al lado oscuro de la fuerza",
+    "bodyPre": "No se pudo encontrar el recurso solicitado. Mientras tanto, ",
+    "bodyHighlight": "pulsa el botón del sable de luz",
+    "bodyPost": " para ver qué pasa. Por favor, enciende los altavoces para una mejor experiencia.",
+    "backHome": "Vuelve al lado luminoso",
+    "toggleSaberAria": "Encender o apagar el sable de luz"
+  },
+  "footer": {
+    "copyright": "Copyright © {year} Stephania Nevado.",
+    "rights": "Todos los derechos reservados."
+  },
+  "common": {
+    "language": "Idioma",
+    "themeSystem": "Sistema",
+    "themeLight": "Claro",
+    "themeDark": "Oscuro",
+    "switchThemeAriaMounted": "Cambiar tema (actualmente {theme})",
+    "switchThemeAria": "Cambiar tema",
+    "switchLanguageAria": "Cambiar idioma"
+  },
+  "icosahedron": {
+    "tooltip": "Creé esta animación usando solo CSS"
+  }
+}
