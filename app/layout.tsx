@@ -1,16 +1,9 @@
-import type { Metadata } from 'next'
+import { getLocale } from 'next-intl/server'
 
 import localFont from 'next/font/local'
 
-import { ThemeProvider } from 'components/ThemeProvider'
 
 import 'app/globals.css'
-
-export const metadata: Metadata = {
-  title: "Stephania Nevado's portfolio",
-  description: 'This is my portfolio showcase landing page',
-  icons: '/images/favicon.svg',
-}
 
 const font = localFont({
   src: './fonts/ClashDisplay-Variable.woff2',
@@ -18,16 +11,15 @@ const font = localFont({
   preload: true,
 })
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const locale = await getLocale()
   return (
-    <html lang="en" className={font.className} suppressHydrationWarning>
-      <body>
-        <ThemeProvider>{children}</ThemeProvider>
-      </body>
+    <html lang={locale} className={font.className} suppressHydrationWarning>
+      <body>{children}</body>
     </html>
   )
 }

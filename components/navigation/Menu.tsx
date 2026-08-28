@@ -1,12 +1,17 @@
+'use client'
+
+import { useLocale, useTranslations } from 'next-intl'
+
 import Image from 'next/image'
+
 
 import { Box } from 'components/common/box/Box'
 import { Button } from 'components/common/button/Button'
 import { IconButton } from 'components/common/iconButton/IconButton'
 import { Close, Link } from 'components/icons/icons'
+import { LocaleSwitcher } from 'components/LocaleSwitcher'
 import { Items } from 'components/navigation/Items'
 import { Theme } from 'components/Theme'
-import { ThemeToggle } from 'components/ThemeToggle'
 
 type Props = {
   open: boolean
@@ -15,6 +20,8 @@ type Props = {
 
 export const Menu = ({ open, onClose }: Props) => {
   const { primaryWhite } = Theme.colors
+  const locale = useLocale()
+  const t = useTranslations('nav')
 
   if (!open) {
     return null
@@ -38,7 +45,7 @@ export const Menu = ({ open, onClose }: Props) => {
         justifyContent="space-between"
         marginTop={6}
         marginHorizontal={4}>
-        <Box as="a" href="/">
+        <Box as="a" href={`/${locale}`}>
           <Image
             src="/images/cat-logo.svg"
             alt="svg logo"
@@ -59,7 +66,7 @@ export const Menu = ({ open, onClose }: Props) => {
           name="close-menu-button"
           onClick={onClose}
           icon={Close}
-          aria-label="Close navigation menu"
+          aria-label={t('closeMenu')}
         />
       </Box>
       <Box animation="fadeInLeft">
@@ -70,7 +77,7 @@ export const Menu = ({ open, onClose }: Props) => {
         alignItems="center"
         marginHorizontal={4}
         marginVertical={2}>
-        <ThemeToggle />
+        <LocaleSwitcher />
       </Box>
       <Box marginHorizontal={3} marginVertical={4}>
         <Button
@@ -79,7 +86,7 @@ export const Menu = ({ open, onClose }: Props) => {
           target="_blank"
           icon={Link}
           iconPosition="left">
-          Resume
+          {t('resume')}
         </Button>
       </Box>
     </Box>

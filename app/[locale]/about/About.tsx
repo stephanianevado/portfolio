@@ -1,6 +1,9 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
+
 import Image from 'next/image'
+
 
 import AppWrapper from 'components/AppWrapper'
 import { Box } from 'components/common/box/Box'
@@ -16,11 +19,12 @@ export default function About() {
     fontWeight: { bold },
   } = Theme
   const { LAPTOP, MOBILE_S } = Breakpoint
+  const t = useTranslations('about')
 
   return (
     <AppWrapper>
       <Box>
-        <Title header="Nice to meet you!" subHeader="WELCOME" />
+        <Title header={t('header')} subHeader={t('subHeader')} />
         <Box
           breakpoints={{
             [MOBILE_S]: { direction: 'column' },
@@ -31,15 +35,11 @@ export default function About() {
               [LAPTOP]: { flex: 3 },
             }}>
             <Text as="p" color={primaryGrey} variant={medium} subStyle={bold}>
-              ⸺ Who am I?
+              {t('who')}
             </Text>
 
             <Text as="p" color={primaryGrey} variant={small}>
-              I&apos;m a Full stack developer, and my interest in programming
-              started during the pandemic in 2020. As a side project, I created
-              a HealthTech product called Nutreto - a cloud-based platform for
-              nutrition and health. This turned into a passion for web
-              development, and a career change.
+              {t('whoBody')}
             </Text>
             <Box
               breakpoints={{
@@ -50,7 +50,7 @@ export default function About() {
               }}>
               <Image
                 src="/images/me.png"
-                alt="Picture of Stephania Nevado"
+                alt={t('portraitAlt')}
                 width={280}
                 height={300}
                 priority
@@ -61,40 +61,34 @@ export default function About() {
               />
             </Box>
             <Text as="p" color={primaryGrey} variant={medium} subStyle={bold}>
-              ⸺ My first Frontend developer job
+              {t('firstJob')}
             </Text>
             <Text as="p" color={tertiaryBlack} variant={small}>
-              I built an{' '}
+              {t('firstJobPre')}
               <Link
                 href="https://syndata.co/"
                 target="_blank"
                 variant={small}
                 subStyle={bold}
                 color={primaryPurple}>
-                AI
-              </Link>{' '}
-              product for synthetic data generation . There was no other
-              frontend developer in the entire company, so I created a frontend
-              application from scratch using modern web technologies
-              (JavaScript, React, Styled components and Jest).
+                {t('firstJobLinkLabel')}
+              </Link>
+              {t('firstJobPost')}
             </Text>
             <Text as="p" color={primaryGrey} variant={medium} subStyle={bold}>
-              ⸺ My current job as a Frontend developer
+              {t('currentJob')}
             </Text>
             <Text as="p" color={tertiaryBlack} variant={small}>
-              I work at{' '}
+              {t('currentJobPre')}
               <Link
                 href="https://www.carla.se/"
                 target="_blank"
                 variant={small}
                 subStyle={bold}
                 color={primaryPurple}>
-                Carla
-              </Link>{' '}
-              - a start-up for buying, selling and leasing electrified vehicles
-              online. We use Next.js, TypeScript and React for the app, as well
-              as Jest and Cypress for testing. The static content is served via
-              Contentful and the API layer uses GraphQL.
+                {t('currentJobLinkLabel')}
+              </Link>
+              {t('currentJobPost')}
             </Text>
           </Box>
           <Box
@@ -108,7 +102,7 @@ export default function About() {
             }}>
             <Image
               src="/images/me.png"
-              alt="Picture of Stephania Nevado"
+              alt={t('portraitAlt')}
               width={280}
               height={300}
               priority
@@ -121,34 +115,27 @@ export default function About() {
         </Box>
 
         <Text as="p" color={primaryGrey} variant={medium} subStyle={bold}>
-          ⸺ Initiatives
+          {t('initiatives')}
         </Text>
 
         <Text as="ul" color={tertiaryBlack} variant={medium}>
           <Text as="li" color={tertiaryBlack} variant={small}>
-            I pushed myself and my team at Carla to convert the entire codebase
-            from JavaScript to TypeScript.
+            {t('initiative1')}
           </Text>
           <Text as="li" color={tertiaryBlack} variant={small}>
-            I created a female engineering club to discuss problems and
-            solutions within the company and the tech world in general.
+            {t('initiative2')}
           </Text>
           <Text as="li" color={tertiaryBlack} variant={small}>
-            During the last year, I&apos;ve set aside 1 &quot;study hour&quot;
-            each day to deepen my web development knowledge.
+            {t('initiative3')}
           </Text>
         </Text>
 
         <Text as="p" color={primaryGrey} variant={medium} subStyle={bold}>
-          ⸺ My interests
+          {t('interests')}
         </Text>
 
         <Text as="p" color={tertiaryBlack} variant={small}>
-          I&apos;m passionate about tech, leadership, change management, process
-          improvement and teamwork. I&apos;m also always curious to learn new
-          things. I&apos;m a well-organized person, a problem solver, and I like
-          to create modular, readable and testable code which is easy to
-          maintain and extend.
+          {t('interestsBody')}
         </Text>
       </Box>
     </AppWrapper>

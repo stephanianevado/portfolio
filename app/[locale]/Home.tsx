@@ -1,6 +1,9 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
+
 import { Fragment } from 'react'
+
 
 import Icosahedron from 'components/animations/Icosahedron'
 import AppWrapper from 'components/AppWrapper'
@@ -21,6 +24,8 @@ export default function Home() {
     lineHeight: { xl },
   } = Theme
   const { LAPTOP, MOBILE_S } = Breakpoint
+  const t = useTranslations('home')
+  const tItems = useTranslations('contactItems')
 
   return (
     <AppWrapper>
@@ -41,7 +46,7 @@ export default function Home() {
               color={secondaryGrey}
               variant={normal}
               subStyle={bold}>
-              Stephania Nevado
+              {t('name')}
             </Text>
           </Box>
           <Text
@@ -52,7 +57,7 @@ export default function Home() {
               [MOBILE_S]: { variant: xxxl, subStyle: bold },
               [LAPTOP]: { variant: huge, subStyle: bold },
             }}>
-            Full stack developer, manager and nutritionist located in Sweden ✨
+            {t('tagline')}
           </Text>
           <Spacer size={2} />
           <Box
@@ -66,7 +71,7 @@ export default function Home() {
               })
               .map((id) => {
                 const item = contactItems[id]
-                const { alternativeText, href, icon: Icon } = item
+                const { href, icon: Icon } = item
                 return (
                   <Fragment key={id}>
                     <Button
@@ -78,7 +83,7 @@ export default function Home() {
                       color={primaryWhite}
                       bg={secondaryBlack}
                       mode={Mode.ALTERNATIVE}>
-                      {alternativeText}
+                      {tItems(`${id}.alternativeText`)}
                     </Button>
                     <Spacer size={4} />
                   </Fragment>

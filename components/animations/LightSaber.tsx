@@ -1,6 +1,9 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
+
 import { useState } from 'react'
+
 
 import { cn } from 'utils/cn'
 
@@ -8,6 +11,7 @@ import styles from './LightSaber.module.css'
 
 export default function LightSaber() {
   const [isActive, setIsActive] = useState(false)
+  const t = useTranslations('notFound')
 
   const playSound = (filename: string) => {
     const audio = new Audio(filename)
@@ -34,7 +38,7 @@ export default function LightSaber() {
             onClick={handleSaberClick}
             role="button"
             tabIndex={0}
-            aria-label="Toggle lightsaber"
+            aria-label={t('toggleSaberAria')}
           />
         </div>
       </div>

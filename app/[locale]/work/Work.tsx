@@ -1,5 +1,7 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
+
 import AppWrapper from 'components/AppWrapper'
 import { Box } from 'components/common/box/Box'
 import { Button, Mode } from 'components/common/button/Button'
@@ -9,7 +11,8 @@ import { Link } from 'components/icons/icons'
 import { Theme } from 'components/Theme'
 import { Title } from 'components/Title'
 
-import { Id, workItems } from 'utils/workItems'
+import type { Id} from 'utils/workItems';
+import { workItems } from 'utils/workItems'
 
 export default function Work() {
   const {
@@ -17,32 +20,28 @@ export default function Work() {
     fontSize: { small, large },
     fontWeight: { bold },
   } = Theme
+  const t = useTranslations('work')
+  const tItems = useTranslations('work.items')
 
   return (
     <AppWrapper>
       <Box>
-        <Title header="Work" subHeader="RECENT PROJECTS" />
-        {Object.values(Id).map((id) => {
-          const item = workItems[id]
-          const {
-            title,
-            text,
-            technologies,
-            buttonText,
-            href,
-            icon: Icon,
-          } = item
+        <Title header={t('header')} subHeader={t('subHeader')} />
+        {Object.keys(workItems).map((id) => {
+          const key = id as Id
+          const item = workItems[key]
+          const { href, icon: Icon } = item
           return (
-            <Box key={id}>
+            <Box key={key}>
               <Text
                 as="h3"
                 color={secondaryGrey}
                 variant={large}
                 subStyle={bold}>
-                {title}
+                {tItems(`${key}.title`)}
               </Text>
               <Text as="p" color={secondaryBlack} variant={small}>
-                {text}
+                {tItems(`${key}.text`)}
               </Text>
               <Text as="p" color={secondaryBlack} variant={small}>
                 <Text
@@ -50,9 +49,9 @@ export default function Work() {
                   color={secondaryBlue}
                   variant={small}
                   subStyle={bold}>
-                  Technologies used:{' '}
+                  {t('technologiesLabel')}
                 </Text>
-                {technologies}
+                {tItems(`${key}.technologies`)}
               </Text>
               <Spacer size={2} />
               <Button
@@ -65,7 +64,7 @@ export default function Work() {
                 bg={secondaryBlack}
                 mode={Mode.ALTERNATIVE}
                 isCompact>
-                {buttonText}
+                {tItems(`${key}.buttonText`)}
                 <Spacer size={2} />
                 <Link color={primaryWhite} size={3} />
               </Button>
