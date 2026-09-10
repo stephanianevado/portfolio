@@ -4,7 +4,8 @@
 .vscode
 node_modules
 
-
 # TypeScript
 tsconfig.tsbuildinfo
-tsconfig.tsbuildinfo
+
+# Testing
+coverage

@@ -41,8 +41,15 @@
       ],
       "utils/*": [
         "utils/*"
+      ],
+      "test/*": [
+        "test/*"
       ]
     },
+    "types": [
+      "vitest/globals",
+      "@testing-library/jest-dom"
+    ],
     "plugins": [
       {
         "name": "next"
@@ -53,6 +60,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    "test/**/*",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"
   ],
